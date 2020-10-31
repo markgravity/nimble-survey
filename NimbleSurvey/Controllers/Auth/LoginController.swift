@@ -50,11 +50,23 @@ fileprivate extension LoginController {
         loginButton.rx.tap
             .withUnretained(self)
             .bind { `self`, _ in
-                
-                _ = self._viewModel.login(
-                    email: self.emailTextField.text,
-                    password: self.passwordTextField.text
-                )
+                _ = self._viewModel.login()
+            }
+            .disposed(by: _disposeBag)
+        
+        // Email
+        emailTextField.rx.text
+            .withUnretained(self)
+            .bind { `self`, text in
+                self._viewModel.setEmail(text)
+            }
+            .disposed(by: _disposeBag)
+        
+        // Password
+        passwordTextField.rx.text
+            .withUnretained(self)
+            .bind { `self`, text in
+                self._viewModel.setPassword(text)
             }
             .disposed(by: _disposeBag)
         
@@ -63,6 +75,14 @@ fileprivate extension LoginController {
             .withUnretained(self)
             .bind {
                 $0.0._onStateChanged($0.1)
+            }
+            .disposed(by: _disposeBag)
+        
+        // Is Valid
+        _viewModel.isValid
+            .withUnretained(self)
+            .bind {
+                $0.0._onValidChanged($0.1)
             }
             .disposed(by: _disposeBag)
     }
@@ -80,9 +100,26 @@ fileprivate extension LoginController {
         case .logging:
             showProgressHUD()
             
+        case .logged:
+            dismissProgressHUD()
+            
         case .error(let error):
             dismissProgressHUD()
             alert(error)
+        }
+    }
+    
+    func _onValidChanged(_ isValid: Bool) {
+        
+        switch isValid {
+        case true:
+            loginButton.isEnabled = true
+            loginButton.backgroundColor = .white
+            
+        case false:
+            loginButton.isEnabled = false
+            loginButton.backgroundColor = .gray
+        
         }
     }
 }

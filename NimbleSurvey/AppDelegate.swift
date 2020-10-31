@@ -28,7 +28,8 @@ class AppDelegate: BaseAppDelegate {
             launchOptions: launchOptions,
             plugins:
                 L10nRegister.self,
-                ApiRegister.self
+                ApiRegister.self,
+                UIRegister.self
         )
         
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
