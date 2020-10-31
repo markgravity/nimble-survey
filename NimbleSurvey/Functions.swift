@@ -8,7 +8,7 @@
 import UIKit
 import SwiftyBase
 
-func alert(_ message: String) {
+func alert(_ message: String, handler: VoidHandler? = nil) {
     let controller = UIAlertController(
         title: "alert.title_text",
         message: message,
@@ -24,6 +24,9 @@ func alert(_ message: String) {
     )
 }
 
-func alert(_ error: Error) {
-    alert((error as NSError).localizedDescription)
+func alert(_ error: Error,_ handler: VoidHandler? = nil) {
+    alert(
+        (error as NSError).localizedDescription,
+        handler: handler
+    )
 }

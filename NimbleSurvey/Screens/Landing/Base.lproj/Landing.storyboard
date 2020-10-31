@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-1035" y="94"/>
         </scene>
-        <!--View Controller-->
+        <!--Landing Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NimbleTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LandingController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LandingController" customModule="NimbleSurvey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,10 +55,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VWL-Ro-ILt"/>
+                    <connections>
+                        <segue destination="adh-qp-388" kind="show" identifier="LoginNavigationController" customClass="PushAtBeginSegue" customModule="SwiftyBase" id="DyB-qh-aT4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="94"/>
+        </scene>
+        <!--Auth-->
+        <scene sceneID="E5r-SR-pHV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Auth" id="adh-qp-388" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="n1H-Uh-pT3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dIb-gp-eGo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="891" y="94"/>
         </scene>
     </scenes>
     <resources>

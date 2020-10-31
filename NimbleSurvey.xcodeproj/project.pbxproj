@@ -42,6 +42,9 @@
 		2D1F44EA254D71C60058AED0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F44E9254D71C60058AED0 /* LoginController.swift */; };
 		2D1F44F3254D72480058AED0 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F44F2254D72480058AED0 /* LoginVM.swift */; };
 		2D1F44FB254D74BC0058AED0 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F44FA254D74BC0058AED0 /* Functions.swift */; };
+		2D1F4501254D76FD0058AED0 /* LandingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F4500254D76FD0058AED0 /* LandingVM.swift */; };
+		2D1F450A254D777E0058AED0 /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F4509254D777E0058AED0 /* LandingController.swift */; };
+		2D1F4580254D784F0058AED0 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F457F254D784F0058AED0 /* Promise.swift */; };
 		A5113E336CB2AA760EDC74F9 /* Pods_NimbleSurveyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F231B9B8D09D57BBE09738 /* Pods_NimbleSurveyTests.framework */; };
 		CD60915D1D2D537B2BC9BE4F /* NimbleSurveyMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3206312DEDD0AAAB6AF68E /* NimbleSurveyMocks.generated.swift */; };
 		D2E9BB40F7E7B956AD03E8C8 /* Pods_NimbleSurvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D329CBE0C89DC2B082A703 /* Pods_NimbleSurvey.framework */; };
@@ -109,6 +112,9 @@
 		2D1F44E9254D71C60058AED0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		2D1F44F2254D72480058AED0 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		2D1F44FA254D74BC0058AED0 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		2D1F4500254D76FD0058AED0 /* LandingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingVM.swift; sourceTree = "<group>"; };
+		2D1F4509254D777E0058AED0 /* LandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
+		2D1F457F254D784F0058AED0 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 		494CA6B73E95B4463818A3B5 /* Pods-NimbleSurveyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleSurveyTests.debug.xcconfig"; path = "Target Support Files/Pods-NimbleSurveyTests/Pods-NimbleSurveyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		68B0219DA40BABDB0FB1A09A /* Pods-NimbleSurvey-NimbleSurveyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleSurvey-NimbleSurveyUITests.debug.xcconfig"; path = "Target Support Files/Pods-NimbleSurvey-NimbleSurveyUITests/Pods-NimbleSurvey-NimbleSurveyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C89179C5326C7BF4990EBE3 /* Pods-NimbleSurvey-NimbleSurveyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleSurvey-NimbleSurveyUITests.release.xcconfig"; path = "Target Support Files/Pods-NimbleSurvey-NimbleSurveyUITests/Pods-NimbleSurvey-NimbleSurveyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -185,11 +191,11 @@
 				2D1F438E254D13D90058AED0 /* Models */,
 				2D1F438A254D13D90058AED0 /* Params */,
 				2D1F437A254D13D80058AED0 /* Registers */,
+				2D1F4382254D13D90058AED0 /* Services */,
 				2D1F438B254D13D90058AED0 /* ViewModels */,
+				2D1F439D254D140A0058AED0 /* Controllers */,
 				2D1F439B254D13E00058AED0 /* Components */,
 				2D1F437E254D13D80058AED0 /* Screens */,
-				2D1F4382254D13D90058AED0 /* Services */,
-				2D1F439D254D140A0058AED0 /* Controllers */,
 				2D1F4325254D138E0058AED0 /* AppDelegate.swift */,
 				2D1F4327254D138E0058AED0 /* SceneDelegate.swift */,
 				2D1F43CD254D159A0058AED0 /* LaunchScreen.storyboard */,
@@ -273,6 +279,7 @@
 		2D1F438B254D13D90058AED0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				2D1F44FF254D76ED0058AED0 /* Landing */,
 				2D1F44F1254D723D0058AED0 /* Auth */,
 				2D1F438C254D13D90058AED0 /* Global */,
 			);
@@ -306,6 +313,7 @@
 		2D1F439C254D13F60058AED0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2D1F457E254D783D0058AED0 /* Extensions */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -313,6 +321,7 @@
 		2D1F439D254D140A0058AED0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2D1F4508254D776F0058AED0 /* Landing */,
 				2D1F44E8254D71A20058AED0 /* Auth */,
 				2D1F4329254D138E0058AED0 /* ViewController.swift */,
 			);
@@ -459,6 +468,30 @@
 				2D1F44F2254D72480058AED0 /* LoginVM.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		2D1F44FF254D76ED0058AED0 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				2D1F4500254D76FD0058AED0 /* LandingVM.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		2D1F4508254D776F0058AED0 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				2D1F4509254D777E0058AED0 /* LandingController.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		2D1F457E254D783D0058AED0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2D1F457F254D784F0058AED0 /* Promise.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8FC12E9BE4ECF378AA6C7079 /* Pods */ = {
@@ -787,15 +820,18 @@
 				2D1F44EA254D71C60058AED0 /* LoginController.swift in Sources */,
 				2D1F444C254D51BE0058AED0 /* UserTokenInfo.swift in Sources */,
 				2D1F43DB254D16A10058AED0 /* ApiService.swift in Sources */,
+				2D1F4501254D76FD0058AED0 /* LandingVM.swift in Sources */,
 				2D1F4391254D13D90058AED0 /* ApiRegister.swift in Sources */,
 				2D1F44FB254D74BC0058AED0 /* Functions.swift in Sources */,
 				2D1F446C254D54090058AED0 /* AuthRefreshTokenParams.swift in Sources */,
 				2D1F439A254D13D90058AED0 /* UserInfo.swift in Sources */,
 				2D1F4416254D4ED80058AED0 /* UserService.swift in Sources */,
+				2D1F450A254D777E0058AED0 /* LandingController.swift in Sources */,
 				2D1F4436254D4EF50058AED0 /* AuthLoginParams.swift in Sources */,
 				2D1F43DA254D16A10058AED0 /* ApiException.swift in Sources */,
 				2D1F4446254D51A10058AED0 /* AuthService.swift in Sources */,
 				2D1F4464254D536D0058AED0 /* AuthForgotPasswordParams.swift in Sources */,
+				2D1F4580254D784F0058AED0 /* Promise.swift in Sources */,
 				2D1F44F3254D72480058AED0 /* LoginVM.swift in Sources */,
 				2D1F445A254D53160058AED0 /* AuthLogoutParams.swift in Sources */,
 				2D1F4392254D13D90058AED0 /* L10nRegister.swift in Sources */,

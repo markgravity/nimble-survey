@@ -47,9 +47,19 @@ fileprivate extension LocatorRegister {
             AuthServiceImpl()
         }
         
-        // Auth
+        // UserDefaults
         locator.register(UserDefaults.self) { _ in
             UserDefaults.standard
+        }
+        
+        // LandingVM
+        locator.register(LandingVM.self) { _ in
+            LandingVMImpl()
+        }
+        
+        // LoginVM
+        locator.register(LoginVM.self) { _ in
+            LoginVMImpl()
         }
     }
 }

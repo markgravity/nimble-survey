@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gkj-IW-3Gk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -21,14 +21,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="eFV-Ip-GAX">
-                                <rect key="frame" x="106.5" y="197" width="201" height="48"/>
+                                <rect key="frame" x="106.5" y="241" width="201" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="AdP-uF-89O"/>
                                     <constraint firstAttribute="width" constant="201" id="cFD-4H-W8T"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dVW-I9-nYR" customClass="TextField" customModule="NimbleSurvey" customModuleProvider="target">
-                                <rect key="frame" x="44" y="362" width="327" height="56"/>
+                                <rect key="frame" x="44" y="406" width="327" height="56"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="vZF-4e-7Cx"/>
@@ -50,7 +50,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBd-7g-OxU">
-                                <rect key="frame" x="44" y="438" width="327" height="56"/>
+                                <rect key="frame" x="44" y="482" width="327" height="56"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jSX-Rz-2ZI" customClass="TextField" customModule="NimbleSurvey" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="249" height="56"/>
@@ -99,7 +99,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pf-eR-xng">
-                                <rect key="frame" x="44" y="514" width="327" height="56"/>
+                                <rect key="frame" x="44" y="558" width="327" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="nx3-MW-sqT"/>
@@ -145,6 +145,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C98-o7-Ju5" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="axp-YF-d6M">
+            <objects>
+                <navigationController storyboardIdentifier="LoginNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gkj-IW-3Gk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mBI-NI-rzT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="t6Q-SJ-py0" kind="relationship" relationship="rootViewController" id="jgn-2v-1DY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xt2-5c-Z7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1035" y="94"/>
         </scene>
     </scenes>
     <resources>
