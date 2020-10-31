@@ -93,16 +93,25 @@ extension ApiServiceImpl {
         
         // Reponse must be a dictionary & has 'status' field is int
         guard
-            let response = json.dictionary
+            let response = json.dictionaryObject
         else { throw ApiException.invalidResponse }
         
         // Validate error structure
-        guard
-            let errors = response["errors"]?.dictionaryObject,
-            let errorBag = ApiErrorBag(JSON: errors)
-        else { throw ApiException.invalidResponse }
+        if response["errors"] != nil {
+            
+            // Mapping to error bag
+            guard let errorBag = ApiErrorBag(JSON: response),
+                  errorBag.errors != nil
+            else {
+                throw ApiException.invalidResponse
+            }
+            
+            // Throw error bag
+            throw ApiException.other(bag: errorBag)
+        }
         
-        throw ApiException.other(bag: errorBag)
+        
+        // All goods
     }
     
     /// Headers
@@ -119,22 +128,5 @@ extension ApiServiceImpl {
         }
         
         return headers
-    }
-    
-    fileprivate func _handle(_ error: Error) throws {
-        
-        // We wont throw 401, so let it refresh
-        guard
-            let httpException = error as? HttpException,
-            let afError = httpException.error as? AFError,
-            case .responseValidationFailed(let reason) = afError,
-            case .unacceptableStatusCode(let code) = reason,
-            code == 401
-        else {
-            throw error
-        }
-        
-        // End this request, cause it will be retry
-        throw ApiException.invalidResponse
     }
 }

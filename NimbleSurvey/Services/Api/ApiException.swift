@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum ApiException: LocalizedError {
+enum ApiException: LocalizedError, Equatable {
     case invalidResponse
     case other(bag: ApiErrorBag)
 }

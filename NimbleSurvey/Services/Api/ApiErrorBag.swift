@@ -9,7 +9,7 @@ import Foundation
 import SwiftyBase
 import ObjectMapper
 
-struct ApiErrorBag: Error, Mappable {
+struct ApiErrorBag: Error, Mappable, Equatable {
     fileprivate(set) var errors: [ApiError]!
     var first: ApiError? {
         errors.first
@@ -22,7 +22,7 @@ struct ApiErrorBag: Error, Mappable {
 }
 
 // MARK: - ApiError
-struct ApiError: Error, Mappable {
+struct ApiError: Error, Mappable, Equatable {
     var code: ApiErrorCode!
     var detail: String!
     

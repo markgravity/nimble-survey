@@ -16,11 +16,11 @@ import Promises
 import SwiftyBase
 
 // MARK - Locator
-//extension Container {
-//    func mock<Service>(_ serviceType: Service.Type,_ service: Service) {
-//        locator.register(serviceType) { _ in service }
-//    }
-//}
+extension Container {
+    func mock<Service>(_ serviceType: Service.Type,_ service: Service) {
+        locator.register(serviceType) { _ in service }
+    }
+}
 
 func waitUntil(
     on queue: DispatchQueue = .global(),
