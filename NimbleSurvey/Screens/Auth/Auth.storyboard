@@ -112,6 +112,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="l10nTitle" value="login.login_text"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>

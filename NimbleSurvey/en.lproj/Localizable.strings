@@ -7,3 +7,13 @@
 */
 
 "auth.invalid_grant_msg" = "The provided authorization grant is invalid, expired, revoked, does not match the redirection URI used in the authorization request, or was issued to another client.";
+
+// Alert
+"alert.title_text" = "Alert";
+"alert.ok_text" = "OK";
+
+// Login
+"login.email_placeholder_text" = "Email";
+"login.password_placeholder_text" = "Password";
+"login.forgot_text" = "Forgot?";
+"login.login_text" = "Log in";
