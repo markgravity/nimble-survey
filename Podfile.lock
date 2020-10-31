@@ -1,0 +1,138 @@
+PODS:
+  - Alamofire (5.0.5)
+  - AlamofireNetworkActivityLogger (3.0.0):
+    - Alamofire (~> 5.0.0-rc.2)
+  - Gradients (0.3.0)
+  - L10n-swift (5.7.2):
+    - L10n-swift/Core (= 5.7.2)
+    - L10n-swift/Extension (= 5.7.2)
+    - L10n-swift/IBInspectable (= 5.7.2)
+  - L10n-swift/Core (5.7.2)
+  - L10n-swift/Extension (5.7.2):
+    - L10n-swift/Core
+  - L10n-swift/IBInspectable (5.7.2):
+    - L10n-swift/Core
+  - LNZCollectionLayouts (1.2.2)
+  - MockingbirdFramework (0.10.0)
+  - Nimble (8.0.9)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - ObjectMapper (4.2.0)
+  - PromisesObjC (1.2.11)
+  - PromisesSwift (1.2.11):
+    - PromisesObjC (= 1.2.11)
+  - PureLayout (3.1.6)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
+  - SwiftRichString (3.7.2)
+  - SwiftyBase (0.1.0):
+    - Alamofire
+    - Gradients
+    - L10n-swift
+    - NVActivityIndicatorView (~> 4.8.0)
+    - ObjectMapper
+    - PromisesSwift
+    - PureLayout
+    - RxCocoa
+    - RxSwift
+    - RxSwiftExt
+    - SwiftRichString
+    - SwiftyJSON
+    - Swinject
+    - UIColor_Hex_Swift
+    - UIWindowTransitions
+  - SwiftyComponent (0.1.0):
+    - PromisesSwift
+    - PureLayout
+  - SwiftyJSON (5.0.0)
+  - Swinject (2.7.1)
+  - UIColor_Hex_Swift (5.1.0)
+  - UIWindowTransitions (0.2.0)
+
+DEPENDENCIES:
+  - AlamofireNetworkActivityLogger (~> 3.0)
+  - LNZCollectionLayouts (~> 1.2.2)
+  - MockingbirdFramework (~> 0.10.0)
+  - Nimble (~> 8.0.4)
+  - SwiftyBase (from `https://github.com/markgravity/swifty-base.git`)
+  - SwiftyComponent (from `https://github.com/markgravity/swifty-component.git`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireNetworkActivityLogger
+    - Gradients
+    - L10n-swift
+    - LNZCollectionLayouts
+    - MockingbirdFramework
+    - Nimble
+    - NVActivityIndicatorView
+    - ObjectMapper
+    - PromisesObjC
+    - PromisesSwift
+    - PureLayout
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - RxSwiftExt
+    - SwiftRichString
+    - SwiftyJSON
+    - Swinject
+    - UIColor_Hex_Swift
+    - UIWindowTransitions
+
+EXTERNAL SOURCES:
+  SwiftyBase:
+    :git: https://github.com/markgravity/swifty-base.git
+  SwiftyComponent:
+    :git: https://github.com/markgravity/swifty-component.git
+
+CHECKOUT OPTIONS:
+  SwiftyBase:
+    :commit: cbf19a327d99de7c85b18ca23c462f0841890284
+    :git: https://github.com/markgravity/swifty-base.git
+  SwiftyComponent:
+    :commit: a30b2fb8b060cd2f49669192a159e6f7ae439806
+    :git: https://github.com/markgravity/swifty-component.git
+
+SPEC CHECKSUMS:
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  AlamofireNetworkActivityLogger: 94e8a7d454a4a9800cef1d0c1d3699754493684b
+  Gradients: d7e1be639692b86577616ee55ea96f54fb5f1de1
+  L10n-swift: 5895718b0534335a3af0e91e80f0d23dad4d5c30
+  LNZCollectionLayouts: 509d8143a70db014f2094ae7052ec879ab988dab
+  MockingbirdFramework: 618cd2d6dbd5264b77498ad24e3f4d6cb2da86b9
+  Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
+  PromisesSwift: fed4eb6f7a29846a22624d1b86b77e1dedb88724
+  PureLayout: bd3c4ec3a3819ad387c99ebb72c6b129c3ed4d2d
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
+  SwiftRichString: d61b807db1f8834c26fee92b6dd3e1be2dc5af03
+  SwiftyBase: 416206906826ece7a87b24f125241c888fe021b7
+  SwiftyComponent: 4a515432491fc516496e12dbba5618c333845e1f
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+  UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
+  UIWindowTransitions: cb662e2ae9e2d1060fcdbe3eb3de9232bedb7612
+
+PODFILE CHECKSUM: d7fef8aba5c5ed778cbee633b0f1689c002f7466
+
+COCOAPODS: 1.9.1
