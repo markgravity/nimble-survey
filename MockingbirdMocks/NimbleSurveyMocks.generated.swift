@@ -67,6 +67,99 @@ public func mock(file: StaticString = #file, line: UInt = #line, _ type: NimbleS
   return ApiServiceMock(sourceLocation: SourceLocation(file, line))
 }
 
+// MARK: - Mocked AuthForgotPasswordVM
+
+public final class AuthForgotPasswordVMMock: NimbleSurvey.AuthForgotPasswordVM, Mockingbird.Mock {
+  static let staticMock = Mockingbird.StaticMock()
+  public let mockingContext = Mockingbird.MockingContext()
+  public let stubbingContext = Mockingbird.StubbingContext()
+  public let mockMetadata = Mockingbird.MockMetadata(["generator_version": "0.10.0", "module_name": "NimbleSurvey"])
+  public var sourceLocation: Mockingbird.SourceLocation? {
+    get { return stubbingContext.sourceLocation }
+    set {
+      stubbingContext.sourceLocation = newValue
+      AuthForgotPasswordVMMock.staticMock.stubbingContext.sourceLocation = newValue
+    }
+  }
+
+  // MARK: Mocked isValid
+
+  public var `isValid`: Observable<Bool> {
+    get {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "isValid.get", arguments: [])
+      mockingContext.didInvoke(invocation)
+      return (stubbingContext.implementation(for: invocation) as! () -> Observable<Bool>)()
+    }
+  }
+
+  public func getIsValid() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Observable<Bool>, Observable<Bool>> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "isValid.get", arguments: [])
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Observable<Bool>, Observable<Bool>>(mock: self, invocation: invocation)
+  }
+
+  // MARK: Mocked state
+
+  public var `state`: ValueObservable<NimbleSurvey.AuthForgotPasswordState> {
+    get {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "state.get", arguments: [])
+      mockingContext.didInvoke(invocation)
+      return (stubbingContext.implementation(for: invocation) as! () -> ValueObservable<NimbleSurvey.AuthForgotPasswordState>)()
+    }
+  }
+
+  public func getState() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> ValueObservable<NimbleSurvey.AuthForgotPasswordState>, ValueObservable<NimbleSurvey.AuthForgotPasswordState>> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "state.get", arguments: [])
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> ValueObservable<NimbleSurvey.AuthForgotPasswordState>, ValueObservable<NimbleSurvey.AuthForgotPasswordState>>(mock: self, invocation: invocation)
+  }
+
+  fileprivate init(sourceLocation: Mockingbird.SourceLocation) {
+    Mockingbird.checkVersion(for: self)
+    self.sourceLocation = sourceLocation
+  }
+
+  // MARK: Mocked `reset`()
+
+  public func `reset`() -> Promise<Void> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`reset`() -> Promise<Void>", arguments: [])
+    mockingContext.didInvoke(invocation)
+    let implementation = stubbingContext.implementation(for: invocation, optional: false)
+    if let concreteImplementation = implementation as? () -> Promise<Void> {
+      return concreteImplementation()
+    } else {
+      return (implementation as! () -> Promise<Void>)()
+    }
+  }
+
+  public func `reset`() -> Mockingbird.Mockable<Mockingbird.MethodDeclaration, () -> Promise<Void>, Promise<Void>> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`reset`() -> Promise<Void>", arguments: [])
+    return Mockingbird.Mockable<Mockingbird.MethodDeclaration, () -> Promise<Void>, Promise<Void>>(mock: self, invocation: invocation)
+  }
+
+  // MARK: Mocked `setEmail`(_ `text`: String?)
+
+  public func `setEmail`(_ `text`: String?) -> Void {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`setEmail`(_ `text`: String?) -> Void", arguments: [Mockingbird.ArgumentMatcher(`text`)])
+    mockingContext.didInvoke(invocation)
+    let implementation = stubbingContext.implementation(for: invocation, optional: true)
+    if let concreteImplementation = implementation as? (String?) -> Void {
+      concreteImplementation(`text`)
+    } else {
+      (implementation as? () -> Void)?()
+    }
+  }
+
+  public func `setEmail`(_ `text`: @escaping @autoclosure () -> String?) -> Mockingbird.Mockable<Mockingbird.MethodDeclaration, (String?) -> Void, Void> {
+    let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(`text`)]
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`setEmail`(_ `text`: String?) -> Void", arguments: arguments)
+    return Mockingbird.Mockable<Mockingbird.MethodDeclaration, (String?) -> Void, Void>(mock: self, invocation: invocation)
+  }
+}
+
+/// Create a source-attributed `NimbleSurvey.AuthForgotPasswordVM` concrete protocol mock instance.
+public func mock(file: StaticString = #file, line: UInt = #line, _ type: NimbleSurvey.AuthForgotPasswordVM.Protocol) -> AuthForgotPasswordVMMock {
+  return AuthForgotPasswordVMMock(sourceLocation: SourceLocation(file, line))
+}
+
 // MARK: - Mocked AuthService
 
 public final class AuthServiceMock: NimbleSurvey.AuthService, Mockingbird.Mock {

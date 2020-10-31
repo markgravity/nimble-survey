@@ -9,6 +9,8 @@ target 'NimbleSurvey' do
   # Pods for NimbleSurvey
   pod 'SwiftyComponent', :git => 'https://github.com/markgravity/swifty-component.git'
   pod 'SwiftyBase', :git => 'https://github.com/markgravity/swifty-base.git'
+  pod 'SwiftyPopup', :path => '/Users/markg/Dropbox/Projects/iOS/SwiftyPopup'
+  
   pod 'LNZCollectionLayouts', '~> 1.2.2'
   pod 'AlamofireNetworkActivityLogger', '~> 3.0'
   pod 'Burritos', '~> 0.0.3'

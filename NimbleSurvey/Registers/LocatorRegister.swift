@@ -61,6 +61,11 @@ fileprivate extension LocatorRegister {
         locator.register(LoginVM.self) { _ in
             LoginVMImpl()
         }
+        
+        // Forget Password
+        locator.register(AuthForgotPasswordVM.self) { _ in
+            AuthForgotPasswordVMImpl()
+        }
     }
 }
 
