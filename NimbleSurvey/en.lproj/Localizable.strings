@@ -17,3 +17,8 @@
 "login.password_placeholder_text" = "Password";
 "login.forgot_text" = "Forgot?";
 "login.login_text" = "Log in";
+
+// Forgot Password
+"auth.forgot_password.description_text" = "Enter your email to receive instructions for resetting your password.";
+"auth.forgot_password.email_placeholder_text" = "Email";
+"auth.forgot_password.reset_text" = "Reset";

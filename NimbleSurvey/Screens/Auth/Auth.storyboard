@@ -82,6 +82,9 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="l10nTitle" value="login.forgot_text"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="Fc1-sk-FbD" kind="show" id="Vy3-ZO-xeM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -137,7 +140,9 @@
                             <constraint firstItem="daZ-HJ-faZ" firstAttribute="centerY" secondItem="Yak-KS-i3N" secondAttribute="centerY" priority="750" id="zac-fV-0s4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Tja-7U-W85"/>
+                    <navigationItem key="navigationItem" id="Tja-7U-W85">
+                        <barButtonItem key="backBarButtonItem" title=" " id="VFu-VH-Peq"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="dVW-I9-nYR" id="tV4-6p-1af"/>
                         <outlet property="loginButton" destination="2Pf-eR-xng" id="eYI-dW-SL3"/>
@@ -147,6 +152,111 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C98-o7-Ju5" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+        <!-- -->
+        <scene sceneID="USp-b1-v0F">
+            <objects>
+                <viewController storyboardIdentifier="AuthForgotPasswordController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fc1-sk-FbD" customClass="AuthForgotPasswordController" customModule="NimbleSurvey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bzj-3T-5IG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-bg" translatesAutoresizingMaskIntoConstraints="NO" id="zU8-mL-8RJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="xiq-lT-WNA">
+                                <rect key="frame" x="106.5" y="173" width="201" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="2Pz-bs-aWL"/>
+                                    <constraint firstAttribute="width" constant="201" id="cvP-2Q-vHB"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QGN-Q6-k5b">
+                                <rect key="frame" x="43.5" y="382" width="327" height="132"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BPk-o7-Yf5" customClass="TextField" customModule="NimbleSurvey" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="56"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="kfZ-Ty-3r6"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="horizontalMargin">
+                                                <point key="value" x="12" y="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="l10nPlaceholder" value="auth.forgot_password.email_placeholder_text"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kp-FC-aT7">
+                                        <rect key="frame" x="0.0" y="76" width="327" height="56"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="zeB-FV-AdU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="l10nTitle" value="auth.forgot_password.reset_text"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Enter your email to receive instructions for resetting your password.  " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeB-Ai-8nv">
+                                <rect key="frame" x="24" y="245" width="366" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.77254901960784317" green="0.76862745098039209" blue="0.76470588235294112" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="l10nText" value="auth.forgot_password.description_text"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zbT-eR-HMt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xiq-lT-WNA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zbT-eR-HMt" secondAttribute="top" constant="20" id="0bW-iP-d8f"/>
+                            <constraint firstItem="zbT-eR-HMt" firstAttribute="trailing" secondItem="QGN-Q6-k5b" secondAttribute="trailing" constant="43.5" id="1Wy-EG-aNC"/>
+                            <constraint firstItem="YeB-Ai-8nv" firstAttribute="leading" secondItem="zbT-eR-HMt" secondAttribute="leading" constant="24" id="4sy-v2-STi"/>
+                            <constraint firstItem="zU8-mL-8RJ" firstAttribute="leading" secondItem="zbT-eR-HMt" secondAttribute="leading" id="6Qt-dp-aae"/>
+                            <constraint firstItem="QGN-Q6-k5b" firstAttribute="centerY" secondItem="Bzj-3T-5IG" secondAttribute="centerY" priority="750" id="AA1-X3-Y9H"/>
+                            <constraint firstItem="YeB-Ai-8nv" firstAttribute="top" secondItem="xiq-lT-WNA" secondAttribute="bottom" constant="24" id="MQO-Tw-tg5"/>
+                            <constraint firstItem="xiq-lT-WNA" firstAttribute="centerX" secondItem="Bzj-3T-5IG" secondAttribute="centerX" id="UXz-uy-kll"/>
+                            <constraint firstItem="QGN-Q6-k5b" firstAttribute="top" secondItem="YeB-Ai-8nv" secondAttribute="bottom" constant="96" id="YZz-QQ-qeW"/>
+                            <constraint firstItem="zbT-eR-HMt" firstAttribute="trailing" secondItem="zU8-mL-8RJ" secondAttribute="trailing" id="ZAg-Az-kCN"/>
+                            <constraint firstItem="QGN-Q6-k5b" firstAttribute="centerX" secondItem="Bzj-3T-5IG" secondAttribute="centerX" id="bzi-tv-tX1"/>
+                            <constraint firstItem="QGN-Q6-k5b" firstAttribute="leading" secondItem="zbT-eR-HMt" secondAttribute="leading" constant="43.5" id="kH9-ah-ZOo"/>
+                            <constraint firstItem="zU8-mL-8RJ" firstAttribute="top" secondItem="Bzj-3T-5IG" secondAttribute="top" id="kHl-yX-LMM"/>
+                            <constraint firstAttribute="bottom" secondItem="zU8-mL-8RJ" secondAttribute="bottom" id="oYb-db-gM3"/>
+                            <constraint firstItem="zbT-eR-HMt" firstAttribute="trailing" secondItem="YeB-Ai-8nv" secondAttribute="trailing" constant="24" id="ykE-lQ-jW1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title=" " id="Fmv-wb-R6b">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="l10nBackButton" value=" "/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="BPk-o7-Yf5" id="HGG-eh-Uv6"/>
+                        <outlet property="resetButton" destination="0kp-FC-aT7" id="m0z-WF-W98"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lL2-P0-A9g" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="axp-YF-d6M">

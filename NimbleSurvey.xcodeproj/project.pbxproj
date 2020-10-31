@@ -47,6 +47,9 @@
 		2D1F458A254D83AE0058AED0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D1F458C254D83AE0058AED0 /* Localizable.strings */; };
 		2D1F4591254D915C0058AED0 /* UIRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F4590254D915B0058AED0 /* UIRegister.swift */; };
 		2D1F45A0254D9C8C0058AED0 /* LoginVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F459F254D9C8C0058AED0 /* LoginVMTests.swift */; };
+		2D1F45EB254DB5FB0058AED0 /* AuthForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F45EA254DB5FB0058AED0 /* AuthForgotPasswordController.swift */; };
+		2D1F45F0254DB7FE0058AED0 /* AuthForgotPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F45EF254DB7FE0058AED0 /* AuthForgotPasswordVM.swift */; };
+		2D1F45F5254DBA380058AED0 /* AuthForgotPasswordVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F45F4254DBA380058AED0 /* AuthForgotPasswordVMTests.swift */; };
 		A5113E336CB2AA760EDC74F9 /* Pods_NimbleSurveyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F231B9B8D09D57BBE09738 /* Pods_NimbleSurveyTests.framework */; };
 		CD60915D1D2D537B2BC9BE4F /* NimbleSurveyMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3206312DEDD0AAAB6AF68E /* NimbleSurveyMocks.generated.swift */; };
 		D2E9BB40F7E7B956AD03E8C8 /* Pods_NimbleSurvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D329CBE0C89DC2B082A703 /* Pods_NimbleSurvey.framework */; };
@@ -119,6 +122,9 @@
 		2D1F458B254D83AE0058AED0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2D1F4590254D915B0058AED0 /* UIRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRegister.swift; sourceTree = "<group>"; };
 		2D1F459F254D9C8C0058AED0 /* LoginVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVMTests.swift; sourceTree = "<group>"; };
+		2D1F45EA254DB5FB0058AED0 /* AuthForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthForgotPasswordController.swift; sourceTree = "<group>"; };
+		2D1F45EF254DB7FE0058AED0 /* AuthForgotPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthForgotPasswordVM.swift; sourceTree = "<group>"; };
+		2D1F45F4254DBA380058AED0 /* AuthForgotPasswordVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthForgotPasswordVMTests.swift; sourceTree = "<group>"; };
 		494CA6B73E95B4463818A3B5 /* Pods-NimbleSurveyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleSurveyTests.debug.xcconfig"; path = "Target Support Files/Pods-NimbleSurveyTests/Pods-NimbleSurveyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		68B0219DA40BABDB0FB1A09A /* Pods-NimbleSurvey-NimbleSurveyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleSurvey-NimbleSurveyUITests.debug.xcconfig"; path = "Target Support Files/Pods-NimbleSurvey-NimbleSurveyUITests/Pods-NimbleSurvey-NimbleSurveyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C89179C5326C7BF4990EBE3 /* Pods-NimbleSurvey-NimbleSurveyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleSurvey-NimbleSurveyUITests.release.xcconfig"; path = "Target Support Files/Pods-NimbleSurvey-NimbleSurveyUITests/Pods-NimbleSurvey-NimbleSurveyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -464,6 +470,7 @@
 			isa = PBXGroup;
 			children = (
 				2D1F44E9254D71C60058AED0 /* LoginController.swift */,
+				2D1F45EA254DB5FB0058AED0 /* AuthForgotPasswordController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -472,6 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				2D1F44F2254D72480058AED0 /* LoginVM.swift */,
+				2D1F45EF254DB7FE0058AED0 /* AuthForgotPasswordVM.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -504,6 +512,7 @@
 			isa = PBXGroup;
 			children = (
 				2D1F459F254D9C8C0058AED0 /* LoginVMTests.swift */,
+				2D1F45F4254DBA380058AED0 /* AuthForgotPasswordVMTests.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -833,6 +842,7 @@
 				2D1F4376254D13C50058AED0 /* Constant.swift in Sources */,
 				2D1F44EA254D71C60058AED0 /* LoginController.swift in Sources */,
 				2D1F444C254D51BE0058AED0 /* UserTokenInfo.swift in Sources */,
+				2D1F45EB254DB5FB0058AED0 /* AuthForgotPasswordController.swift in Sources */,
 				2D1F43DB254D16A10058AED0 /* ApiService.swift in Sources */,
 				2D1F4501254D76FD0058AED0 /* LandingVM.swift in Sources */,
 				2D1F4391254D13D90058AED0 /* ApiRegister.swift in Sources */,
@@ -851,6 +861,7 @@
 				2D1F445A254D53160058AED0 /* AuthLogoutParams.swift in Sources */,
 				2D1F4392254D13D90058AED0 /* L10nRegister.swift in Sources */,
 				2D1F440D254D1EAE0058AED0 /* HttpService.swift in Sources */,
+				2D1F45F0254DB7FE0058AED0 /* AuthForgotPasswordVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,6 +870,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D1F45A0254D9C8C0058AED0 /* LoginVMTests.swift in Sources */,
+				2D1F45F5254DBA380058AED0 /* AuthForgotPasswordVMTests.swift in Sources */,
 				2D1F433D254D13900058AED0 /* NimbleSurveyTests.swift in Sources */,
 				2D1F43E7254D17250058AED0 /* Helpers.swift in Sources */,
 				2D1F43E8254D17250058AED0 /* ApiServiceTests.swift in Sources */,

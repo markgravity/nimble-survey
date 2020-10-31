@@ -19,5 +19,10 @@ class UIRegister: NSObject, PluginRegisterable {
         UINavigationBar.appearance().backgroundColor = .clear
         // Set translucent. (Default value is already true, so this can be removed if desired.)
         UINavigationBar.appearance().isTranslucent = true
+        
+        // Set back button
+        UINavigationBar.appearance().backIndicatorImage = UIImage.init(named: "nav-back-white")
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage.init(named: "nav-back-white")
+        UINavigationBar.appearance().tintColor = .white
     }
 }
