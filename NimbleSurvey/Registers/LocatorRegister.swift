@@ -38,6 +38,6 @@ fileprivate extension LocatorRegister {
     
     func _registerSingletons() {
         
-        locator.registerSingleton(AuthVM.self, AuthVMImpl())
+//        locator.registerSingleton(AuthVM.self, AuthVMImpl())
     }
 }

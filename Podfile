@@ -6,7 +6,7 @@ target 'NimbleSurvey' do
   use_frameworks!
   inhibit_all_warnings!
 
-  # Pods for NimbleTest
+  # Pods for NimbleSurvey
   pod 'SwiftyComponent', :git => 'https://github.com/markgravity/swifty-component.git'
   pod 'SwiftyBase', :git => 'https://github.com/markgravity/swifty-base.git'
   pod 'LNZCollectionLayouts', '~> 1.2.2'

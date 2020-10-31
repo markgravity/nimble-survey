@@ -1,6 +1,6 @@
 //
 //  UserInfo.swift
-//  NimbleTest
+//  NimbleSurvey
 //
 //  Created by Mark G on 31/10/2020.
 //

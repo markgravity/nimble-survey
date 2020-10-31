@@ -1,6 +1,6 @@
 //
 //  AuthVM.swift
-//  NimbleTest
+//  NimbleSurvey
 //
 //  Created by Mark G on 29/10/2020.
 //
@@ -10,7 +10,7 @@ import SwiftyBase
 
 // MARK: - Protocol
 protocol AuthVM {
-   
+   func login()
 }
 
 // MARK: - Implements

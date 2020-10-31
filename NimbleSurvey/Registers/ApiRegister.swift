@@ -12,7 +12,6 @@ import SwiftyBase
 import RxSwift
 
 class ApiRegister: NSObject, PluginRegisterable {
-    @Inject fileprivate var _authVM: AuthVM
     fileprivate let _disposeBag = DisposeBag()
     
     var isPersistent: Bool = true
