@@ -137,5 +137,29 @@ class AuthVMTests: XCTestCase {
             expect(self.viewModel.user.value).to(equal(self.user))
         }
     }
+    
+    func testRetriveWithInvalidToken() throws {
+        
+        // Mock
+        userDefault.setValue(token.toJSONString()!, forKey: AuthVMImpl.rawTokenKey)
+        
+        let apiError = ApiError(source: .unauthorized, code: .invalidToken, detail: "")
+        let errorBag = ApiErrorBag(errors: [apiError])
+        given(
+            userService.me()
+        ) ~> .error(ApiException.other(bag: errorBag))
+        
+        waitUntil {
+
+            // Retrieve auth info
+            try await(
+                self.viewModel.retrieve()
+            )
+            
+            //
+            expect(self.viewModel.isAuthenticated.value)
+                .to(beFalse())
+        }
+    }
 
 }

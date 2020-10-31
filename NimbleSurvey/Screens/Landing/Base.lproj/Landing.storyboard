@@ -56,17 +56,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="VWL-Ro-ILt"/>
                     <connections>
-                        <segue destination="adh-qp-388" kind="show" identifier="LoginNavigationController" customClass="PushAtBeginSegue" customModule="SwiftyBase" id="DyB-qh-aT4"/>
+                        <segue destination="adh-qp-388" kind="show" identifier="LoginNavigationController" customClass="SwapRootViewControllerSegue" customModule="SwiftyBase" id="DyB-qh-aT4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="94"/>
         </scene>
-        <!--Auth-->
+        <!--LoginNavigationController-->
         <scene sceneID="E5r-SR-pHV">
             <objects>
-                <viewControllerPlaceholder storyboardName="Auth" id="adh-qp-388" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Auth" referencedIdentifier="LoginNavigationController" id="adh-qp-388" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="n1H-Uh-pT3"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIb-gp-eGo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

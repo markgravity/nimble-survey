@@ -70,10 +70,28 @@ extension AuthVMImpl {
             ApiConfigs.token = token.accessToken
             
             // Request for user info
-            let user = try await(
-                self._userService.me()
-            )
-            self._user.accept(user)
+            do {
+                
+                let user = try await(
+                    self._userService.me()
+                )
+                self._user.accept(user)
+            } catch {
+                
+                // Handle invalid token
+                guard let apiException = error as? ApiException,
+                      case .other(let errorBag) = apiException,
+                      errorBag.hasError(source: .unauthorized, code: .invalidToken)
+                else {
+                    throw error
+                }
+                
+                // Clear auth when token
+                // was invalided
+                self._clearToken()
+                self._user.accept(nil)
+            }
+            
         }
     }
     

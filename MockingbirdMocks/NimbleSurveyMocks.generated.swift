@@ -362,6 +362,110 @@ public func mock(file: StaticString = #file, line: UInt = #line, _ type: NimbleS
   return HttpServiceMock(sourceLocation: SourceLocation(file, line))
 }
 
+// MARK: - Mocked LandingVM
+
+public final class LandingVMMock: NimbleSurvey.LandingVM, Mockingbird.Mock {
+  static let staticMock = Mockingbird.StaticMock()
+  public let mockingContext = Mockingbird.MockingContext()
+  public let stubbingContext = Mockingbird.StubbingContext()
+  public let mockMetadata = Mockingbird.MockMetadata(["generator_version": "0.10.0", "module_name": "NimbleSurvey"])
+  public var sourceLocation: Mockingbird.SourceLocation? {
+    get { return stubbingContext.sourceLocation }
+    set {
+      stubbingContext.sourceLocation = newValue
+      LandingVMMock.staticMock.stubbingContext.sourceLocation = newValue
+    }
+  }
+
+  fileprivate init(sourceLocation: Mockingbird.SourceLocation) {
+    Mockingbird.checkVersion(for: self)
+    self.sourceLocation = sourceLocation
+  }
+
+  // MARK: Mocked `fetch`()
+
+  public func `fetch`() -> Promise<Void> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`fetch`() -> Promise<Void>", arguments: [])
+    mockingContext.didInvoke(invocation)
+    let implementation = stubbingContext.implementation(for: invocation, optional: false)
+    if let concreteImplementation = implementation as? () -> Promise<Void> {
+      return concreteImplementation()
+    } else {
+      return (implementation as! () -> Promise<Void>)()
+    }
+  }
+
+  public func `fetch`() -> Mockingbird.Mockable<Mockingbird.MethodDeclaration, () -> Promise<Void>, Promise<Void>> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`fetch`() -> Promise<Void>", arguments: [])
+    return Mockingbird.Mockable<Mockingbird.MethodDeclaration, () -> Promise<Void>, Promise<Void>>(mock: self, invocation: invocation)
+  }
+}
+
+/// Create a source-attributed `NimbleSurvey.LandingVM` concrete protocol mock instance.
+public func mock(file: StaticString = #file, line: UInt = #line, _ type: NimbleSurvey.LandingVM.Protocol) -> LandingVMMock {
+  return LandingVMMock(sourceLocation: SourceLocation(file, line))
+}
+
+// MARK: - Mocked LoginVM
+
+public final class LoginVMMock: NimbleSurvey.LoginVM, Mockingbird.Mock {
+  static let staticMock = Mockingbird.StaticMock()
+  public let mockingContext = Mockingbird.MockingContext()
+  public let stubbingContext = Mockingbird.StubbingContext()
+  public let mockMetadata = Mockingbird.MockMetadata(["generator_version": "0.10.0", "module_name": "NimbleSurvey"])
+  public var sourceLocation: Mockingbird.SourceLocation? {
+    get { return stubbingContext.sourceLocation }
+    set {
+      stubbingContext.sourceLocation = newValue
+      LoginVMMock.staticMock.stubbingContext.sourceLocation = newValue
+    }
+  }
+
+  // MARK: Mocked state
+
+  public var `state`: ValueObservable<NimbleSurvey.LoginState> {
+    get {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "state.get", arguments: [])
+      mockingContext.didInvoke(invocation)
+      return (stubbingContext.implementation(for: invocation) as! () -> ValueObservable<NimbleSurvey.LoginState>)()
+    }
+  }
+
+  public func getState() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> ValueObservable<NimbleSurvey.LoginState>, ValueObservable<NimbleSurvey.LoginState>> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "state.get", arguments: [])
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> ValueObservable<NimbleSurvey.LoginState>, ValueObservable<NimbleSurvey.LoginState>>(mock: self, invocation: invocation)
+  }
+
+  fileprivate init(sourceLocation: Mockingbird.SourceLocation) {
+    Mockingbird.checkVersion(for: self)
+    self.sourceLocation = sourceLocation
+  }
+
+  // MARK: Mocked `login`(`email`: String?, `password`: String?)
+
+  public func `login`(`email`: String?, `password`: String?) -> Promise<Void> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`login`(`email`: String?, `password`: String?) -> Promise<Void>", arguments: [Mockingbird.ArgumentMatcher(`email`), Mockingbird.ArgumentMatcher(`password`)])
+    mockingContext.didInvoke(invocation)
+    let implementation = stubbingContext.implementation(for: invocation, optional: false)
+    if let concreteImplementation = implementation as? (String?, String?) -> Promise<Void> {
+      return concreteImplementation(`email`, `password`)
+    } else {
+      return (implementation as! () -> Promise<Void>)()
+    }
+  }
+
+  public func `login`(`email`: @escaping @autoclosure () -> String?, `password`: @escaping @autoclosure () -> String?) -> Mockingbird.Mockable<Mockingbird.MethodDeclaration, (String?, String?) -> Promise<Void>, Promise<Void>> {
+    let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(`email`), Mockingbird.resolve(`password`)]
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`login`(`email`: String?, `password`: String?) -> Promise<Void>", arguments: arguments)
+    return Mockingbird.Mockable<Mockingbird.MethodDeclaration, (String?, String?) -> Promise<Void>, Promise<Void>>(mock: self, invocation: invocation)
+  }
+}
+
+/// Create a source-attributed `NimbleSurvey.LoginVM` concrete protocol mock instance.
+public func mock(file: StaticString = #file, line: UInt = #line, _ type: NimbleSurvey.LoginVM.Protocol) -> LoginVMMock {
+  return LoginVMMock(sourceLocation: SourceLocation(file, line))
+}
+
 // MARK: - Mocked UserService
 
 public final class UserServiceMock: NimbleSurvey.UserService, Mockingbird.Mock {

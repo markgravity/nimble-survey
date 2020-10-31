@@ -11,7 +11,7 @@ import SwiftyBase
 struct AuthLoginParams {
     
     // Properties
-    fileprivate let _grantType: AuthLoginGrantType = .refreshToken
+    fileprivate let _grantType: AuthLoginGrantType = .password
     fileprivate let _clientId: String = Constant.Auth.Key
     fileprivate let _clientSerect: String = Constant.Auth.Serect
     
