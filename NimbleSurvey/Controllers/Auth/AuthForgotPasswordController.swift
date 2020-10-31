@@ -9,6 +9,7 @@ import UIKit
 import SwiftyBase
 import RxCocoa
 import RxSwift
+import SwiftyPopup
 
 class AuthForgotPasswordController: ViewController {
     
@@ -92,6 +93,11 @@ fileprivate extension AuthForgotPasswordController {
             
         case .resetted:
             dismissProgressHUD()
+            let popup = NotificationPopup(
+                title: "auth.forgot_password.resetted_notification_title_text".trans(),
+                message: "auth.forgot_password.resetted_notification_message_msg".trans()
+            )
+            PopupNavigator.begin(with: popup)
             
         case .error(let error):
             dismissProgressHUD()

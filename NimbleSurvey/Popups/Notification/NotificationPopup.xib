@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationPopup" customModule="NimbleSurvey" customModuleProvider="target">
+            <connections>
+                <outlet property="messageLabel" destination="Lph-yb-sdP" id="Z6f-cg-dcZ"/>
+                <outlet property="titleLabel" destination="nQs-dX-EVV" id="HhR-IS-ohg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell-white" translatesAutoresizingMaskIntoConstraints="NO" id="czL-3r-X0y">
+                    <rect key="frame" x="20" y="55" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="Hkn-v4-R09"/>
+                        <constraint firstAttribute="width" constant="22" id="MQ1-SE-W0n"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Check your email." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQs-dX-EVV">
+                    <rect key="frame" x="57" y="52" width="298" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="We’ve email you instructions to reset  your password.We’ve email you instructions to reset  your password." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lph-yb-sdP">
+                    <rect key="frame" x="57" y="72.5" width="298" height="35.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="750" constant="27" id="R94-bF-PXM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="0.57999999999999996" colorSpace="calibratedRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="czL-3r-X0y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="55" id="7vh-QK-clZ"/>
+                <constraint firstItem="nQs-dX-EVV" firstAttribute="leading" secondItem="czL-3r-X0y" secondAttribute="trailing" constant="15" id="BVh-8G-ZcG"/>
+                <constraint firstAttribute="trailing" secondItem="nQs-dX-EVV" secondAttribute="trailing" constant="20" id="DyV-L4-O38"/>
+                <constraint firstAttribute="trailing" secondItem="Lph-yb-sdP" secondAttribute="trailing" constant="20" id="F9L-Vo-kRk"/>
+                <constraint firstItem="nQs-dX-EVV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="52" id="Svz-HA-ziH"/>
+                <constraint firstItem="czL-3r-X0y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Xis-19-b56"/>
+                <constraint firstItem="Lph-yb-sdP" firstAttribute="top" secondItem="nQs-dX-EVV" secondAttribute="bottom" id="fVv-4a-rOJ"/>
+                <constraint firstItem="Lph-yb-sdP" firstAttribute="leading" secondItem="czL-3r-X0y" secondAttribute="trailing" constant="15" id="pKS-xE-Min"/>
+                <constraint firstAttribute="bottom" secondItem="Lph-yb-sdP" secondAttribute="bottom" constant="8" id="pZE-hg-8Gb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="sIu-Cz-P0h" appends="YES" id="oCT-m1-1o3"/>
+            </connections>
+            <point key="canvasLocation" x="139.85507246376812" y="148.66071428571428"/>
+        </view>
+        <tapGestureRecognizer id="sIu-Cz-P0h">
+            <connections>
+                <action selector="onTap:" destination="-1" id="kPz-59-VT5"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="bell-white" width="30" height="30"/>
+    </resources>
+</document>
