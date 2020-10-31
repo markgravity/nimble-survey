@@ -9,7 +9,7 @@ import SwiftyBase
 import Promises
 
 // MARK: - Protocol
-protocol AuthService: RestfulApiService<UserTokenInfo, ListResponse<UserTokenInfo>> {
+protocol AuthService {
     
     func login(params: AuthLoginParams) -> Promise<UserTokenInfo>
     func logout(params: AuthLogoutParams) -> Promise<Void>
@@ -18,16 +18,14 @@ protocol AuthService: RestfulApiService<UserTokenInfo, ListResponse<UserTokenInf
 }
 
 // MARK: Implements
-class AuthServiceImpl: RestfulApiService<UserTokenInfo, ListResponse<UserTokenInfo>>, AuthService {
-  
-    override
-    var endPoint: String {"/oauth"}
+class AuthServiceImpl: AuthService {
+    @Inject fileprivate var _api: ApiService
     
     func login(params: AuthLoginParams) -> Promise<UserTokenInfo> {
-        api.request(
+        _api.request(
             method: .post,
             baseUrl: nil,
-            endPoint: "\(endPoint)/token",
+            endPoint: "/oauth/token",
             token: nil,
             params: params
         )
@@ -35,10 +33,10 @@ class AuthServiceImpl: RestfulApiService<UserTokenInfo, ListResponse<UserTokenIn
     }
     
     func logout(params: AuthLogoutParams) -> Promise<Void> {
-        api.request(
+        _api.request(
             method: .post,
             baseUrl: nil,
-            endPoint: "\(endPoint)/revoke",
+            endPoint: "/oauth/revoke",
             token: nil,
             params: params
         )
@@ -46,10 +44,10 @@ class AuthServiceImpl: RestfulApiService<UserTokenInfo, ListResponse<UserTokenIn
     }
     
     func refreshToken(params: AuthRefreshTokenParams) -> Promise<UserTokenInfo> {
-        api.request(
+        _api.request(
             method: .post,
             baseUrl: nil,
-            endPoint: "\(endPoint)/token",
+            endPoint: "/oauth/token",
             token: nil,
             params: params
         )
@@ -57,7 +55,7 @@ class AuthServiceImpl: RestfulApiService<UserTokenInfo, ListResponse<UserTokenIn
     }
     
     func forgotPassword(params: AuthForgotPasswordParams) -> Promise<Void> {
-        api.request(
+        _api.request(
             method: .post,
             baseUrl: nil,
             endPoint: "/passwords",

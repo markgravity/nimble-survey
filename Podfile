@@ -11,6 +11,7 @@ target 'NimbleSurvey' do
   pod 'SwiftyBase', :git => 'https://github.com/markgravity/swifty-base.git'
   pod 'LNZCollectionLayouts', '~> 1.2.2'
   pod 'AlamofireNetworkActivityLogger', '~> 3.0'
+  pod 'Burritos', '~> 0.0.3'
   
   post_install do |pi|
      pi.pods_project.targets.each do |t|

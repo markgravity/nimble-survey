@@ -9,19 +9,17 @@ import SwiftyBase
 import Promises
 
 // MARK: - Protocol
-protocol UserService: RestfulApiService<UserInfo, ListResponse<UserInfo>> {
+protocol UserService {
     
     func me() -> Promise<UserInfo>
 }
 
 // MARK: Implements
-class UserServiceImpl: RestfulApiService<UserInfo, ListResponse<UserInfo>>, UserService {
-  
-    override
-    var endPoint: String {""}
+class UserServiceImpl: UserService {
+    @Inject fileprivate var _api: ApiService
     
     func me() -> Promise<UserInfo> {
-        api.request(
+        _api.request(
             method: .get,
             baseUrl: nil,
             endPoint: "/me",

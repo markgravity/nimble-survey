@@ -2,6 +2,33 @@ PODS:
   - Alamofire (5.0.5)
   - AlamofireNetworkActivityLogger (3.0.0):
     - Alamofire (~> 5.0.0-rc.2)
+  - Burritos (0.0.3):
+    - Burritos/AtomicWrite (= 0.0.3)
+    - Burritos/Clamping (= 0.0.3)
+    - Burritos/Copying (= 0.0.3)
+    - Burritos/DefaultValue (= 0.0.3)
+    - Burritos/DynamicUIColor (= 0.0.3)
+    - Burritos/EnvironmentVariable (= 0.0.3)
+    - Burritos/Expirable (= 0.0.3)
+    - Burritos/LateInit (= 0.0.3)
+    - Burritos/Lazy (= 0.0.3)
+    - Burritos/LazyConstant (= 0.0.3)
+    - Burritos/Trimmed (= 0.0.3)
+    - Burritos/UndoRedo (= 0.0.3)
+    - Burritos/UserDefault (= 0.0.3)
+  - Burritos/AtomicWrite (0.0.3)
+  - Burritos/Clamping (0.0.3)
+  - Burritos/Copying (0.0.3)
+  - Burritos/DefaultValue (0.0.3)
+  - Burritos/DynamicUIColor (0.0.3)
+  - Burritos/EnvironmentVariable (0.0.3)
+  - Burritos/Expirable (0.0.3)
+  - Burritos/LateInit (0.0.3)
+  - Burritos/Lazy (0.0.3)
+  - Burritos/LazyConstant (0.0.3)
+  - Burritos/Trimmed (0.0.3)
+  - Burritos/UndoRedo (0.0.3)
+  - Burritos/UserDefault (0.0.3)
   - Gradients (0.3.0)
   - L10n-swift (5.7.2):
     - L10n-swift/Core (= 5.7.2)
@@ -64,6 +91,7 @@ PODS:
 
 DEPENDENCIES:
   - AlamofireNetworkActivityLogger (~> 3.0)
+  - Burritos (~> 0.0.3)
   - LNZCollectionLayouts (~> 1.2.2)
   - MockingbirdFramework (~> 0.10.0)
   - Nimble (~> 8.0.4)
@@ -74,6 +102,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireNetworkActivityLogger
+    - Burritos
     - Gradients
     - L10n-swift
     - LNZCollectionLayouts
@@ -111,6 +140,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   AlamofireNetworkActivityLogger: 94e8a7d454a4a9800cef1d0c1d3699754493684b
+  Burritos: a91d76e7581376c34026523f43ea83108e102b18
   Gradients: d7e1be639692b86577616ee55ea96f54fb5f1de1
   L10n-swift: 5895718b0534335a3af0e91e80f0d23dad4d5c30
   LNZCollectionLayouts: 509d8143a70db014f2094ae7052ec879ab988dab
@@ -133,6 +163,6 @@ SPEC CHECKSUMS:
   UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
   UIWindowTransitions: cb662e2ae9e2d1060fcdbe3eb3de9232bedb7612
 
-PODFILE CHECKSUM: d7fef8aba5c5ed778cbee633b0f1689c002f7466
+PODFILE CHECKSUM: 3889f087a58cce101a888ec9a40ad0d9c371a2a1
 
 COCOAPODS: 1.9.1

@@ -1,0 +1,9 @@
+/* 
+  Strings.strings
+  NimbleSurvey
+
+  Created by Mark G on 30/10/2020.
+  Copyright © 2020 Mark G. All rights reserved.
+*/
+
+"auth.invalid_grant_msg" = "The provided authorization grant is invalid, expired, revoked, does not match the redirection URI used in the authorization request, or was issued to another client.";

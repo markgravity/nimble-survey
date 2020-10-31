@@ -35,6 +35,8 @@
 		2D1F445A254D53160058AED0 /* AuthLogoutParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F4459254D53160058AED0 /* AuthLogoutParams.swift */; };
 		2D1F4464254D536D0058AED0 /* AuthForgotPasswordParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F4463254D536D0058AED0 /* AuthForgotPasswordParams.swift */; };
 		2D1F446C254D54090058AED0 /* AuthRefreshTokenParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F446B254D54090058AED0 /* AuthRefreshTokenParams.swift */; };
+		2D1F4471254D581B0058AED0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D1F4470254D581B0058AED0 /* Localizable.strings */; };
+		2D1F44B3254D5FF50058AED0 /* AuthVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F44B2254D5FF50058AED0 /* AuthVMTests.swift */; };
 		A5113E336CB2AA760EDC74F9 /* Pods_NimbleSurveyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F231B9B8D09D57BBE09738 /* Pods_NimbleSurveyTests.framework */; };
 		CD60915D1D2D537B2BC9BE4F /* NimbleSurveyMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3206312DEDD0AAAB6AF68E /* NimbleSurveyMocks.generated.swift */; };
 		D2E9BB40F7E7B956AD03E8C8 /* Pods_NimbleSurvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D329CBE0C89DC2B082A703 /* Pods_NimbleSurvey.framework */; };
@@ -95,6 +97,8 @@
 		2D1F4459254D53160058AED0 /* AuthLogoutParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLogoutParams.swift; sourceTree = "<group>"; };
 		2D1F4463254D536D0058AED0 /* AuthForgotPasswordParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthForgotPasswordParams.swift; sourceTree = "<group>"; };
 		2D1F446B254D54090058AED0 /* AuthRefreshTokenParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRefreshTokenParams.swift; sourceTree = "<group>"; };
+		2D1F4470254D581B0058AED0 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		2D1F44B2254D5FF50058AED0 /* AuthVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVMTests.swift; sourceTree = "<group>"; };
 		494CA6B73E95B4463818A3B5 /* Pods-NimbleSurveyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleSurveyTests.debug.xcconfig"; path = "Target Support Files/Pods-NimbleSurveyTests/Pods-NimbleSurveyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		68B0219DA40BABDB0FB1A09A /* Pods-NimbleSurvey-NimbleSurveyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleSurvey-NimbleSurveyUITests.debug.xcconfig"; path = "Target Support Files/Pods-NimbleSurvey-NimbleSurveyUITests/Pods-NimbleSurvey-NimbleSurveyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C89179C5326C7BF4990EBE3 /* Pods-NimbleSurvey-NimbleSurveyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleSurvey-NimbleSurveyUITests.release.xcconfig"; path = "Target Support Files/Pods-NimbleSurvey-NimbleSurveyUITests/Pods-NimbleSurvey-NimbleSurveyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 				2D1F4325254D138E0058AED0 /* AppDelegate.swift */,
 				2D1F4327254D138E0058AED0 /* SceneDelegate.swift */,
 				2D1F43CD254D159A0058AED0 /* LaunchScreen.storyboard */,
+				2D1F4470254D581B0058AED0 /* Localizable.strings */,
 				2D1F432E254D138F0058AED0 /* Assets.xcassets */,
 				2D1F4375254D13C50058AED0 /* Constant.swift */,
 				2D1F4333254D138F0058AED0 /* Info.plist */,
@@ -189,6 +194,7 @@
 		2D1F433B254D13900058AED0 /* NimbleSurveyTests */ = {
 			isa = PBXGroup;
 			children = (
+				2D1F44B0254D5FDD0058AED0 /* ViewModels */,
 				2D1F43E2254D17250058AED0 /* Services */,
 				2D1F43E4254D17250058AED0 /* Support */,
 				2D1F43E1254D17250058AED0 /* Helpers.swift */,
@@ -320,6 +326,7 @@
 		2D1F43E4254D17250058AED0 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				2D1F44BA254D60750058AED0 /* Mocks */,
 				2D1F43E5254D17250058AED0 /* Fakes */,
 				2D1F43E6254D17250058AED0 /* Fixtures */,
 			);
@@ -382,6 +389,29 @@
 				2D1F444B254D51BE0058AED0 /* UserTokenInfo.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		2D1F44B0254D5FDD0058AED0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2D1F44B1254D5FE30058AED0 /* Global */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2D1F44B1254D5FE30058AED0 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				2D1F44B2254D5FF50058AED0 /* AuthVMTests.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		2D1F44BA254D60750058AED0 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		8FC12E9BE4ECF378AA6C7079 /* Pods */ = {
@@ -519,6 +549,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D1F43CE254D159A0058AED0 /* LaunchScreen.storyboard in Resources */,
+				2D1F4471254D581B0058AED0 /* Localizable.strings in Resources */,
 				2D1F432F254D138F0058AED0 /* Assets.xcassets in Resources */,
 				2D1F4393254D13D90058AED0 /* Landing.storyboard in Resources */,
 			);
@@ -587,13 +618,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-NimbleSurveyTests/Pods-NimbleSurveyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-NimbleSurveyTests/Pods-NimbleSurveyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -623,13 +650,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-NimbleSurvey-NimbleSurveyUITests/Pods-NimbleSurvey-NimbleSurveyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-NimbleSurvey-NimbleSurveyUITests/Pods-NimbleSurvey-NimbleSurveyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -688,13 +711,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-NimbleSurvey/Pods-NimbleSurvey-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-NimbleSurvey/Pods-NimbleSurvey-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -740,6 +759,7 @@
 				2D1F43E7254D17250058AED0 /* Helpers.swift in Sources */,
 				2D1F43E8254D17250058AED0 /* ApiServiceTests.swift in Sources */,
 				CD60915D1D2D537B2BC9BE4F /* NimbleSurveyMocks.generated.swift in Sources */,
+				2D1F44B3254D5FF50058AED0 /* AuthVMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
