@@ -10,7 +10,7 @@ import SwiftyBase
 
 // MARK: - Protocol
 protocol AuthVM {
-   
+   func login()
 }
 
 // MARK: - Implements

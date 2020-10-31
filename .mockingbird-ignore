@@ -1,0 +1,10 @@
+NimbleSurvey/Models/*
+NimbleSurvey/Controllers/*
+NimbleSurvey/Components/*
+NimbleSurvey/Views/*
+NimbleSurvey/AppDelegate.swift
+NimbleSurvey/Functions.swift
+NimbleSurvey/Contants.swift
+NimbleSurvey/Params/*
+NimbleSurvey/Registers/*
+NimbleSurvey/SceneDelegate.swift

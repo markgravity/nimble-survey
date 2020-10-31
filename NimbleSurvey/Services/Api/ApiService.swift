@@ -11,6 +11,18 @@ import SwiftyJSON
 import L10n_swift
 import Alamofire
 
+// MARK: - Protocol
+public typealias RequestHandler = () -> Promise<Data>
+public protocol ApiService {
+    func request(
+        method: HttpMethod,
+        baseUrl: String?,
+        endPoint: String,
+        token: String?,
+        params: HttpParametable?
+    ) -> Promise<ApiResponse>
+}
+
 // MARK: Implements
 class ApiServiceImpl: ApiService {
     

@@ -5,8 +5,9 @@
 //  Created by Mark G on 31/10/2020.
 //
 
-import XCTest
 @testable import NimbleSurvey
+import XCTest
+import Mockingbird
 
 class NimbleSurveyTests: XCTestCase {
 
