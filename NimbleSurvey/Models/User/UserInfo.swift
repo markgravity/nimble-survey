@@ -7,7 +7,7 @@
 
 import ObjectMapper
 
-struct UserInfo {
+struct UserInfo: Equatable {
     
     // Properties
     var email: String!

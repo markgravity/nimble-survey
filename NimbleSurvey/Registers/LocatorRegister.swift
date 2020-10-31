@@ -27,8 +27,39 @@ fileprivate extension LocatorRegister {
     
     func _registerFactories() {
         
+        // Http
         locator.register(HttpService.self) { _ in
             HttpServiceImpl()
+        }
+        
+        // Api
+        locator.register(ApiService.self) { _ in
+            ApiServiceImpl()
+        }
+        
+        // User
+        locator.register(UserService.self) { _ in
+            UserServiceImpl()
+        }
+        
+        // Auth
+        locator.register(AuthService.self) { _ in
+            AuthServiceImpl()
+        }
+        
+        // UserDefaults
+        locator.register(UserDefaults.self) { _ in
+            UserDefaults.standard
+        }
+        
+        // LandingVM
+        locator.register(LandingVM.self) { _ in
+            LandingVMImpl()
+        }
+        
+        // LoginVM
+        locator.register(LoginVM.self) { _ in
+            LoginVMImpl()
         }
     }
 }
@@ -38,6 +69,6 @@ fileprivate extension LocatorRegister {
     
     func _registerSingletons() {
         
-//        locator.registerSingleton(AuthVM.self, AuthVMImpl())
+        locator.registerSingleton(AuthVM.self, AuthVMImpl())
     }
 }

@@ -1,9 +1,8 @@
 //
 //  Constant.swift
-//  anyWidget
+//  NimbleSurvey
 //
-//  Created by Mark G on 26/09/2020.
-//  Copyright © 2020 Mark G. All rights reserved.
+//  Created by Mark G on 31/10/2020.
 //
 
 import Foundation

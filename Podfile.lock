@@ -2,6 +2,33 @@ PODS:
   - Alamofire (5.0.5)
   - AlamofireNetworkActivityLogger (3.0.0):
     - Alamofire (~> 5.0.0-rc.2)
+  - Burritos (0.0.3):
+    - Burritos/AtomicWrite (= 0.0.3)
+    - Burritos/Clamping (= 0.0.3)
+    - Burritos/Copying (= 0.0.3)
+    - Burritos/DefaultValue (= 0.0.3)
+    - Burritos/DynamicUIColor (= 0.0.3)
+    - Burritos/EnvironmentVariable (= 0.0.3)
+    - Burritos/Expirable (= 0.0.3)
+    - Burritos/LateInit (= 0.0.3)
+    - Burritos/Lazy (= 0.0.3)
+    - Burritos/LazyConstant (= 0.0.3)
+    - Burritos/Trimmed (= 0.0.3)
+    - Burritos/UndoRedo (= 0.0.3)
+    - Burritos/UserDefault (= 0.0.3)
+  - Burritos/AtomicWrite (0.0.3)
+  - Burritos/Clamping (0.0.3)
+  - Burritos/Copying (0.0.3)
+  - Burritos/DefaultValue (0.0.3)
+  - Burritos/DynamicUIColor (0.0.3)
+  - Burritos/EnvironmentVariable (0.0.3)
+  - Burritos/Expirable (0.0.3)
+  - Burritos/LateInit (0.0.3)
+  - Burritos/Lazy (0.0.3)
+  - Burritos/LazyConstant (0.0.3)
+  - Burritos/Trimmed (0.0.3)
+  - Burritos/UndoRedo (0.0.3)
+  - Burritos/UserDefault (0.0.3)
   - Gradients (0.3.0)
   - L10n-swift (5.7.2):
     - L10n-swift/Core (= 5.7.2)
@@ -57,6 +84,13 @@ PODS:
   - SwiftyComponent (0.1.0):
     - PromisesSwift
     - PureLayout
+  - SwiftyDuration (0.1.0):
+    - SwiftyDuration/Core (= 0.1.0)
+    - SwiftyDuration/ObjectMapper (= 0.1.0)
+  - SwiftyDuration/Core (0.1.0)
+  - SwiftyDuration/ObjectMapper (0.1.0):
+    - ObjectMapper
+    - SwiftyDuration/Core
   - SwiftyJSON (5.0.0)
   - Swinject (2.7.1)
   - UIColor_Hex_Swift (5.1.0)
@@ -64,16 +98,19 @@ PODS:
 
 DEPENDENCIES:
   - AlamofireNetworkActivityLogger (~> 3.0)
+  - Burritos (~> 0.0.3)
   - LNZCollectionLayouts (~> 1.2.2)
   - MockingbirdFramework (~> 0.10.0)
   - Nimble (~> 8.0.4)
   - SwiftyBase (from `https://github.com/markgravity/swifty-base.git`)
   - SwiftyComponent (from `https://github.com/markgravity/swifty-component.git`)
+  - SwiftyDuration (from `https://github.com/markgravity/swifty-duration`)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireNetworkActivityLogger
+    - Burritos
     - Gradients
     - L10n-swift
     - LNZCollectionLayouts
@@ -99,6 +136,8 @@ EXTERNAL SOURCES:
     :git: https://github.com/markgravity/swifty-base.git
   SwiftyComponent:
     :git: https://github.com/markgravity/swifty-component.git
+  SwiftyDuration:
+    :git: https://github.com/markgravity/swifty-duration
 
 CHECKOUT OPTIONS:
   SwiftyBase:
@@ -107,10 +146,14 @@ CHECKOUT OPTIONS:
   SwiftyComponent:
     :commit: a30b2fb8b060cd2f49669192a159e6f7ae439806
     :git: https://github.com/markgravity/swifty-component.git
+  SwiftyDuration:
+    :commit: 98614b03413218fd10d9225901ca5cbec7e84dde
+    :git: https://github.com/markgravity/swifty-duration
 
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   AlamofireNetworkActivityLogger: 94e8a7d454a4a9800cef1d0c1d3699754493684b
+  Burritos: a91d76e7581376c34026523f43ea83108e102b18
   Gradients: d7e1be639692b86577616ee55ea96f54fb5f1de1
   L10n-swift: 5895718b0534335a3af0e91e80f0d23dad4d5c30
   LNZCollectionLayouts: 509d8143a70db014f2094ae7052ec879ab988dab
@@ -128,11 +171,12 @@ SPEC CHECKSUMS:
   SwiftRichString: d61b807db1f8834c26fee92b6dd3e1be2dc5af03
   SwiftyBase: 416206906826ece7a87b24f125241c888fe021b7
   SwiftyComponent: 4a515432491fc516496e12dbba5618c333845e1f
+  SwiftyDuration: 93239cf9c70d39c2cc5d78ee827fa0a92818132d
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
   UIWindowTransitions: cb662e2ae9e2d1060fcdbe3eb3de9232bedb7612
 
-PODFILE CHECKSUM: d7fef8aba5c5ed778cbee633b0f1689c002f7466
+PODFILE CHECKSUM: 994302bf5f29bd7df16e900a51852efd9597d3b3
 
 COCOAPODS: 1.9.1
