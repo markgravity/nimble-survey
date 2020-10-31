@@ -10,7 +10,6 @@
 		2D1F4326254D138E0058AED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F4325254D138E0058AED0 /* AppDelegate.swift */; };
 		2D1F4328254D138E0058AED0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F4327254D138E0058AED0 /* SceneDelegate.swift */; };
 		2D1F432A254D138E0058AED0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F4329254D138E0058AED0 /* ViewController.swift */; };
-		2D1F432F254D138F0058AED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1F432E254D138F0058AED0 /* Assets.xcassets */; };
 		2D1F433D254D13900058AED0 /* NimbleSurveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F433C254D13900058AED0 /* NimbleSurveyTests.swift */; };
 		2D1F4348254D13900058AED0 /* NimbleSurveyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F4347254D13900058AED0 /* NimbleSurveyUITests.swift */; };
 		2D1F4376254D13C50058AED0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F4375254D13C50058AED0 /* Constant.swift */; };
@@ -37,6 +36,12 @@
 		2D1F446C254D54090058AED0 /* AuthRefreshTokenParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F446B254D54090058AED0 /* AuthRefreshTokenParams.swift */; };
 		2D1F4471254D581B0058AED0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D1F4470254D581B0058AED0 /* Localizable.strings */; };
 		2D1F44B3254D5FF50058AED0 /* AuthVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F44B2254D5FF50058AED0 /* AuthVMTests.swift */; };
+		2D1F44D6254D6CA10058AED0 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D1F44D5254D6CA10058AED0 /* Auth.storyboard */; };
+		2D1F44DE254D6CDF0058AED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D1F44DD254D6CDF0058AED0 /* Assets.xcassets */; };
+		2D1F44E4254D6ECC0058AED0 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F44E3254D6ECC0058AED0 /* TextField.swift */; };
+		2D1F44EA254D71C60058AED0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F44E9254D71C60058AED0 /* LoginController.swift */; };
+		2D1F44F3254D72480058AED0 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F44F2254D72480058AED0 /* LoginVM.swift */; };
+		2D1F44FB254D74BC0058AED0 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F44FA254D74BC0058AED0 /* Functions.swift */; };
 		A5113E336CB2AA760EDC74F9 /* Pods_NimbleSurveyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F231B9B8D09D57BBE09738 /* Pods_NimbleSurveyTests.framework */; };
 		CD60915D1D2D537B2BC9BE4F /* NimbleSurveyMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3206312DEDD0AAAB6AF68E /* NimbleSurveyMocks.generated.swift */; };
 		D2E9BB40F7E7B956AD03E8C8 /* Pods_NimbleSurvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D329CBE0C89DC2B082A703 /* Pods_NimbleSurvey.framework */; };
@@ -67,7 +72,6 @@
 		2D1F4325254D138E0058AED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D1F4327254D138E0058AED0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2D1F4329254D138E0058AED0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2D1F432E254D138F0058AED0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D1F4333254D138F0058AED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D1F4338254D13900058AED0 /* NimbleSurveyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NimbleSurveyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1F433C254D13900058AED0 /* NimbleSurveyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbleSurveyTests.swift; sourceTree = "<group>"; };
@@ -99,6 +103,12 @@
 		2D1F446B254D54090058AED0 /* AuthRefreshTokenParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRefreshTokenParams.swift; sourceTree = "<group>"; };
 		2D1F4470254D581B0058AED0 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		2D1F44B2254D5FF50058AED0 /* AuthVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVMTests.swift; sourceTree = "<group>"; };
+		2D1F44D5254D6CA10058AED0 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		2D1F44DD254D6CDF0058AED0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D1F44E3254D6ECC0058AED0 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		2D1F44E9254D71C60058AED0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		2D1F44F2254D72480058AED0 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		2D1F44FA254D74BC0058AED0 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		494CA6B73E95B4463818A3B5 /* Pods-NimbleSurveyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleSurveyTests.debug.xcconfig"; path = "Target Support Files/Pods-NimbleSurveyTests/Pods-NimbleSurveyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		68B0219DA40BABDB0FB1A09A /* Pods-NimbleSurvey-NimbleSurveyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleSurvey-NimbleSurveyUITests.debug.xcconfig"; path = "Target Support Files/Pods-NimbleSurvey-NimbleSurveyUITests/Pods-NimbleSurvey-NimbleSurveyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C89179C5326C7BF4990EBE3 /* Pods-NimbleSurvey-NimbleSurveyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleSurvey-NimbleSurveyUITests.release.xcconfig"; path = "Target Support Files/Pods-NimbleSurvey-NimbleSurveyUITests/Pods-NimbleSurvey-NimbleSurveyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,20 +182,21 @@
 			isa = PBXGroup;
 			children = (
 				2D1F439C254D13F60058AED0 /* Core */,
-				2D1F439B254D13E00058AED0 /* Components */,
 				2D1F438E254D13D90058AED0 /* Models */,
 				2D1F438A254D13D90058AED0 /* Params */,
 				2D1F437A254D13D80058AED0 /* Registers */,
+				2D1F438B254D13D90058AED0 /* ViewModels */,
+				2D1F439B254D13E00058AED0 /* Components */,
 				2D1F437E254D13D80058AED0 /* Screens */,
 				2D1F4382254D13D90058AED0 /* Services */,
 				2D1F439D254D140A0058AED0 /* Controllers */,
-				2D1F438B254D13D90058AED0 /* ViewModels */,
 				2D1F4325254D138E0058AED0 /* AppDelegate.swift */,
 				2D1F4327254D138E0058AED0 /* SceneDelegate.swift */,
 				2D1F43CD254D159A0058AED0 /* LaunchScreen.storyboard */,
 				2D1F4470254D581B0058AED0 /* Localizable.strings */,
-				2D1F432E254D138F0058AED0 /* Assets.xcassets */,
+				2D1F44FA254D74BC0058AED0 /* Functions.swift */,
 				2D1F4375254D13C50058AED0 /* Constant.swift */,
+				2D1F44DD254D6CDF0058AED0 /* Assets.xcassets */,
 				2D1F4333254D138F0058AED0 /* Info.plist */,
 			);
 			path = NimbleSurvey;
@@ -226,6 +237,7 @@
 		2D1F437E254D13D80058AED0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				2D1F44D4254D6C8D0058AED0 /* Auth */,
 				2D1F437F254D13D80058AED0 /* Landing */,
 			);
 			path = Screens;
@@ -261,6 +273,7 @@
 		2D1F438B254D13D90058AED0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				2D1F44F1254D723D0058AED0 /* Auth */,
 				2D1F438C254D13D90058AED0 /* Global */,
 			);
 			path = ViewModels;
@@ -285,6 +298,7 @@
 		2D1F439B254D13E00058AED0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2D1F44E2254D6EC00058AED0 /* TextField */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -299,6 +313,7 @@
 		2D1F439D254D140A0058AED0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2D1F44E8254D71A20058AED0 /* Auth */,
 				2D1F4329254D138E0058AED0 /* ViewController.swift */,
 			);
 			path = Controllers;
@@ -412,6 +427,38 @@
 			children = (
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		2D1F44D4254D6C8D0058AED0 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2D1F44D5254D6CA10058AED0 /* Auth.storyboard */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2D1F44E2254D6EC00058AED0 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				2D1F44E3254D6ECC0058AED0 /* TextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		2D1F44E8254D71A20058AED0 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2D1F44E9254D71C60058AED0 /* LoginController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2D1F44F1254D723D0058AED0 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2D1F44F2254D72480058AED0 /* LoginVM.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		8FC12E9BE4ECF378AA6C7079 /* Pods */ = {
@@ -550,8 +597,9 @@
 			files = (
 				2D1F43CE254D159A0058AED0 /* LaunchScreen.storyboard in Resources */,
 				2D1F4471254D581B0058AED0 /* Localizable.strings in Resources */,
-				2D1F432F254D138F0058AED0 /* Assets.xcassets in Resources */,
+				2D1F44D6254D6CA10058AED0 /* Auth.storyboard in Resources */,
 				2D1F4393254D13D90058AED0 /* Landing.storyboard in Resources */,
+				2D1F44DE254D6CDF0058AED0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,6 +776,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D1F43DC254D16A10058AED0 /* ListResponse.swift in Sources */,
+				2D1F44E4254D6ECC0058AED0 /* TextField.swift in Sources */,
 				2D1F432A254D138E0058AED0 /* ViewController.swift in Sources */,
 				2D1F43DD254D16A10058AED0 /* ApiErrorBag.swift in Sources */,
 				2D1F4326254D138E0058AED0 /* AppDelegate.swift in Sources */,
@@ -735,9 +784,11 @@
 				2D1F4328254D138E0058AED0 /* SceneDelegate.swift in Sources */,
 				2D1F4399254D13D90058AED0 /* AuthVM.swift in Sources */,
 				2D1F4376254D13C50058AED0 /* Constant.swift in Sources */,
+				2D1F44EA254D71C60058AED0 /* LoginController.swift in Sources */,
 				2D1F444C254D51BE0058AED0 /* UserTokenInfo.swift in Sources */,
 				2D1F43DB254D16A10058AED0 /* ApiService.swift in Sources */,
 				2D1F4391254D13D90058AED0 /* ApiRegister.swift in Sources */,
+				2D1F44FB254D74BC0058AED0 /* Functions.swift in Sources */,
 				2D1F446C254D54090058AED0 /* AuthRefreshTokenParams.swift in Sources */,
 				2D1F439A254D13D90058AED0 /* UserInfo.swift in Sources */,
 				2D1F4416254D4ED80058AED0 /* UserService.swift in Sources */,
@@ -745,6 +796,7 @@
 				2D1F43DA254D16A10058AED0 /* ApiException.swift in Sources */,
 				2D1F4446254D51A10058AED0 /* AuthService.swift in Sources */,
 				2D1F4464254D536D0058AED0 /* AuthForgotPasswordParams.swift in Sources */,
+				2D1F44F3254D72480058AED0 /* LoginVM.swift in Sources */,
 				2D1F445A254D53160058AED0 /* AuthLogoutParams.swift in Sources */,
 				2D1F4392254D13D90058AED0 /* L10nRegister.swift in Sources */,
 				2D1F440D254D1EAE0058AED0 /* HttpService.swift in Sources */,
