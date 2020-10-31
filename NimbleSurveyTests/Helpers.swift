@@ -14,6 +14,7 @@ import Nimble
 import RxSwift
 import Promises
 import SwiftyBase
+import SwiftyDuration
 
 // MARK - Locator
 extension Container {
@@ -463,18 +464,18 @@ func group<T1: ObservableType, T2: ObservableType, T3: ObservableType, T4: Obser
     e4.verify()
 }
 
-//func delay(_ duration: Duration = .init(miliseconds: 100), action: (() -> Void)? = nil) {
-//    guard let action = action else {
-//        sleep(UInt32(duration.inSeconds))
-//        return
-//    }
-//    
-//    let interval = DispatchTimeInterval.milliseconds(duration.inMilliseconds)
-//    let deadline = DispatchTime.now().advanced(by: interval)
-//    DispatchQueue.main.asyncAfter(deadline: deadline) {
-//        action()
-//    }
-//}
+func delay(_ duration: Duration = .init(miliseconds: 100), action: (() -> Void)? = nil) {
+    guard let action = action else {
+        sleep(UInt32(duration.inSeconds))
+        return
+    }
+    
+    let interval = DispatchTimeInterval.milliseconds(duration.inMilliseconds)
+    let deadline = DispatchTime.now().advanced(by: interval)
+    DispatchQueue.main.asyncAfter(deadline: deadline) {
+        action()
+    }
+}
 
 // MARK: - Fixture
 //func fixture(_ name: String) -> String {

@@ -28,6 +28,7 @@ target 'NimbleSurvey' do
     
     pod 'MockingbirdFramework', '~> 0.10.0'
     pod 'Nimble', '~> 8.0.4'
+    pod 'SwiftyDuration', :git => 'https://github.com/markgravity/swifty-duration'
   end
 
   target 'NimbleSurveyUITests' do

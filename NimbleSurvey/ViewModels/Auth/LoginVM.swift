@@ -54,7 +54,7 @@ extension LoginVMImpl {
     func login() -> Promise<Void> {
         
         // Validate state
-        guard case .initial = _state.value
+        guard _state.value == .initial
         else { return .success() }
 
         return Promise(on: .global()) {
@@ -74,7 +74,7 @@ extension LoginVMImpl {
             self._state.accept(.logged)
         }
         .catch {
-            self._state.accept(.error($0))
+            self._state.accept(.error($0 as NSError))
             self._state.accept(.initial)
         }
     }
@@ -101,10 +101,10 @@ fileprivate extension LoginVMImpl {
 }
 
 // MARK: - State & Enums
-enum LoginState {
+enum LoginState: Equatable {
     
     case initial
     case logging
     case logged
-    case error(Error)
+    case error(NSError)
 }

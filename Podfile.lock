@@ -84,6 +84,13 @@ PODS:
   - SwiftyComponent (0.1.0):
     - PromisesSwift
     - PureLayout
+  - SwiftyDuration (0.1.0):
+    - SwiftyDuration/Core (= 0.1.0)
+    - SwiftyDuration/ObjectMapper (= 0.1.0)
+  - SwiftyDuration/Core (0.1.0)
+  - SwiftyDuration/ObjectMapper (0.1.0):
+    - ObjectMapper
+    - SwiftyDuration/Core
   - SwiftyJSON (5.0.0)
   - Swinject (2.7.1)
   - UIColor_Hex_Swift (5.1.0)
@@ -97,6 +104,7 @@ DEPENDENCIES:
   - Nimble (~> 8.0.4)
   - SwiftyBase (from `https://github.com/markgravity/swifty-base.git`)
   - SwiftyComponent (from `https://github.com/markgravity/swifty-component.git`)
+  - SwiftyDuration (from `https://github.com/markgravity/swifty-duration`)
 
 SPEC REPOS:
   trunk:
@@ -128,6 +136,8 @@ EXTERNAL SOURCES:
     :git: https://github.com/markgravity/swifty-base.git
   SwiftyComponent:
     :git: https://github.com/markgravity/swifty-component.git
+  SwiftyDuration:
+    :git: https://github.com/markgravity/swifty-duration
 
 CHECKOUT OPTIONS:
   SwiftyBase:
@@ -136,6 +146,9 @@ CHECKOUT OPTIONS:
   SwiftyComponent:
     :commit: a30b2fb8b060cd2f49669192a159e6f7ae439806
     :git: https://github.com/markgravity/swifty-component.git
+  SwiftyDuration:
+    :commit: 98614b03413218fd10d9225901ca5cbec7e84dde
+    :git: https://github.com/markgravity/swifty-duration
 
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
@@ -158,11 +171,12 @@ SPEC CHECKSUMS:
   SwiftRichString: d61b807db1f8834c26fee92b6dd3e1be2dc5af03
   SwiftyBase: 416206906826ece7a87b24f125241c888fe021b7
   SwiftyComponent: 4a515432491fc516496e12dbba5618c333845e1f
+  SwiftyDuration: 93239cf9c70d39c2cc5d78ee827fa0a92818132d
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
   UIWindowTransitions: cb662e2ae9e2d1060fcdbe3eb3de9232bedb7612
 
-PODFILE CHECKSUM: 3889f087a58cce101a888ec9a40ad0d9c371a2a1
+PODFILE CHECKSUM: 994302bf5f29bd7df16e900a51852efd9597d3b3
 
 COCOAPODS: 1.9.1
