@@ -16,6 +16,7 @@ target 'NimbleSurvey' do
   pod 'Burritos', '~> 0.0.3'
   pod 'SkeletonView', '~> 1.11.0'
   pod 'AlamofireImage', '~> 4.0.3'
+  pod 'Hero', '~> 1.5.0'
   
   post_install do |pi|
      pi.pods_project.targets.each do |t|

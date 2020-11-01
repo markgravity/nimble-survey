@@ -12,6 +12,7 @@ import RxSwift
 import SkeletonView
 import LNZCollectionLayouts
 import SwiftyPopup
+import Hero
 
 class HomeController: ViewController {
     @Inject fileprivate var _viewModel: HomeVM
