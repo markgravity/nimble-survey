@@ -214,6 +214,9 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="RzV-WM-MDl" kind="show" identifier="SurveyController" id="f9w-uH-2m8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i72-49-2oQ">
                                 <rect key="frame" x="358" y="79" width="36" height="36"/>
@@ -282,6 +285,16 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+        <!--SurveyController-->
+        <scene sceneID="Cxl-hs-kD5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Survey" referencedIdentifier="SurveyController" id="RzV-WM-MDl" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XTr-5m-ETh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgK-8x-ksZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="-46"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dbf-dz-xaS">

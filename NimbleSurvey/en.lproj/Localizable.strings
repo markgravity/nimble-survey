@@ -27,3 +27,6 @@
 
 // Home
 "home.today_text" = "TODAY";
+
+// Survey
+"survey.start_text" = "Start Survey";

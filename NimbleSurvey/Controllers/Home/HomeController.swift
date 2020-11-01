@@ -37,6 +37,11 @@ class HomeController: ViewController {
         _binds()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     @IBAction func onPan(_ sender: Any) {
         guard let gesture = sender as? UIPanGestureRecognizer,
               _refreshPopup == nil
@@ -74,6 +79,12 @@ extension HomeController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        if let controller = segue.destination as? SurveyController {
+            
+            let survey = _viewModel.items.value[_viewModel.focusIndex.value]
+            controller.configure(with: survey)
+        }
     }
 }
 
