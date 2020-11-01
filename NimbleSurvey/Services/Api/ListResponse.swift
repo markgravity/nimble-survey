@@ -11,12 +11,10 @@ import ObjectMapper
 struct ListResponse<E: Mappable>: ListResponsable {
     typealias Element = E
     var items: [E] = []
-    var nextCursor: String?
     
     init?(map: Map) {}
     
     mutating func mapping(map: Map) {
         items           <- map["data"]
-        nextCursor      <- map["meta.next_cursor"]
     }
 }

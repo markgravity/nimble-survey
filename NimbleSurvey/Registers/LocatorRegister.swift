@@ -47,6 +47,11 @@ fileprivate extension LocatorRegister {
             AuthServiceImpl()
         }
         
+        // SurveyService
+        locator.register(SurveyService.self) { _ in
+            SurveyServiceImpl()
+        }
+        
         // UserDefaults
         locator.register(UserDefaults.self) { _ in
             UserDefaults.standard
@@ -62,9 +67,14 @@ fileprivate extension LocatorRegister {
             LoginVMImpl()
         }
         
-        // Forget Password
+        // ForgetPasswordVM
         locator.register(AuthForgotPasswordVM.self) { _ in
             AuthForgotPasswordVMImpl()
+        }
+        
+        // HomeVM
+        locator.register(HomeVM.self) { _ in
+            HomeVMImpl()
         }
     }
 }

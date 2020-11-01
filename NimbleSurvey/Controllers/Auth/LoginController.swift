@@ -102,6 +102,10 @@ fileprivate extension LoginController {
             
         case .logged:
             dismissProgressHUD()
+            performSegue(
+                withNavigationOf: HomeController.self,
+                sender: nil
+            )
             
         case .error(let error):
             dismissProgressHUD()

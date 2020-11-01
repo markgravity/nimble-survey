@@ -57,6 +57,7 @@
                     <navigationItem key="navigationItem" id="VWL-Ro-ILt"/>
                     <connections>
                         <segue destination="adh-qp-388" kind="show" identifier="LoginNavigationController" customClass="SwapRootViewControllerSegue" customModule="SwiftyBase" id="DyB-qh-aT4"/>
+                        <segue destination="O9f-y2-EA7" kind="show" identifier="HomeNavigationController" customClass="SwapRootViewControllerSegue" customModule="SwiftyBase" id="LTH-9N-QYu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -72,6 +73,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIb-gp-eGo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="891" y="94"/>
+        </scene>
+        <!--HomeNavigationController-->
+        <scene sceneID="EhT-DT-RJS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeNavigationController" id="O9f-y2-EA7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="G6N-Sq-wW4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a7I-g1-vtA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="891" y="132"/>
         </scene>
     </scenes>
     <resources>

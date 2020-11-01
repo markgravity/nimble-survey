@@ -54,8 +54,10 @@ fileprivate extension LandingController {
     func _onFetchComplated() {
         switch _authVM.isAuthenticated.value {
         case true:
-            // Navigate to home
-        break
+            performSegue(
+                withNavigationOf: HomeController.self,
+                sender: nil
+            )
         
         case false:
             performSegue(
