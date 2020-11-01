@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Survey Controller-->
+        <scene sceneID="ffo-wz-lp2">
+            <objects>
+                <viewController storyboardIdentifier="SurveyController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vHL-s0-eG8" customClass="SurveyController" customModule="NimbleSurvey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C6X-hf-Gob">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7UF-18-gei">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="survey_thumbnail"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="We would like to know how you feel about our work from home..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prS-Nh-Zw4">
+                                <rect key="frame" x="20" y="157.5" width="374" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="survey_desciption"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Working from home Check-In" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fh-tz-hHP">
+                                <rect key="frame" x="20" y="108" width="374" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="survey_title"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ho3-aa-eph">
+                                <rect key="frame" x="254" y="786" width="140" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="dhr-ot-m5h"/>
+                                    <constraint firstAttribute="width" constant="140" id="jsT-ag-pOE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Start Survey">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="l10nTitle" value="survey.start_text"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3IM-8h-cxc"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="prS-Nh-Zw4" firstAttribute="top" secondItem="3Fh-tz-hHP" secondAttribute="bottom" constant="16" id="7Rl-DQ-oAS"/>
+                            <constraint firstItem="prS-Nh-Zw4" firstAttribute="leading" secondItem="3IM-8h-cxc" secondAttribute="leading" constant="20" id="7t7-lK-CZM"/>
+                            <constraint firstItem="3IM-8h-cxc" firstAttribute="trailing" secondItem="7UF-18-gei" secondAttribute="trailing" id="FRQ-uY-gfs"/>
+                            <constraint firstItem="3Fh-tz-hHP" firstAttribute="top" secondItem="3IM-8h-cxc" secondAttribute="top" constant="20" id="Ha1-cR-EGg"/>
+                            <constraint firstItem="7UF-18-gei" firstAttribute="leading" secondItem="3IM-8h-cxc" secondAttribute="leading" id="IkY-Ch-fIk"/>
+                            <constraint firstAttribute="bottom" secondItem="7UF-18-gei" secondAttribute="bottom" id="Sd1-uB-yXP"/>
+                            <constraint firstItem="3IM-8h-cxc" firstAttribute="bottom" secondItem="ho3-aa-eph" secondAttribute="bottom" constant="20" id="bLO-ei-tOj"/>
+                            <constraint firstItem="3Fh-tz-hHP" firstAttribute="leading" secondItem="3IM-8h-cxc" secondAttribute="leading" constant="20" id="dGu-P5-bFw"/>
+                            <constraint firstItem="7UF-18-gei" firstAttribute="top" secondItem="C6X-hf-Gob" secondAttribute="top" id="fCH-a2-3ZT"/>
+                            <constraint firstItem="3IM-8h-cxc" firstAttribute="trailing" secondItem="prS-Nh-Zw4" secondAttribute="trailing" constant="20" id="j7W-eR-iEL"/>
+                            <constraint firstAttribute="trailing" secondItem="3Fh-tz-hHP" secondAttribute="trailing" constant="20" id="qG3-Ao-roo"/>
+                            <constraint firstItem="3IM-8h-cxc" firstAttribute="trailing" secondItem="ho3-aa-eph" secondAttribute="trailing" constant="20" id="zWH-3c-dGn"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="prS-Nh-Zw4" id="wsC-vX-qd9"/>
+                        <outlet property="thumbnailImageView" destination="7UF-18-gei" id="tet-rw-0un"/>
+                        <outlet property="titleLabel" destination="3Fh-tz-hHP" id="WHM-eL-zlS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nrq-Bo-YxE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-188.40579710144928" y="-97.098214285714278"/>
+        </scene>
+    </scenes>
+</document>

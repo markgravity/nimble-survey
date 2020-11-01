@@ -12,6 +12,7 @@ import RxSwift
 import SkeletonView
 import LNZCollectionLayouts
 import SwiftyPopup
+import Hero
 
 class HomeController: ViewController {
     @Inject fileprivate var _viewModel: HomeVM
@@ -35,6 +36,11 @@ class HomeController: ViewController {
         // Do any additional setup after loading the view.
         _setup()
         _binds()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     @IBAction func onPan(_ sender: Any) {
@@ -74,6 +80,12 @@ extension HomeController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        if let controller = segue.destination as? SurveyController {
+            
+            let survey = _viewModel.items.value[_viewModel.focusIndex.value]
+            controller.configure(with: survey)
+        }
     }
 }
 
