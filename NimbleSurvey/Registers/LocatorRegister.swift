@@ -47,6 +47,21 @@ fileprivate extension LocatorRegister {
             AuthServiceImpl()
         }
         
+        // SurveyService
+        locator.register(SurveyService.self) { _ in
+            SurveyServiceImpl()
+        }
+        
+        // Timer Service
+        locator.register(TimerService.self) { _ in
+            TimerServiceImpl()
+        }
+        
+        // Timer Service
+        locator.register(DateService.self) { _ in
+            DateServiceImpl()
+        }
+        
         // UserDefaults
         locator.register(UserDefaults.self) { _ in
             UserDefaults.standard
@@ -62,9 +77,14 @@ fileprivate extension LocatorRegister {
             LoginVMImpl()
         }
         
-        // Forget Password
+        // ForgetPasswordVM
         locator.register(AuthForgotPasswordVM.self) { _ in
             AuthForgotPasswordVMImpl()
+        }
+        
+        // HomeVM
+        locator.register(HomeVM.self) { _ in
+            HomeVMImpl()
         }
     }
 }

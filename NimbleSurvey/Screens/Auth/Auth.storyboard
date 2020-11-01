@@ -147,6 +147,7 @@
                         <outlet property="emailTextField" destination="dVW-I9-nYR" id="tV4-6p-1af"/>
                         <outlet property="loginButton" destination="2Pf-eR-xng" id="eYI-dW-SL3"/>
                         <outlet property="passwordTextField" destination="jSX-Rz-2ZI" id="tzu-gH-Mfa"/>
+                        <segue destination="SQs-Rp-ups" kind="show" identifier="HomeNavigationController" customClass="SwapRootViewControllerSegue" customModule="SwiftyBase" id="C29-MC-e5n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C98-o7-Ju5" sceneMemberID="firstResponder"/>
@@ -273,6 +274,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xt2-5c-Z7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1035" y="94"/>
+        </scene>
+        <!--HomeNavigationController-->
+        <scene sceneID="XFN-ct-azB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeNavigationController" id="SQs-Rp-ups" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3os-tA-xkf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h1y-KQ-plJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="505"/>
         </scene>
     </scenes>
     <resources>

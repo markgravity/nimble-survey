@@ -52,6 +52,18 @@
 		2D1F45F5254DBA380058AED0 /* AuthForgotPasswordVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F45F4254DBA380058AED0 /* AuthForgotPasswordVMTests.swift */; };
 		2D1F461C254DBC550058AED0 /* NotificationPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F461A254DBC550058AED0 /* NotificationPopup.swift */; };
 		2D1F461D254DBC550058AED0 /* NotificationPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D1F461B254DBC550058AED0 /* NotificationPopup.xib */; };
+		2D6CF9A3254EB8F40052BFB4 /* RefreshPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CF9A1254EB8F40052BFB4 /* RefreshPopup.swift */; };
+		2D6CF9A4254EB8F40052BFB4 /* RefreshPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6CF9A2254EB8F40052BFB4 /* RefreshPopup.xib */; };
+		2D6CF9AD254ECCEA0052BFB4 /* HomeVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CF9AC254ECCEA0052BFB4 /* HomeVMTests.swift */; };
+		2D6CF9B6254ED57B0052BFB4 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CF9B5254ED57B0052BFB4 /* TimerService.swift */; };
+		2D6CF9BC254ED6A00052BFB4 /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CF9BB254ED6A00052BFB4 /* DateService.swift */; };
+		2DB97589254E5391001E6B97 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB97588254E5391001E6B97 /* Home.storyboard */; };
+		2DF25ECA254E6228003DEE22 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF25EC9254E6228003DEE22 /* HomeCollectionViewCell.swift */; };
+		2DF25ED4254E62A6003DEE22 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF25ED3254E62A6003DEE22 /* HomeController.swift */; };
+		2DF25EFE254E9FEB003DEE22 /* SurveyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF25EFD254E9FEB003DEE22 /* SurveyInfo.swift */; };
+		2DF25F07254EA073003DEE22 /* SurveyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF25F06254EA073003DEE22 /* SurveyService.swift */; };
+		2DF25F10254EA14A003DEE22 /* SurveyListParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF25F0F254EA14A003DEE22 /* SurveyListParams.swift */; };
+		2DF25F19254EA245003DEE22 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF25F18254EA245003DEE22 /* HomeVM.swift */; };
 		A5113E336CB2AA760EDC74F9 /* Pods_NimbleSurveyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F231B9B8D09D57BBE09738 /* Pods_NimbleSurveyTests.framework */; };
 		CD60915D1D2D537B2BC9BE4F /* NimbleSurveyMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3206312DEDD0AAAB6AF68E /* NimbleSurveyMocks.generated.swift */; };
 		D2E9BB40F7E7B956AD03E8C8 /* Pods_NimbleSurvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D329CBE0C89DC2B082A703 /* Pods_NimbleSurvey.framework */; };
@@ -129,6 +141,18 @@
 		2D1F45F4254DBA380058AED0 /* AuthForgotPasswordVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthForgotPasswordVMTests.swift; sourceTree = "<group>"; };
 		2D1F461A254DBC550058AED0 /* NotificationPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPopup.swift; sourceTree = "<group>"; };
 		2D1F461B254DBC550058AED0 /* NotificationPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationPopup.xib; sourceTree = "<group>"; };
+		2D6CF9A1254EB8F40052BFB4 /* RefreshPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshPopup.swift; sourceTree = "<group>"; };
+		2D6CF9A2254EB8F40052BFB4 /* RefreshPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefreshPopup.xib; sourceTree = "<group>"; };
+		2D6CF9AC254ECCEA0052BFB4 /* HomeVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVMTests.swift; sourceTree = "<group>"; };
+		2D6CF9B5254ED57B0052BFB4 /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
+		2D6CF9BB254ED6A00052BFB4 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
+		2DB97588254E5391001E6B97 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		2DF25EC9254E6228003DEE22 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		2DF25ED3254E62A6003DEE22 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		2DF25EFD254E9FEB003DEE22 /* SurveyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyInfo.swift; sourceTree = "<group>"; };
+		2DF25F06254EA073003DEE22 /* SurveyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyService.swift; sourceTree = "<group>"; };
+		2DF25F0F254EA14A003DEE22 /* SurveyListParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListParams.swift; sourceTree = "<group>"; };
+		2DF25F18254EA245003DEE22 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		494CA6B73E95B4463818A3B5 /* Pods-NimbleSurveyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleSurveyTests.debug.xcconfig"; path = "Target Support Files/Pods-NimbleSurveyTests/Pods-NimbleSurveyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		68B0219DA40BABDB0FB1A09A /* Pods-NimbleSurvey-NimbleSurveyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleSurvey-NimbleSurveyUITests.debug.xcconfig"; path = "Target Support Files/Pods-NimbleSurvey-NimbleSurveyUITests/Pods-NimbleSurvey-NimbleSurveyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C89179C5326C7BF4990EBE3 /* Pods-NimbleSurvey-NimbleSurveyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbleSurvey-NimbleSurveyUITests.release.xcconfig"; path = "Target Support Files/Pods-NimbleSurvey-NimbleSurveyUITests/Pods-NimbleSurvey-NimbleSurveyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -259,8 +283,9 @@
 		2D1F437E254D13D80058AED0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				2D1F44D4254D6C8D0058AED0 /* Auth */,
 				2D1F437F254D13D80058AED0 /* Landing */,
+				2D1F44D4254D6C8D0058AED0 /* Auth */,
+				2DB97587254E5382001E6B97 /* Home */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -276,6 +301,9 @@
 		2D1F4382254D13D90058AED0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2D6CF9BA254ED67D0052BFB4 /* Date */,
+				2D6CF9B4254ED56C0052BFB4 /* Timer */,
+				2DF25F05254EA05D003DEE22 /* Survey */,
 				2D1F4444254D51550058AED0 /* Auth */,
 				2D1F4414254D4EC50058AED0 /* User */,
 				2D1F440B254D1E9B0058AED0 /* Http */,
@@ -287,6 +315,7 @@
 		2D1F438A254D13D90058AED0 /* Params */ = {
 			isa = PBXGroup;
 			children = (
+				2DF25F0E254EA138003DEE22 /* Survey */,
 				2D1F4434254D4EE50058AED0 /* Auth */,
 			);
 			path = Params;
@@ -295,6 +324,7 @@
 		2D1F438B254D13D90058AED0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				2DF25F17254EA239003DEE22 /* Home */,
 				2D1F44FF254D76ED0058AED0 /* Landing */,
 				2D1F44F1254D723D0058AED0 /* Auth */,
 				2D1F438C254D13D90058AED0 /* Global */,
@@ -313,6 +343,7 @@
 		2D1F438E254D13D90058AED0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2DF25EFC254E9FD4003DEE22 /* Survey */,
 				2D1F444A254D51AB0058AED0 /* User */,
 			);
 			path = Models;
@@ -339,6 +370,7 @@
 			children = (
 				2D1F4508254D776F0058AED0 /* Landing */,
 				2D1F44E8254D71A20058AED0 /* Auth */,
+				2DF25ED2254E629A003DEE22 /* Home */,
 				2D1F4329254D138E0058AED0 /* ViewController.swift */,
 			);
 			path = Controllers;
@@ -434,6 +466,7 @@
 		2D1F44B0254D5FDD0058AED0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				2D6CF9AB254ECCD60052BFB4 /* Home */,
 				2D1F459E254D9C7C0058AED0 /* Auth */,
 				2D1F44B1254D5FE30058AED0 /* Global */,
 			);
@@ -525,6 +558,7 @@
 		2D1F4619254DBC390058AED0 /* Popups */ = {
 			isa = PBXGroup;
 			children = (
+				2D6CF9A0254EB8D90052BFB4 /* Refresh */,
 				2D1F4624254DBC5B0058AED0 /* Notification */,
 			);
 			path = Popups;
@@ -537,6 +571,104 @@
 				2D1F461B254DBC550058AED0 /* NotificationPopup.xib */,
 			);
 			path = Notification;
+			sourceTree = "<group>";
+		};
+		2D6CF9A0254EB8D90052BFB4 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CF9A1254EB8F40052BFB4 /* RefreshPopup.swift */,
+				2D6CF9A2254EB8F40052BFB4 /* RefreshPopup.xib */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
+		2D6CF9AB254ECCD60052BFB4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CF9AC254ECCEA0052BFB4 /* HomeVMTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2D6CF9B4254ED56C0052BFB4 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CF9B5254ED57B0052BFB4 /* TimerService.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		2D6CF9BA254ED67D0052BFB4 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CF9BB254ED6A00052BFB4 /* DateService.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		2DB97587254E5382001E6B97 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2DF25EC8254E620F003DEE22 /* Components */,
+				2DB97588254E5391001E6B97 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2DF25EC8254E620F003DEE22 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2DF25ED1254E622D003DEE22 /* HomeCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2DF25ED1254E622D003DEE22 /* HomeCell */ = {
+			isa = PBXGroup;
+			children = (
+				2DF25EC9254E6228003DEE22 /* HomeCollectionViewCell.swift */,
+			);
+			path = HomeCell;
+			sourceTree = "<group>";
+		};
+		2DF25ED2254E629A003DEE22 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2DF25ED3254E62A6003DEE22 /* HomeController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2DF25EFC254E9FD4003DEE22 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				2DF25EFD254E9FEB003DEE22 /* SurveyInfo.swift */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		2DF25F05254EA05D003DEE22 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				2DF25F06254EA073003DEE22 /* SurveyService.swift */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		2DF25F0E254EA138003DEE22 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				2DF25F0F254EA14A003DEE22 /* SurveyListParams.swift */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		2DF25F17254EA239003DEE22 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2DF25F18254EA245003DEE22 /* HomeVM.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		8FC12E9BE4ECF378AA6C7079 /* Pods */ = {
@@ -673,9 +805,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DB97589254E5391001E6B97 /* Home.storyboard in Resources */,
 				2D1F43CE254D159A0058AED0 /* LaunchScreen.storyboard in Resources */,
 				2D1F461D254DBC550058AED0 /* NotificationPopup.xib in Resources */,
 				2D1F458A254D83AE0058AED0 /* Localizable.strings in Resources */,
+				2D6CF9A4254EB8F40052BFB4 /* RefreshPopup.xib in Resources */,
 				2D1F44D6254D6CA10058AED0 /* Auth.storyboard in Resources */,
 				2D1F4393254D13D90058AED0 /* Landing.storyboard in Resources */,
 				2D1F44DE254D6CDF0058AED0 /* Assets.xcassets in Resources */,
@@ -855,30 +989,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D1F43DC254D16A10058AED0 /* ListResponse.swift in Sources */,
+				2DF25F10254EA14A003DEE22 /* SurveyListParams.swift in Sources */,
 				2D1F44E4254D6ECC0058AED0 /* TextField.swift in Sources */,
 				2D1F432A254D138E0058AED0 /* ViewController.swift in Sources */,
 				2D1F43DD254D16A10058AED0 /* ApiErrorBag.swift in Sources */,
 				2D1F4326254D138E0058AED0 /* AppDelegate.swift in Sources */,
 				2D1F4390254D13D90058AED0 /* LocatorRegister.swift in Sources */,
 				2D1F4328254D138E0058AED0 /* SceneDelegate.swift in Sources */,
+				2D6CF9A3254EB8F40052BFB4 /* RefreshPopup.swift in Sources */,
 				2D1F4399254D13D90058AED0 /* AuthVM.swift in Sources */,
+				2DF25ED4254E62A6003DEE22 /* HomeController.swift in Sources */,
+				2DF25F07254EA073003DEE22 /* SurveyService.swift in Sources */,
 				2D1F4376254D13C50058AED0 /* Constant.swift in Sources */,
 				2D1F44EA254D71C60058AED0 /* LoginController.swift in Sources */,
 				2D1F444C254D51BE0058AED0 /* UserTokenInfo.swift in Sources */,
 				2D1F45EB254DB5FB0058AED0 /* AuthForgotPasswordController.swift in Sources */,
 				2D1F43DB254D16A10058AED0 /* ApiService.swift in Sources */,
 				2D1F461C254DBC550058AED0 /* NotificationPopup.swift in Sources */,
+				2DF25F19254EA245003DEE22 /* HomeVM.swift in Sources */,
 				2D1F4501254D76FD0058AED0 /* LandingVM.swift in Sources */,
 				2D1F4391254D13D90058AED0 /* ApiRegister.swift in Sources */,
 				2D1F44FB254D74BC0058AED0 /* Functions.swift in Sources */,
+				2DF25ECA254E6228003DEE22 /* HomeCollectionViewCell.swift in Sources */,
 				2D1F446C254D54090058AED0 /* AuthRefreshTokenParams.swift in Sources */,
 				2D1F439A254D13D90058AED0 /* UserInfo.swift in Sources */,
 				2D1F4416254D4ED80058AED0 /* UserService.swift in Sources */,
 				2D1F450A254D777E0058AED0 /* LandingController.swift in Sources */,
 				2D1F4436254D4EF50058AED0 /* AuthLoginParams.swift in Sources */,
 				2D1F43DA254D16A10058AED0 /* ApiException.swift in Sources */,
+				2DF25EFE254E9FEB003DEE22 /* SurveyInfo.swift in Sources */,
 				2D1F4446254D51A10058AED0 /* AuthService.swift in Sources */,
 				2D1F4464254D536D0058AED0 /* AuthForgotPasswordParams.swift in Sources */,
+				2D6CF9BC254ED6A00052BFB4 /* DateService.swift in Sources */,
 				2D1F4580254D784F0058AED0 /* Promise.swift in Sources */,
 				2D1F4591254D915C0058AED0 /* UIRegister.swift in Sources */,
 				2D1F44F3254D72480058AED0 /* LoginVM.swift in Sources */,
@@ -886,6 +1028,7 @@
 				2D1F4392254D13D90058AED0 /* L10nRegister.swift in Sources */,
 				2D1F440D254D1EAE0058AED0 /* HttpService.swift in Sources */,
 				2D1F45F0254DB7FE0058AED0 /* AuthForgotPasswordVM.swift in Sources */,
+				2D6CF9B6254ED57B0052BFB4 /* TimerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,6 +1039,7 @@
 				2D1F45A0254D9C8C0058AED0 /* LoginVMTests.swift in Sources */,
 				2D1F45F5254DBA380058AED0 /* AuthForgotPasswordVMTests.swift in Sources */,
 				2D1F433D254D13900058AED0 /* NimbleSurveyTests.swift in Sources */,
+				2D6CF9AD254ECCEA0052BFB4 /* HomeVMTests.swift in Sources */,
 				2D1F43E7254D17250058AED0 /* Helpers.swift in Sources */,
 				2D1F43E8254D17250058AED0 /* ApiServiceTests.swift in Sources */,
 				CD60915D1D2D537B2BC9BE4F /* NimbleSurveyMocks.generated.swift in Sources */,

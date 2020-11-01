@@ -18,7 +18,7 @@ class NotificationPopup: Component, Popupable {
     fileprivate var _timer: Timer?
     
     var navigation: PopupNavigation<ResultType>!
-    var maskType: PopupMaskType = .init(rawValue: 0)
+    var maskType: PopupMaskType = []
     var style: PopupStyle = .top
     var shouldDismissOnBackgroundTap: Bool = false
     

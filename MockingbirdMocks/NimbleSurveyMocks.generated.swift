@@ -9,6 +9,7 @@
 @testable import Mockingbird
 @testable import NimbleSurvey
 import Alamofire
+import AlamofireImage
 import Burritos
 import Foundation
 import L10n_swift
@@ -17,7 +18,9 @@ import Promises
 import RxSwift
 import Swift
 import SwiftyBase
+import SwiftyComponent
 import SwiftyJSON
+import SwiftyPopup
 import UIKit
 
 private var genericTypesStaticMocks = Mockingbird.Synchronized<[String: Mockingbird.StaticMock]>([:])
@@ -410,6 +413,174 @@ public func mock(file: StaticString = #file, line: UInt = #line, _ type: NimbleS
   return AuthVMMock(sourceLocation: SourceLocation(file, line))
 }
 
+// MARK: - Mocked DateService
+
+public final class DateServiceMock: NimbleSurvey.DateService, Mockingbird.Mock {
+  static let staticMock = Mockingbird.StaticMock()
+  public let mockingContext = Mockingbird.MockingContext()
+  public let stubbingContext = Mockingbird.StubbingContext()
+  public let mockMetadata = Mockingbird.MockMetadata(["generator_version": "0.10.0", "module_name": "NimbleSurvey"])
+  public var sourceLocation: Mockingbird.SourceLocation? {
+    get { return stubbingContext.sourceLocation }
+    set {
+      stubbingContext.sourceLocation = newValue
+      DateServiceMock.staticMock.stubbingContext.sourceLocation = newValue
+    }
+  }
+
+  fileprivate init(sourceLocation: Mockingbird.SourceLocation) {
+    Mockingbird.checkVersion(for: self)
+    self.sourceLocation = sourceLocation
+  }
+
+  // MARK: Mocked `now`()
+
+  public func `now`() -> Date {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`now`() -> Date", arguments: [])
+    mockingContext.didInvoke(invocation)
+    let implementation = stubbingContext.implementation(for: invocation, optional: false)
+    if let concreteImplementation = implementation as? () -> Date {
+      return concreteImplementation()
+    } else {
+      return (implementation as! () -> Date)()
+    }
+  }
+
+  public func `now`() -> Mockingbird.Mockable<Mockingbird.MethodDeclaration, () -> Date, Date> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`now`() -> Date", arguments: [])
+    return Mockingbird.Mockable<Mockingbird.MethodDeclaration, () -> Date, Date>(mock: self, invocation: invocation)
+  }
+}
+
+/// Create a source-attributed `NimbleSurvey.DateService` concrete protocol mock instance.
+public func mock(file: StaticString = #file, line: UInt = #line, _ type: NimbleSurvey.DateService.Protocol) -> DateServiceMock {
+  return DateServiceMock(sourceLocation: SourceLocation(file, line))
+}
+
+// MARK: - Mocked HomeVM
+
+public final class HomeVMMock: NimbleSurvey.HomeVM, Mockingbird.Mock {
+  static let staticMock = Mockingbird.StaticMock()
+  public let mockingContext = Mockingbird.MockingContext()
+  public let stubbingContext = Mockingbird.StubbingContext()
+  public let mockMetadata = Mockingbird.MockMetadata(["generator_version": "0.10.0", "module_name": "NimbleSurvey"])
+  public var sourceLocation: Mockingbird.SourceLocation? {
+    get { return stubbingContext.sourceLocation }
+    set {
+      stubbingContext.sourceLocation = newValue
+      HomeVMMock.staticMock.stubbingContext.sourceLocation = newValue
+    }
+  }
+
+  // MARK: Mocked currentDateText
+
+  public var `currentDateText`: Observable<String> {
+    get {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "currentDateText.get", arguments: [])
+      mockingContext.didInvoke(invocation)
+      return (stubbingContext.implementation(for: invocation) as! () -> Observable<String>)()
+    }
+  }
+
+  public func getCurrentDateText() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Observable<String>, Observable<String>> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "currentDateText.get", arguments: [])
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Observable<String>, Observable<String>>(mock: self, invocation: invocation)
+  }
+
+  // MARK: Mocked focusIndex
+
+  public var `focusIndex`: ValueObservable<Int> {
+    get {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "focusIndex.get", arguments: [])
+      mockingContext.didInvoke(invocation)
+      return (stubbingContext.implementation(for: invocation) as! () -> ValueObservable<Int>)()
+    }
+  }
+
+  public func getFocusIndex() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> ValueObservable<Int>, ValueObservable<Int>> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "focusIndex.get", arguments: [])
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> ValueObservable<Int>, ValueObservable<Int>>(mock: self, invocation: invocation)
+  }
+
+  // MARK: Mocked focusItem
+
+  public var `focusItem`: Observable<SurveyInfo?> {
+    get {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "focusItem.get", arguments: [])
+      mockingContext.didInvoke(invocation)
+      return (stubbingContext.implementation(for: invocation) as! () -> Observable<SurveyInfo?>)()
+    }
+  }
+
+  public func getFocusItem() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Observable<SurveyInfo?>, Observable<SurveyInfo?>> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "focusItem.get", arguments: [])
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> Observable<SurveyInfo?>, Observable<SurveyInfo?>>(mock: self, invocation: invocation)
+  }
+
+  // MARK: Mocked items
+
+  public var `items`: ValueObservable<[SurveyInfo]> {
+    get {
+      let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "items.get", arguments: [])
+      mockingContext.didInvoke(invocation)
+      return (stubbingContext.implementation(for: invocation) as! () -> ValueObservable<[SurveyInfo]>)()
+    }
+  }
+
+  public func getItems() -> Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> ValueObservable<[SurveyInfo]>, ValueObservable<[SurveyInfo]>> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "items.get", arguments: [])
+    return Mockingbird.Mockable<Mockingbird.VariableDeclaration, () -> ValueObservable<[SurveyInfo]>, ValueObservable<[SurveyInfo]>>(mock: self, invocation: invocation)
+  }
+
+  fileprivate init(sourceLocation: Mockingbird.SourceLocation) {
+    Mockingbird.checkVersion(for: self)
+    self.sourceLocation = sourceLocation
+  }
+
+  // MARK: Mocked `refresh`(`force`: Bool)
+
+  public func `refresh`(`force`: Bool) -> Promise<Void> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`refresh`(`force`: Bool) -> Promise<Void>", arguments: [Mockingbird.ArgumentMatcher(`force`)])
+    mockingContext.didInvoke(invocation)
+    let implementation = stubbingContext.implementation(for: invocation, optional: false)
+    if let concreteImplementation = implementation as? (Bool) -> Promise<Void> {
+      return concreteImplementation(`force`)
+    } else {
+      return (implementation as! () -> Promise<Void>)()
+    }
+  }
+
+  public func `refresh`(`force`: @escaping @autoclosure () -> Bool) -> Mockingbird.Mockable<Mockingbird.MethodDeclaration, (Bool) -> Promise<Void>, Promise<Void>> {
+    let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(`force`)]
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`refresh`(`force`: Bool) -> Promise<Void>", arguments: arguments)
+    return Mockingbird.Mockable<Mockingbird.MethodDeclaration, (Bool) -> Promise<Void>, Promise<Void>>(mock: self, invocation: invocation)
+  }
+
+  // MARK: Mocked `setFocusIndex`(_ `index`: Int)
+
+  public func `setFocusIndex`(_ `index`: Int) -> Void {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`setFocusIndex`(_ `index`: Int) -> Void", arguments: [Mockingbird.ArgumentMatcher(`index`)])
+    mockingContext.didInvoke(invocation)
+    let implementation = stubbingContext.implementation(for: invocation, optional: true)
+    if let concreteImplementation = implementation as? (Int) -> Void {
+      concreteImplementation(`index`)
+    } else {
+      (implementation as? () -> Void)?()
+    }
+  }
+
+  public func `setFocusIndex`(_ `index`: @escaping @autoclosure () -> Int) -> Mockingbird.Mockable<Mockingbird.MethodDeclaration, (Int) -> Void, Void> {
+    let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(`index`)]
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`setFocusIndex`(_ `index`: Int) -> Void", arguments: arguments)
+    return Mockingbird.Mockable<Mockingbird.MethodDeclaration, (Int) -> Void, Void>(mock: self, invocation: invocation)
+  }
+}
+
+/// Create a source-attributed `NimbleSurvey.HomeVM` concrete protocol mock instance.
+public func mock(file: StaticString = #file, line: UInt = #line, _ type: NimbleSurvey.HomeVM.Protocol) -> HomeVMMock {
+  return HomeVMMock(sourceLocation: SourceLocation(file, line))
+}
+
 // MARK: - Mocked HttpService
 
 public final class HttpServiceMock: NimbleSurvey.HttpService, Mockingbird.Mock {
@@ -609,6 +780,96 @@ public final class LoginVMMock: NimbleSurvey.LoginVM, Mockingbird.Mock {
 /// Create a source-attributed `NimbleSurvey.LoginVM` concrete protocol mock instance.
 public func mock(file: StaticString = #file, line: UInt = #line, _ type: NimbleSurvey.LoginVM.Protocol) -> LoginVMMock {
   return LoginVMMock(sourceLocation: SourceLocation(file, line))
+}
+
+// MARK: - Mocked SurveyService
+
+public final class SurveyServiceMock: NimbleSurvey.SurveyService, Mockingbird.Mock {
+  static let staticMock = Mockingbird.StaticMock()
+  public let mockingContext = Mockingbird.MockingContext()
+  public let stubbingContext = Mockingbird.StubbingContext()
+  public let mockMetadata = Mockingbird.MockMetadata(["generator_version": "0.10.0", "module_name": "NimbleSurvey"])
+  public var sourceLocation: Mockingbird.SourceLocation? {
+    get { return stubbingContext.sourceLocation }
+    set {
+      stubbingContext.sourceLocation = newValue
+      SurveyServiceMock.staticMock.stubbingContext.sourceLocation = newValue
+    }
+  }
+
+  fileprivate init(sourceLocation: Mockingbird.SourceLocation) {
+    Mockingbird.checkVersion(for: self)
+    self.sourceLocation = sourceLocation
+  }
+
+  // MARK: Mocked `list`(`params`: SurveyListParams)
+
+  public func `list`(`params`: SurveyListParams) -> Promise<NimbleSurvey.ListResponse<SurveyInfo>> {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`list`(`params`: SurveyListParams) -> Promise<NimbleSurvey.ListResponse<SurveyInfo>>", arguments: [Mockingbird.ArgumentMatcher(`params`)])
+    mockingContext.didInvoke(invocation)
+    let implementation = stubbingContext.implementation(for: invocation, optional: false)
+    if let concreteImplementation = implementation as? (SurveyListParams) -> Promise<NimbleSurvey.ListResponse<SurveyInfo>> {
+      return concreteImplementation(`params`)
+    } else {
+      return (implementation as! () -> Promise<NimbleSurvey.ListResponse<SurveyInfo>>)()
+    }
+  }
+
+  public func `list`(`params`: @escaping @autoclosure () -> SurveyListParams) -> Mockingbird.Mockable<Mockingbird.MethodDeclaration, (SurveyListParams) -> Promise<NimbleSurvey.ListResponse<SurveyInfo>>, Promise<NimbleSurvey.ListResponse<SurveyInfo>>> {
+    let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(`params`)]
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`list`(`params`: SurveyListParams) -> Promise<NimbleSurvey.ListResponse<SurveyInfo>>", arguments: arguments)
+    return Mockingbird.Mockable<Mockingbird.MethodDeclaration, (SurveyListParams) -> Promise<NimbleSurvey.ListResponse<SurveyInfo>>, Promise<NimbleSurvey.ListResponse<SurveyInfo>>>(mock: self, invocation: invocation)
+  }
+}
+
+/// Create a source-attributed `NimbleSurvey.SurveyService` concrete protocol mock instance.
+public func mock(file: StaticString = #file, line: UInt = #line, _ type: NimbleSurvey.SurveyService.Protocol) -> SurveyServiceMock {
+  return SurveyServiceMock(sourceLocation: SourceLocation(file, line))
+}
+
+// MARK: - Mocked TimerService
+
+public final class TimerServiceMock: NimbleSurvey.TimerService, Mockingbird.Mock {
+  static let staticMock = Mockingbird.StaticMock()
+  public let mockingContext = Mockingbird.MockingContext()
+  public let stubbingContext = Mockingbird.StubbingContext()
+  public let mockMetadata = Mockingbird.MockMetadata(["generator_version": "0.10.0", "module_name": "NimbleSurvey"])
+  public var sourceLocation: Mockingbird.SourceLocation? {
+    get { return stubbingContext.sourceLocation }
+    set {
+      stubbingContext.sourceLocation = newValue
+      TimerServiceMock.staticMock.stubbingContext.sourceLocation = newValue
+    }
+  }
+
+  fileprivate init(sourceLocation: Mockingbird.SourceLocation) {
+    Mockingbird.checkVersion(for: self)
+    self.sourceLocation = sourceLocation
+  }
+
+  // MARK: Mocked `scheduledTimer`(`withTimeInterval` `interval`: TimeInterval, `repeats`: Bool, `block`: @escaping (Timer) -> Void)
+
+  public func `scheduledTimer`(`withTimeInterval` `interval`: TimeInterval, `repeats`: Bool, `block`: @escaping (Timer) -> Void) -> Timer {
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`scheduledTimer`(`withTimeInterval` `interval`: TimeInterval, `repeats`: Bool, `block`: @escaping (Timer) -> Void) -> Timer", arguments: [Mockingbird.ArgumentMatcher(`interval`), Mockingbird.ArgumentMatcher(`repeats`), Mockingbird.ArgumentMatcher(`block`)])
+    mockingContext.didInvoke(invocation)
+    let implementation = stubbingContext.implementation(for: invocation, optional: false)
+    if let concreteImplementation = implementation as? (TimeInterval, Bool, @escaping (Timer) -> Void) -> Timer {
+      return concreteImplementation(`interval`, `repeats`, `block`)
+    } else {
+      return (implementation as! () -> Timer)()
+    }
+  }
+
+  public func `scheduledTimer`(`withTimeInterval` `interval`: @escaping @autoclosure () -> TimeInterval, `repeats`: @escaping @autoclosure () -> Bool, `block`: @escaping @autoclosure () -> (Timer) -> Void) -> Mockingbird.Mockable<Mockingbird.MethodDeclaration, (TimeInterval, Bool, @escaping (Timer) -> Void) -> Timer, Timer> {
+    let arguments: [Mockingbird.ArgumentMatcher] = [Mockingbird.resolve(`interval`), Mockingbird.resolve(`repeats`), Mockingbird.resolve(`block`)]
+    let invocation: Mockingbird.Invocation = Mockingbird.Invocation(selectorName: "`scheduledTimer`(`withTimeInterval` `interval`: TimeInterval, `repeats`: Bool, `block`: @escaping (Timer) -> Void) -> Timer", arguments: arguments)
+    return Mockingbird.Mockable<Mockingbird.MethodDeclaration, (TimeInterval, Bool, @escaping (Timer) -> Void) -> Timer, Timer>(mock: self, invocation: invocation)
+  }
+}
+
+/// Create a source-attributed `NimbleSurvey.TimerService` concrete protocol mock instance.
+public func mock(file: StaticString = #file, line: UInt = #line, _ type: NimbleSurvey.TimerService.Protocol) -> TimerServiceMock {
+  return TimerServiceMock(sourceLocation: SourceLocation(file, line))
 }
 
 // MARK: - Mocked UserService

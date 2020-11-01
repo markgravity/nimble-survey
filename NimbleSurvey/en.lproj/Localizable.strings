@@ -24,3 +24,6 @@
 "auth.forgot_password.reset_text" = "Reset";
 "auth.forgot_password.resetted_notification_title_text" = "Check your email.";
 "auth.forgot_password.resetted_notification_message_msg" = "We’ve email you instructions to reset  your password.";
+
+// Home
+"home.today_text" = "TODAY";

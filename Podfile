@@ -14,6 +14,8 @@ target 'NimbleSurvey' do
   pod 'LNZCollectionLayouts', '~> 1.2.2'
   pod 'AlamofireNetworkActivityLogger', '~> 3.0'
   pod 'Burritos', '~> 0.0.3'
+  pod 'SkeletonView', '~> 1.11.0'
+  pod 'AlamofireImage', '~> 4.0.3'
   
   post_install do |pi|
      pi.pods_project.targets.each do |t|
