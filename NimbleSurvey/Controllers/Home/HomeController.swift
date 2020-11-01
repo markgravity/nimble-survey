@@ -11,11 +11,14 @@ import RxCocoa
 import RxSwift
 import SkeletonView
 import LNZCollectionLayouts
+import SwiftyPopup
 
 class HomeController: ViewController {
     @Inject fileprivate var _viewModel: HomeVM
     @Inject fileprivate var _authVM: AuthVM
     
+    fileprivate let _triggerHeight: CGFloat = 200
+    fileprivate var _refreshPopup: RefreshPopup?
     fileprivate let _disposeBag = DisposeBag()
     
     /// Outlets
@@ -32,6 +35,37 @@ class HomeController: ViewController {
         // Do any additional setup after loading the view.
         _setup()
         _binds()
+    }
+    
+    @IBAction func onPan(_ sender: Any) {
+        guard let gesture = sender as? UIPanGestureRecognizer,
+              _refreshPopup == nil
+        else { return }
+        
+        // Get translation
+        let translation = gesture.translation(in: nil)
+        
+        // Trigger when y greater
+        // than `_triggerHeight`
+        guard translation.y >= _triggerHeight
+        else { return }
+        
+        // Show refresh popup
+        let popup = RefreshPopup()
+        _refreshPopup = popup
+        PopupNavigator.begin(with: popup)
+        
+        // Begin refresh
+        _viewModel.refresh()
+            .always {
+                
+                // Prevent promise conflict
+                // It's temporary solution
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    self._refreshPopup?.dismiss()
+                    self._refreshPopup = nil
+                }
+            }
     }
 }
 
@@ -96,8 +130,22 @@ fileprivate extension HomeController {
         // Current Page for PageControl
         _viewModel.focusIndex
             .withUnretained(self)
-            .bind {
-                $0.0.pageControl.currentPage = $0.1
+            .bind { `self`, index in
+                self.pageControl.currentPage = index
+                
+                // Perform a scrolling
+                // when focus index does not
+                // sync with current focus
+                // of collection view
+                let layout = self.collectionView.collectionViewLayout as! LNZSnapToCenterCollectionViewLayout
+                if layout.currentInFocus != index {
+                    let indexPath = IndexPath(row: index, section: 0)
+                    self.collectionView.scrollToItem(
+                        at: indexPath,
+                        at: .left,
+                        animated: true
+                    )
+                }
             }
             .disposed(by: _disposeBag)
         

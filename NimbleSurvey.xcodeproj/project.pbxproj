@@ -52,6 +52,8 @@
 		2D1F45F5254DBA380058AED0 /* AuthForgotPasswordVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F45F4254DBA380058AED0 /* AuthForgotPasswordVMTests.swift */; };
 		2D1F461C254DBC550058AED0 /* NotificationPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F461A254DBC550058AED0 /* NotificationPopup.swift */; };
 		2D1F461D254DBC550058AED0 /* NotificationPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D1F461B254DBC550058AED0 /* NotificationPopup.xib */; };
+		2D6CF9A3254EB8F40052BFB4 /* RefreshPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CF9A1254EB8F40052BFB4 /* RefreshPopup.swift */; };
+		2D6CF9A4254EB8F40052BFB4 /* RefreshPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6CF9A2254EB8F40052BFB4 /* RefreshPopup.xib */; };
 		2DB97589254E5391001E6B97 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB97588254E5391001E6B97 /* Home.storyboard */; };
 		2DF25ECA254E6228003DEE22 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF25EC9254E6228003DEE22 /* HomeCollectionViewCell.swift */; };
 		2DF25ED4254E62A6003DEE22 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF25ED3254E62A6003DEE22 /* HomeController.swift */; };
@@ -136,6 +138,8 @@
 		2D1F45F4254DBA380058AED0 /* AuthForgotPasswordVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthForgotPasswordVMTests.swift; sourceTree = "<group>"; };
 		2D1F461A254DBC550058AED0 /* NotificationPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPopup.swift; sourceTree = "<group>"; };
 		2D1F461B254DBC550058AED0 /* NotificationPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationPopup.xib; sourceTree = "<group>"; };
+		2D6CF9A1254EB8F40052BFB4 /* RefreshPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshPopup.swift; sourceTree = "<group>"; };
+		2D6CF9A2254EB8F40052BFB4 /* RefreshPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefreshPopup.xib; sourceTree = "<group>"; };
 		2DB97588254E5391001E6B97 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2DF25EC9254E6228003DEE22 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		2DF25ED3254E62A6003DEE22 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -545,6 +549,7 @@
 		2D1F4619254DBC390058AED0 /* Popups */ = {
 			isa = PBXGroup;
 			children = (
+				2D6CF9A0254EB8D90052BFB4 /* Refresh */,
 				2D1F4624254DBC5B0058AED0 /* Notification */,
 			);
 			path = Popups;
@@ -557,6 +562,15 @@
 				2D1F461B254DBC550058AED0 /* NotificationPopup.xib */,
 			);
 			path = Notification;
+			sourceTree = "<group>";
+		};
+		2D6CF9A0254EB8D90052BFB4 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CF9A1254EB8F40052BFB4 /* RefreshPopup.swift */,
+				2D6CF9A2254EB8F40052BFB4 /* RefreshPopup.xib */,
+			);
+			path = Refresh;
 			sourceTree = "<group>";
 		};
 		2DB97587254E5382001E6B97 /* Home */ = {
@@ -762,6 +776,7 @@
 				2D1F43CE254D159A0058AED0 /* LaunchScreen.storyboard in Resources */,
 				2D1F461D254DBC550058AED0 /* NotificationPopup.xib in Resources */,
 				2D1F458A254D83AE0058AED0 /* Localizable.strings in Resources */,
+				2D6CF9A4254EB8F40052BFB4 /* RefreshPopup.xib in Resources */,
 				2D1F44D6254D6CA10058AED0 /* Auth.storyboard in Resources */,
 				2D1F4393254D13D90058AED0 /* Landing.storyboard in Resources */,
 				2D1F44DE254D6CDF0058AED0 /* Assets.xcassets in Resources */,
@@ -948,6 +963,7 @@
 				2D1F4326254D138E0058AED0 /* AppDelegate.swift in Sources */,
 				2D1F4390254D13D90058AED0 /* LocatorRegister.swift in Sources */,
 				2D1F4328254D138E0058AED0 /* SceneDelegate.swift in Sources */,
+				2D6CF9A3254EB8F40052BFB4 /* RefreshPopup.swift in Sources */,
 				2D1F4399254D13D90058AED0 /* AuthVM.swift in Sources */,
 				2DF25ED4254E62A6003DEE22 /* HomeController.swift in Sources */,
 				2DF25F07254EA073003DEE22 /* SurveyService.swift in Sources */,

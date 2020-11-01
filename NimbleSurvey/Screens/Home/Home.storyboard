@@ -64,6 +64,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nBi-Nt-6hV">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                                    <gestureRecognizers/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
@@ -257,6 +258,9 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="6oP-ga-wgc" appends="YES" id="Hii-B0-zAV"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="EEH-lQ-chJ">
                         <barButtonItem key="backBarButtonItem" title=" " id="E3a-0P-IXA"/>
@@ -272,6 +276,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBa-aq-M52" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="6oP-ga-wgc">
+                    <connections>
+                        <action selector="onPan:" destination="8nQ-ZU-60a" id="3Yx-iZ-892"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>

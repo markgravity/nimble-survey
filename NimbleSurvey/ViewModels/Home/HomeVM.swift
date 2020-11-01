@@ -61,6 +61,10 @@ class HomeVMImpl: HomeVM {
             }
     }
     
+    init() {
+        tick()
+    }
+    
 }
 
 // MARK: - Public
@@ -73,9 +77,16 @@ extension HomeVMImpl {
             let list = try await(
                 self._surveyService.list(params: params)
             )
+            
+            // Update items
             self._items.accept(list.items)
-            self._focusIndex.accept(0)
-            self.tick()
+            
+            // Update focus index
+            var focusIndex = self._focusIndex.value
+            if focusIndex >= list.items.count {
+                focusIndex = 0
+            }
+            self._focusIndex.accept(focusIndex)
         }
     }
     
