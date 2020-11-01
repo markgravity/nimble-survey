@@ -162,4 +162,83 @@ class AuthVMTests: XCTestCase {
         }
     }
 
+    func testLogout() throws {
+        
+        // Mock
+        given(
+            userService.me()
+        ) ~> .value(self.user)
+        
+        given(
+            authService.logout(params: any())
+        ) ~> .success()
+        
+        userDefault.setValue(token.toJSONString()!, forKey: AuthVMImpl.rawTokenKey)
+        
+        waitUntil {
+            try await(
+                self.viewModel.retrieve()
+            )
+            
+            try await(
+                self.viewModel.logout()
+            )
+            
+            expect(self.viewModel.isAuthenticated.value)
+                .to(beFalse())
+            expect(self.userDefault.string(forKey: AuthVMImpl.rawTokenKey))
+                .to(equal(""))
+        }
+    }
+    
+    func testRefreshToken() throws {
+        
+        // Mock
+        given(
+            userService.me()
+        ) ~> .value(self.user)
+        
+        var newToken = self.token!
+        newToken.accessToken = "new access token"
+        given(
+            authService.refreshToken(params: any())
+        ) ~> .value(newToken)
+        
+        userDefault.setValue(token.toJSONString()!, forKey: AuthVMImpl.rawTokenKey)
+        
+        waitUntil {
+            try await(
+                self.viewModel.refreshToken()
+            )
+            
+            // Parse new token
+            let json = self.userDefault.string(forKey: AuthVMImpl.rawTokenKey) ?? ""
+            let theToken = UserTokenInfo(JSONString: json)
+            
+            
+            expect(theToken)
+                .to(equal(newToken))
+        }
+    }
+    
+    func testForgotPassword() throws {
+        
+        // Mock
+        given(
+            authService.forgotPassword(params: any())
+        ) ~> .success()
+        
+        
+        // Excute
+        waitUntil {
+            let params = AuthForgotPasswordParams(email: "email")
+            try await(
+                self.viewModel.forgotPassword(params: params)
+            )
+            
+            verify(
+                self.authService.forgotPassword(params: any())
+            ).wasCalled()
+        }
+    }
 }

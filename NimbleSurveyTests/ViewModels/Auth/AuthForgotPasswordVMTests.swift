@@ -73,9 +73,24 @@ class AuthForgotPasswordVMTests: XCTestCase {
             )
     }
     
-    /// TODO: Write test
-    func testLogingWhileNotInInititalState() {
+    func testResetWhileNotInInititalState() {
         
+        // Mock
+        given(
+            authVM.forgotPassword(params: any())
+        ) ~> .success()
+        
+        _ = self.viewModel.reset()
+        _ = self.viewModel.reset()
+        expect(self.viewModel.state)
+            .emits(
+                inOrder(
+                    .initial,
+                    .resetting,
+                    .resetted,
+                    .initial
+                )
+            )
     }
     
     func testIsValid() {

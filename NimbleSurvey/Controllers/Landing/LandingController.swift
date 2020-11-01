@@ -20,6 +20,14 @@ class LandingController: ViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        // Prevent do anything
+        // when run by tests
+        #if DEBUG
+        if let _ = NSClassFromString("XCTest") {
+            return
+        }
+        #endif
         _setup()
         _binds()
     }

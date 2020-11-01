@@ -7,7 +7,7 @@
 
 import ObjectMapper
 
-struct UserTokenInfo {
+struct UserTokenInfo: Equatable {
     
     // Properties
     var accessToken: String!

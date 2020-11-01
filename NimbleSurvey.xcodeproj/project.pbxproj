@@ -10,7 +10,6 @@
 		2D1F4326254D138E0058AED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F4325254D138E0058AED0 /* AppDelegate.swift */; };
 		2D1F4328254D138E0058AED0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F4327254D138E0058AED0 /* SceneDelegate.swift */; };
 		2D1F432A254D138E0058AED0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F4329254D138E0058AED0 /* ViewController.swift */; };
-		2D1F433D254D13900058AED0 /* NimbleSurveyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F433C254D13900058AED0 /* NimbleSurveyTests.swift */; };
 		2D1F4348254D13900058AED0 /* NimbleSurveyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F4347254D13900058AED0 /* NimbleSurveyUITests.swift */; };
 		2D1F4376254D13C50058AED0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F4375254D13C50058AED0 /* Constant.swift */; };
 		2D1F4390254D13D90058AED0 /* LocatorRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F437B254D13D80058AED0 /* LocatorRegister.swift */; };
@@ -98,7 +97,6 @@
 		2D1F4329254D138E0058AED0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2D1F4333254D138F0058AED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D1F4338254D13900058AED0 /* NimbleSurveyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NimbleSurveyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D1F433C254D13900058AED0 /* NimbleSurveyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbleSurveyTests.swift; sourceTree = "<group>"; };
 		2D1F433E254D13900058AED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D1F4343254D13900058AED0 /* NimbleSurveyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NimbleSurveyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1F4347254D13900058AED0 /* NimbleSurveyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbleSurveyUITests.swift; sourceTree = "<group>"; };
@@ -258,7 +256,6 @@
 				2D1F43E2254D17250058AED0 /* Services */,
 				2D1F43E4254D17250058AED0 /* Support */,
 				2D1F43E1254D17250058AED0 /* Helpers.swift */,
-				2D1F433C254D13900058AED0 /* NimbleSurveyTests.swift */,
 				2D1F433E254D13900058AED0 /* Info.plist */,
 			);
 			path = NimbleSurveyTests;
@@ -1062,7 +1059,6 @@
 			files = (
 				2D1F45A0254D9C8C0058AED0 /* LoginVMTests.swift in Sources */,
 				2D1F45F5254DBA380058AED0 /* AuthForgotPasswordVMTests.swift in Sources */,
-				2D1F433D254D13900058AED0 /* NimbleSurveyTests.swift in Sources */,
 				2D6CF9AD254ECCEA0052BFB4 /* HomeVMTests.swift in Sources */,
 				2D1F43E7254D17250058AED0 /* Helpers.swift in Sources */,
 				2D1F43E8254D17250058AED0 /* ApiServiceTests.swift in Sources */,
