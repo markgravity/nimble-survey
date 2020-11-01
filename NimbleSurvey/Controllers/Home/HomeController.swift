@@ -56,7 +56,7 @@ class HomeController: ViewController {
         PopupNavigator.begin(with: popup)
         
         // Begin refresh
-        _viewModel.refresh()
+        _viewModel.refresh(force: true)
             .always {
                 
                 // Prevent promise conflict
@@ -151,7 +151,7 @@ fileprivate extension HomeController {
         
         // First Load
         _showSkeletonLoading()
-        _ = _viewModel.refresh()
+        _ = _viewModel.refresh(force: false)
             .catchThenAlert()
             .always {
                 self._dismissSkeletonLoading()

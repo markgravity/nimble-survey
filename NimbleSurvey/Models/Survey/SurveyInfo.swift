@@ -7,7 +7,7 @@
 
 import ObjectMapper
 
-struct SurveyInfo {
+struct SurveyInfo: Equatable {
     
     // Properties
     var title: String!

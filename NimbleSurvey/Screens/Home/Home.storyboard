@@ -265,7 +265,6 @@
                     <navigationItem key="navigationItem" id="EEH-lQ-chJ">
                         <barButtonItem key="backBarButtonItem" title=" " id="E3a-0P-IXA"/>
                     </navigationItem>
-                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="avatarButton" destination="i72-49-2oQ" id="EF5-56-MWr"/>
                         <outlet property="collectionView" destination="kBn-tB-9zF" id="raJ-bo-gT0"/>
@@ -287,9 +286,8 @@
         <!--Navigation Controller-->
         <scene sceneID="Dbf-dz-xaS">
             <objects>
-                <navigationController storyboardIdentifier="HomeNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="l9N-pr-W3k" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="l9N-pr-W3k" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vI8-9X-S70">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

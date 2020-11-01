@@ -8,6 +8,8 @@
 import RxSwift
 import SwiftyBase
 import Promises
+import Burritos
+import ObjectMapper
 
 // MARK: - Protocol
 protocol HomeVM {
@@ -16,15 +18,23 @@ protocol HomeVM {
     var focusItem: Observable<SurveyInfo?> { get }
     var currentDateText: Observable<String> { get }
     
-    func refresh() -> Promise<Void>
-    func tick()
+    func refresh(force: Bool) -> Promise<Void>
     func setFocusIndex(_ index: Int)
 }
 
 // MARK: - Implements
 class HomeVMImpl: HomeVM {
     @Inject fileprivate var _surveyService: SurveyService
-    fileprivate let _tick = PublishSubject<Void>()
+    @Inject fileprivate var _timerService: TimerService
+    @Inject fileprivate var _dateService: DateService
+    
+    fileprivate let _ticked = MutableValue<Void>(())
+    fileprivate var _tickTimer: Timer?
+    
+    /// Cached Items
+    static let cachedRawItemsKey = "home_cached_raw_items"
+    @UserDefault(HomeVMImpl.cachedRawItemsKey, defaultValue: "", userDefaults: locator.resolve(UserDefaults.self)!)
+    fileprivate var _cachedRawItems: String
     
     /// Items
     fileprivate let _items = MutableValue<[SurveyInfo]>([])
@@ -54,7 +64,7 @@ class HomeVMImpl: HomeVM {
     
     /// Current Date Text
     var currentDateText: Observable<String> {
-        _tick
+        _ticked
             .withUnretained(self)
             .map {
                 $0.0._getCurrentDateText()
@@ -62,7 +72,11 @@ class HomeVMImpl: HomeVM {
     }
     
     init() {
-        tick()
+        _tick()
+    }
+    
+    deinit {
+        _tickTimer?.invalidate()
     }
     
 }
@@ -70,30 +84,39 @@ class HomeVMImpl: HomeVM {
 // MARK: - Public
 extension HomeVMImpl {
     
-    func refresh() -> Promise<Void> {
+    /// Ignore cached when refresh
+    /// if `force` is `true`
+    func refresh(force: Bool) -> Promise<Void> {
         
         Promise(on: .global()) {
-            let params = SurveyListParams(pageNumber: 1, pageSize: 5)
-            let list = try await(
-                self._surveyService.list(params: params)
-            )
+            
+            let cachedItems = [SurveyInfo].init(JSONString: self._cachedRawItems)
+            var items = cachedItems ?? self._items.value
+            
+            // Force to refresh
+            // or no cached items
+            if force || cachedItems == nil {
+                let params = SurveyListParams(pageNumber: 1, pageSize: 5)
+                let list = try await(
+                    self._surveyService.list(params: params)
+                )
+                items = list.items
+                
+                // Cache them
+                self._cachedRawItems = items.toJSONString() ?? ""
+            }
+            
             
             // Update items
-            self._items.accept(list.items)
+            self._items.accept(items)
             
             // Update focus index
             var focusIndex = self._focusIndex.value
-            if focusIndex >= list.items.count {
+            if focusIndex >= items.count {
                 focusIndex = 0
             }
             self._focusIndex.accept(focusIndex)
         }
-    }
-    
-    /// A trigger to refresh
-    /// current date text
-    func tick() {
-        _tick.onNext(())
     }
     
     func setFocusIndex(_ index: Int) {
@@ -106,9 +129,35 @@ fileprivate extension HomeVMImpl {
     
     func _getCurrentDateText() -> String {
         
+        let date = _dateService.now()
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE, MMMM dd"
-        return formatter.string(from: Date()).uppercased()
+        return formatter.string(from: date)
+            .uppercased()
+    }
+    
+    /// A trigger to refresh
+    /// current date text
+    func _tick() {
+        _ticked.accept(())
+        _tickTimer?.invalidate()
+        
+        // Schedule a next tick
+        // at new day
+        let nextDate = _dateService.now()
+            .addingTimeInterval(86400)
+        let startOfNextDay = Calendar.current.startOfDay(for: nextDate)
+        let interval = startOfNextDay
+            .timeIntervalSince(
+                _dateService.now()
+            ) + 1
+        
+        _tickTimer = _timerService.scheduledTimer(
+            withTimeInterval: interval,
+            repeats: false,
+            block: { [weak self] _ in
+            self?._tick()
+        })
     }
 }
 

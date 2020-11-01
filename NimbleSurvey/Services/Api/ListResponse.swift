@@ -13,6 +13,10 @@ struct ListResponse<E: Mappable>: ListResponsable {
     var items: [E] = []
     
     init?(map: Map) {}
+    init(items: [E]) {
+        self.init(JSON: [:])!
+        self.items = items
+    }
     
     mutating func mapping(map: Map) {
         items           <- map["data"]

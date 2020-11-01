@@ -52,6 +52,16 @@ fileprivate extension LocatorRegister {
             SurveyServiceImpl()
         }
         
+        // Timer Service
+        locator.register(TimerService.self) { _ in
+            TimerServiceImpl()
+        }
+        
+        // Timer Service
+        locator.register(DateService.self) { _ in
+            DateServiceImpl()
+        }
+        
         // UserDefaults
         locator.register(UserDefaults.self) { _ in
             UserDefaults.standard

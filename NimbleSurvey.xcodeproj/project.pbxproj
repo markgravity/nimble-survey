@@ -54,6 +54,9 @@
 		2D1F461D254DBC550058AED0 /* NotificationPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D1F461B254DBC550058AED0 /* NotificationPopup.xib */; };
 		2D6CF9A3254EB8F40052BFB4 /* RefreshPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CF9A1254EB8F40052BFB4 /* RefreshPopup.swift */; };
 		2D6CF9A4254EB8F40052BFB4 /* RefreshPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6CF9A2254EB8F40052BFB4 /* RefreshPopup.xib */; };
+		2D6CF9AD254ECCEA0052BFB4 /* HomeVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CF9AC254ECCEA0052BFB4 /* HomeVMTests.swift */; };
+		2D6CF9B6254ED57B0052BFB4 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CF9B5254ED57B0052BFB4 /* TimerService.swift */; };
+		2D6CF9BC254ED6A00052BFB4 /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CF9BB254ED6A00052BFB4 /* DateService.swift */; };
 		2DB97589254E5391001E6B97 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB97588254E5391001E6B97 /* Home.storyboard */; };
 		2DF25ECA254E6228003DEE22 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF25EC9254E6228003DEE22 /* HomeCollectionViewCell.swift */; };
 		2DF25ED4254E62A6003DEE22 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF25ED3254E62A6003DEE22 /* HomeController.swift */; };
@@ -140,6 +143,9 @@
 		2D1F461B254DBC550058AED0 /* NotificationPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationPopup.xib; sourceTree = "<group>"; };
 		2D6CF9A1254EB8F40052BFB4 /* RefreshPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshPopup.swift; sourceTree = "<group>"; };
 		2D6CF9A2254EB8F40052BFB4 /* RefreshPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefreshPopup.xib; sourceTree = "<group>"; };
+		2D6CF9AC254ECCEA0052BFB4 /* HomeVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVMTests.swift; sourceTree = "<group>"; };
+		2D6CF9B5254ED57B0052BFB4 /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
+		2D6CF9BB254ED6A00052BFB4 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		2DB97588254E5391001E6B97 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2DF25EC9254E6228003DEE22 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		2DF25ED3254E62A6003DEE22 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -295,6 +301,8 @@
 		2D1F4382254D13D90058AED0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2D6CF9BA254ED67D0052BFB4 /* Date */,
+				2D6CF9B4254ED56C0052BFB4 /* Timer */,
 				2DF25F05254EA05D003DEE22 /* Survey */,
 				2D1F4444254D51550058AED0 /* Auth */,
 				2D1F4414254D4EC50058AED0 /* User */,
@@ -458,6 +466,7 @@
 		2D1F44B0254D5FDD0058AED0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				2D6CF9AB254ECCD60052BFB4 /* Home */,
 				2D1F459E254D9C7C0058AED0 /* Auth */,
 				2D1F44B1254D5FE30058AED0 /* Global */,
 			);
@@ -571,6 +580,30 @@
 				2D6CF9A2254EB8F40052BFB4 /* RefreshPopup.xib */,
 			);
 			path = Refresh;
+			sourceTree = "<group>";
+		};
+		2D6CF9AB254ECCD60052BFB4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CF9AC254ECCEA0052BFB4 /* HomeVMTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2D6CF9B4254ED56C0052BFB4 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CF9B5254ED57B0052BFB4 /* TimerService.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		2D6CF9BA254ED67D0052BFB4 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CF9BB254ED6A00052BFB4 /* DateService.swift */,
+			);
+			path = Date;
 			sourceTree = "<group>";
 		};
 		2DB97587254E5382001E6B97 /* Home */ = {
@@ -987,6 +1020,7 @@
 				2DF25EFE254E9FEB003DEE22 /* SurveyInfo.swift in Sources */,
 				2D1F4446254D51A10058AED0 /* AuthService.swift in Sources */,
 				2D1F4464254D536D0058AED0 /* AuthForgotPasswordParams.swift in Sources */,
+				2D6CF9BC254ED6A00052BFB4 /* DateService.swift in Sources */,
 				2D1F4580254D784F0058AED0 /* Promise.swift in Sources */,
 				2D1F4591254D915C0058AED0 /* UIRegister.swift in Sources */,
 				2D1F44F3254D72480058AED0 /* LoginVM.swift in Sources */,
@@ -994,6 +1028,7 @@
 				2D1F4392254D13D90058AED0 /* L10nRegister.swift in Sources */,
 				2D1F440D254D1EAE0058AED0 /* HttpService.swift in Sources */,
 				2D1F45F0254DB7FE0058AED0 /* AuthForgotPasswordVM.swift in Sources */,
+				2D6CF9B6254ED57B0052BFB4 /* TimerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1004,6 +1039,7 @@
 				2D1F45A0254D9C8C0058AED0 /* LoginVMTests.swift in Sources */,
 				2D1F45F5254DBA380058AED0 /* AuthForgotPasswordVMTests.swift in Sources */,
 				2D1F433D254D13900058AED0 /* NimbleSurveyTests.swift in Sources */,
+				2D6CF9AD254ECCEA0052BFB4 /* HomeVMTests.swift in Sources */,
 				2D1F43E7254D17250058AED0 /* Helpers.swift in Sources */,
 				2D1F43E8254D17250058AED0 /* ApiServiceTests.swift in Sources */,
 				CD60915D1D2D537B2BC9BE4F /* NimbleSurveyMocks.generated.swift in Sources */,
