@@ -10,4 +10,13 @@ import UIKit
 enum ApiException: LocalizedError, Equatable {
     case invalidResponse
     case other(bag: ApiErrorBag)
+    
+    var errorDescription: String? {
+        switch self {
+        case .invalidResponse:
+            return "api.invalid_response_error_msg".trans()
+        case .other(let errorBag):
+            return errorBag.errorDescription
+        }
+    }
 }

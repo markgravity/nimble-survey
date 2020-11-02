@@ -31,8 +31,20 @@ func alert(_ message: String, handler: VoidHandler? = nil) {
 }
 
 func alert(_ error: Error,_ handler: VoidHandler? = nil) {
+    
+    var message = "alert.common_error_msg".trans()
+    
+    #if DEBUG
+    message = (error as NSError).localizedDescription
+    #else
+    
+    // Localized Error
+    if let localizedError = error as? LocalizedError {
+        message = localizedError.errorDescription ?? message
+    }
+    #endif
     alert(
-        (error as NSError).localizedDescription,
+        message,
         handler: handler
     )
 }

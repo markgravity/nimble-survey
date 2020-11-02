@@ -11,6 +11,7 @@
 // Alert
 "alert.title_text" = "Alert";
 "alert.ok_text" = "OK";
+"alert.common_error_msg" = "An error occurred while processing your request";
 
 // Login
 "login.email_placeholder_text" = "Email";
