@@ -23,6 +23,8 @@ protocol LoginVM {
 class LoginVMImpl: LoginVM {
     @Inject fileprivate var _authVM: AuthVM
     
+    fileprivate var _isLogging = false
+    
     /// Email
     fileprivate let _email = MutableValue<String?>(nil)
     
@@ -52,14 +54,15 @@ class LoginVMImpl: LoginVM {
 extension LoginVMImpl {
     
     func login() -> Promise<Void> {
-        
-        // Validate state
-        guard _state.value == .initial
-        else { return .success() }
 
         return Promise(on: .global()) {
             
+            // Validate state
+            guard !self._isLogging
+            else { return }
+            
             // Mark as logging
+            self._isLogging = true
             self._state.accept(.logging)
             
             // Begin login
@@ -72,6 +75,7 @@ extension LoginVMImpl {
             )
             
             self._state.accept(.logged)
+            self._isLogging = false
         }
         .catch {
             self._state.accept(.error($0 as NSError))

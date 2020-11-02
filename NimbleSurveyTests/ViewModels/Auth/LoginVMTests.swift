@@ -74,9 +74,24 @@ class LoginVMTests: XCTestCase {
             )
     }
     
-    /// TODO: Write test
     func testLogingWhileNotInInititalState() {
         
+        // Mock
+        given(
+            authVM.login(params: any())
+        ) ~> .success()
+        
+        _ = self.viewModel.login()
+        _ = self.viewModel.login()
+        expect(self.viewModel.state)
+            .emits(
+                inOrder(
+                    .initial,
+                    .logging,
+                    .logged
+                )
+            )
+
     }
     
     func testIsValid() {

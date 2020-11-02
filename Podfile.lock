@@ -113,7 +113,7 @@ DEPENDENCIES:
   - MockingbirdFramework (~> 0.10.0)
   - Nimble (~> 8.0.4)
   - SkeletonView (~> 1.11.0)
-  - SwiftyBase (from `https://github.com/markgravity/swifty-base.git`)
+  - SwiftyBase (from `/Users/markg/Dropbox/Projects/iOS/SwiftyBase`)
   - SwiftyComponent (from `https://github.com/markgravity/swifty-component.git`)
   - SwiftyDuration (from `https://github.com/markgravity/swifty-duration`)
   - SwiftyPopup (from `/Users/markg/Dropbox/Projects/iOS/SwiftyPopup`)
@@ -148,7 +148,7 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   SwiftyBase:
-    :git: https://github.com/markgravity/swifty-base.git
+    :path: "/Users/markg/Dropbox/Projects/iOS/SwiftyBase"
   SwiftyComponent:
     :git: https://github.com/markgravity/swifty-component.git
   SwiftyDuration:
@@ -157,9 +157,6 @@ EXTERNAL SOURCES:
     :path: "/Users/markg/Dropbox/Projects/iOS/SwiftyPopup"
 
 CHECKOUT OPTIONS:
-  SwiftyBase:
-    :commit: cbf19a327d99de7c85b18ca23c462f0841890284
-    :git: https://github.com/markgravity/swifty-base.git
   SwiftyComponent:
     :commit: a30b2fb8b060cd2f49669192a159e6f7ae439806
     :git: https://github.com/markgravity/swifty-component.git
@@ -198,6 +195,6 @@ SPEC CHECKSUMS:
   UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
   UIWindowTransitions: cb662e2ae9e2d1060fcdbe3eb3de9232bedb7612
 
-PODFILE CHECKSUM: 03cdfa88804695f5b8b6ecf29bd98793225f7c90
+PODFILE CHECKSUM: 8822fc72fc2c522120a1dddd91740e44afc00db1
 
 COCOAPODS: 1.9.1

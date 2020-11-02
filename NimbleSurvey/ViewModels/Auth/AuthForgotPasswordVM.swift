@@ -22,6 +22,7 @@ protocol AuthForgotPasswordVM {
 class AuthForgotPasswordVMImpl: AuthForgotPasswordVM {
     
     @Inject fileprivate var _authVM: AuthVM
+    fileprivate var _isResetting: Bool = false
     
     /// Email
     fileprivate let _email = MutableValue<String?>(nil)
@@ -46,13 +47,14 @@ extension AuthForgotPasswordVMImpl {
     
     func reset() -> Promise<Void> {
         
-        // Validate state
-        guard _state.value == .initial
-        else { return .success() }
-        
         return Promise(on: .global()) {
             
+            // Validate state
+            guard !self._isResetting
+            else { return }
+            
             // Mark as logging
+            self._isResetting = true
             self._state.accept(.resetting)
             
             // Begin reset
@@ -65,6 +67,7 @@ extension AuthForgotPasswordVMImpl {
             
             self._state.accept(.resetted)
             self._state.accept(.initial)
+            self._isResetting = false
         }
         .catch {
             self._state.accept(.error($0 as NSError))
