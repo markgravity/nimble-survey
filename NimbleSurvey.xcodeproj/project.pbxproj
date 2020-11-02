@@ -58,6 +58,7 @@
 		2D6CF9BC254ED6A00052BFB4 /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CF9BB254ED6A00052BFB4 /* DateService.swift */; };
 		2D6CF9C9254EF1F10052BFB4 /* Survey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6CF9C8254EF1F10052BFB4 /* Survey.storyboard */; };
 		2D6CF9CE254EF3450052BFB4 /* SurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CF9CD254EF3450052BFB4 /* SurveyController.swift */; };
+		2D8303C7254FA91B009F4BDB /* ApiRegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8303C6254FA91B009F4BDB /* ApiRegisterTests.swift */; };
 		2DB97589254E5391001E6B97 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB97588254E5391001E6B97 /* Home.storyboard */; };
 		2DF25ECA254E6228003DEE22 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF25EC9254E6228003DEE22 /* HomeCollectionViewCell.swift */; };
 		2DF25ED4254E62A6003DEE22 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF25ED3254E62A6003DEE22 /* HomeController.swift */; };
@@ -148,6 +149,7 @@
 		2D6CF9BB254ED6A00052BFB4 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		2D6CF9C8254EF1F10052BFB4 /* Survey.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Survey.storyboard; sourceTree = "<group>"; };
 		2D6CF9CD254EF3450052BFB4 /* SurveyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyController.swift; sourceTree = "<group>"; };
+		2D8303C6254FA91B009F4BDB /* ApiRegisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRegisterTests.swift; sourceTree = "<group>"; };
 		2DB97588254E5391001E6B97 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2DF25EC9254E6228003DEE22 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		2DF25ED3254E62A6003DEE22 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 		2D1F433B254D13900058AED0 /* NimbleSurveyTests */ = {
 			isa = PBXGroup;
 			children = (
+				2D8303C5254FA906009F4BDB /* Registers */,
 				2D1F44B0254D5FDD0058AED0 /* ViewModels */,
 				2D1F43E2254D17250058AED0 /* Services */,
 				2D1F43E4254D17250058AED0 /* Support */,
@@ -623,6 +626,14 @@
 				2D6CF9C8254EF1F10052BFB4 /* Survey.storyboard */,
 			);
 			path = Survey;
+			sourceTree = "<group>";
+		};
+		2D8303C5254FA906009F4BDB /* Registers */ = {
+			isa = PBXGroup;
+			children = (
+				2D8303C6254FA91B009F4BDB /* ApiRegisterTests.swift */,
+			);
+			path = Registers;
 			sourceTree = "<group>";
 		};
 		2DB97587254E5382001E6B97 /* Home */ = {
@@ -1060,6 +1071,7 @@
 				2D1F45A0254D9C8C0058AED0 /* LoginVMTests.swift in Sources */,
 				2D1F45F5254DBA380058AED0 /* AuthForgotPasswordVMTests.swift in Sources */,
 				2D6CF9AD254ECCEA0052BFB4 /* HomeVMTests.swift in Sources */,
+				2D8303C7254FA91B009F4BDB /* ApiRegisterTests.swift in Sources */,
 				2D1F43E7254D17250058AED0 /* Helpers.swift in Sources */,
 				2D1F43E8254D17250058AED0 /* ApiServiceTests.swift in Sources */,
 				CD60915D1D2D537B2BC9BE4F /* NimbleSurveyMocks.generated.swift in Sources */,

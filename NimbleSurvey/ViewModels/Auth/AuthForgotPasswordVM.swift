@@ -72,6 +72,7 @@ extension AuthForgotPasswordVMImpl {
         .catch {
             self._state.accept(.error($0 as NSError))
             self._state.accept(.initial)
+            self._isResetting = false
         }
     }
     
