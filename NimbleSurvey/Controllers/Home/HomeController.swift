@@ -97,6 +97,12 @@ fileprivate extension HomeController {
         let layout = (collectionView.collectionViewLayout as! LNZInfiniteCollectionViewLayout)
         layout.itemSize = UIScreen.main.bounds.size
         layout.focusChangeDelegate = self
+        
+        // Fix page control alignment
+        if #available(iOS 14, *) {} else {
+            pageControl.firstLeftConstraint?.constant = 4
+        }
+        
     }
     
     func _binds() {

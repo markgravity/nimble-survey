@@ -17,6 +17,9 @@ class LoginController: ViewController {
     fileprivate let _disposeBag = DisposeBag()
     
     /// Outlets
+    @IBOutlet weak var backgroundView: AuthBackgroundView!
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var contentStackView: UIStackView!
     @IBOutlet weak var emailTextField: TextField!
     @IBOutlet weak var passwordTextField: TextField!
     @IBOutlet weak var loginButton: UIButton!
