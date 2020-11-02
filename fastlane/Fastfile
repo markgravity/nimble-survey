@@ -1,0 +1,50 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  lane :test do |options|
+
+    # Notes
+    notes = prompt(text: "Notes: ")
+
+     
+    # Increase build number
+    buid_number = increment_build_number
+    
+    # Build app
+    file = build_app(
+      scheme: "NimbleSurvey",
+      silent: true,
+      export_options: {
+        method: "development"
+      }
+    )
+
+    # Upload to App Center
+    notes = "Build " + buid_number + ") : " + notes
+    appcenter_upload(
+      api_token: "6ba1db04a9b2ed0eadcd9cbb84e3bf17f04ca619",
+      owner_name: "markgravity",
+      app_name: "NimbleSurvey",
+      app_display_name: "NimbleSurvey (Test)",
+      file: file,
+      notify_testers: true, # Set to false if you don't want to notify testers of your new release (default: `false`),
+      release_notes: notes
+    )
+  end
+end
