@@ -15,6 +15,7 @@ class LandingController: ViewController {
     @Inject fileprivate var _authVM: AuthVM
     
     fileprivate let _disposeBag = DisposeBag()
+    @IBOutlet weak var logoImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,6 @@ class LandingController: ViewController {
         }
         #endif
         _setup()
-        _binds()
     }
 }
 
@@ -45,12 +45,19 @@ extension LandingController {
 fileprivate extension LandingController {
     func _setup() {
         
+        // Fade in logo
+        logoImageView.alpha = 0
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.logoImageView.alpha = 1
+            self?._binds()
+        }
     }
     
     func _binds() {
         _viewModel.fetch()
+            .delay(1)
             .then {
-                self._onFetchComplated()
+                self._onFetchCompleted()
             }
             .catchThenAlert()
     }
@@ -59,7 +66,7 @@ fileprivate extension LandingController {
 // MARK: - Private
 fileprivate extension LandingController {
     
-    func _onFetchComplated() {
+    func _onFetchCompleted() {
         switch _authVM.isAuthenticated.value {
         case true:
             performSegue(
