@@ -92,7 +92,7 @@ class AuthVMTests: XCTestCase {
                     self.viewModel.login(params: params)
                 )
             } catch {
-                expect(error).to(matchError(AuthException.invalidGrant))
+                expect(error).to(matchError(anError))
             }
         }
     }

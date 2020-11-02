@@ -19,18 +19,18 @@ class LandingToLoginSegue: UIStoryboardSegue {
         
         window.addSubview(controller.view)
         
+        // Setup login controller
+        // Blur View
+        let blurView = controller.backgroundView.blurView!
+        blurView.alpha = 0
+        
+        // Content View
+        let contentStackView = controller.contentStackView!
+        contentStackView.alpha = 0
+        
+        // Position fixes
         DispatchQueue.main.async {
-            
-            // Setup login controller
-            
-            // Blur View
-            let blurView = controller.backgroundView.blurView!
-            blurView.alpha = 0
-            
-            // Content View
-            let contentStackView = controller.contentStackView!
-            contentStackView.alpha = 0
-            
+
             // Logo Image
             let logoImageView = controller.logoImageView!
             let originalFrame = logoImageView.frame
