@@ -10,10 +10,14 @@ import SwiftyBase
 import ObjectMapper
 
 // MARK: - ApiErrorBag
-struct ApiErrorBag: Error, Equatable {
+struct ApiErrorBag: LocalizedError, Equatable {
     fileprivate(set) var errors: [ApiError]!
     var first: ApiError? {
         errors.first
+    }
+    
+    var errorDescription: String? {
+        first?.errorDescription
     }
     
     func hasError(source: ApiErrorSource? = nil, code: ApiErrorCode) -> Bool {
@@ -32,10 +36,13 @@ extension ApiErrorBag: Mappable {
 }
 
 // MARK: - ApiError
-struct ApiError: Error, Mappable, Equatable {
+struct ApiError: LocalizedError, Mappable, Equatable {
     var source: ApiErrorSource?
     var code: ApiErrorCode!
     var detail: String!
+    var errorDescription: String? {
+        detail
+    }
     
     init(source: ApiErrorSource?, code: ApiErrorCode, detail: String) {
         self.init(JSON: [:])!

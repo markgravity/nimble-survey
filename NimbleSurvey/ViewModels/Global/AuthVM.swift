@@ -100,14 +100,9 @@ extension AuthVMImpl {
         Promise(on: .global()) {
             
             // Request for a token info
-            var userToken: UserTokenInfo!
-            do {
-                userToken = try await(
-                    self._authService.login(params: params)
-                )
-            } catch {
-                throw AuthException.invalidGrant
-            }
+            let userToken = try await(
+                self._authService.login(params: params)
+            )
             
             // Store user token
             self._storeToken(userToken)
