@@ -18,7 +18,7 @@ class HomeController: ViewController {
     @Inject fileprivate var _viewModel: HomeVM
     @Inject fileprivate var _authVM: AuthVM
     
-    fileprivate let _triggerHeight: CGFloat = 200
+    fileprivate let _triggerHeight: CGFloat = 100
     fileprivate var _refreshPopup: RefreshPopup?
     fileprivate let _disposeBag = DisposeBag()
     

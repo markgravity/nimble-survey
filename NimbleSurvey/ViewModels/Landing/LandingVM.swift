@@ -28,7 +28,7 @@ extension LandingVMImpl {
             try await(
                 self._authVM.retrieve()
             )
-        }
+        }.timeout(5)
     }
 }
 

@@ -7,9 +7,9 @@ target 'NimbleSurvey' do
   inhibit_all_warnings!
 
   # Pods for NimbleSurvey
-  pod 'SwiftyComponent', :git => 'https://github.com/markgravity/swifty-component.git', :tag => 'v0.1.0'
-  pod 'SwiftyBase', :path => '/Users/markg/Dropbox/Projects/iOS/SwiftyBase', :tag => 'v0.1.0'
-  pod 'SwiftyPopup', :path => '/Users/markg/Dropbox/Projects/iOS/SwiftyPopup', :tag => 'v0.1.0'
+  pod 'SwiftyComponent', :git => 'https://github.com/markgravity/swifty-component.git', :tag => '0.1.0'
+  pod 'SwiftyBase', :path => '/Users/markg/Dropbox/Projects/iOS/SwiftyBase', :tag => '0.1.0'
+  pod 'SwiftyPopup', :path => '/Users/markg/Dropbox/Projects/iOS/SwiftyPopup', :tag => '0.1.0'
   
   pod 'LNZCollectionLayouts', '~> 1.2.2'
   pod 'AlamofireNetworkActivityLogger', '~> 3.0'
@@ -17,7 +17,7 @@ target 'NimbleSurvey' do
   pod 'SkeletonView', '~> 1.11.0'
   pod 'AlamofireImage', '~> 4.0.3'
   pod 'Hero', '~> 1.5.0'
-  pod 'IQKeyboardManagerSwift'
+  pod 'IQKeyboardManagerSwift', '~> 6.5.6'
   
   post_install do |pi|
      pi.pods_project.targets.each do |t|

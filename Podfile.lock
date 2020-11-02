@@ -33,6 +33,7 @@ PODS:
   - Burritos/UserDefault (0.0.3)
   - Gradients (0.3.0)
   - Hero (1.5.0)
+  - IQKeyboardManagerSwift (6.5.6)
   - L10n-swift (5.7.2):
     - L10n-swift/Core (= 5.7.2)
     - L10n-swift/Extension (= 5.7.2)
@@ -109,13 +110,14 @@ DEPENDENCIES:
   - AlamofireNetworkActivityLogger (~> 3.0)
   - Burritos (~> 0.0.3)
   - Hero (~> 1.5.0)
+  - IQKeyboardManagerSwift
   - LNZCollectionLayouts (~> 1.2.2)
   - MockingbirdFramework (~> 0.10.0)
   - Nimble (~> 8.0.4)
   - SkeletonView (~> 1.11.0)
   - SwiftyBase (from `/Users/markg/Dropbox/Projects/iOS/SwiftyBase`)
-  - SwiftyComponent (from `https://github.com/markgravity/swifty-component.git`)
-  - SwiftyDuration (from `https://github.com/markgravity/swifty-duration`)
+  - SwiftyComponent (from `https://github.com/markgravity/swifty-component.git`, tag `0.1.0`)
+  - SwiftyDuration (from `https://github.com/markgravity/swifty-duration`, tag `v0.1.0`)
   - SwiftyPopup (from `/Users/markg/Dropbox/Projects/iOS/SwiftyPopup`)
 
 SPEC REPOS:
@@ -126,6 +128,7 @@ SPEC REPOS:
     - Burritos
     - Gradients
     - Hero
+    - IQKeyboardManagerSwift
     - L10n-swift
     - LNZCollectionLayouts
     - MockingbirdFramework
@@ -149,20 +152,24 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   SwiftyBase:
     :path: "/Users/markg/Dropbox/Projects/iOS/SwiftyBase"
+    :tag: 0.1.0
   SwiftyComponent:
     :git: https://github.com/markgravity/swifty-component.git
+    :tag: 0.1.0
   SwiftyDuration:
     :git: https://github.com/markgravity/swifty-duration
+    :tag: v0.1.0
   SwiftyPopup:
     :path: "/Users/markg/Dropbox/Projects/iOS/SwiftyPopup"
+    :tag: 0.1.0
 
 CHECKOUT OPTIONS:
   SwiftyComponent:
-    :commit: a30b2fb8b060cd2f49669192a159e6f7ae439806
     :git: https://github.com/markgravity/swifty-component.git
+    :tag: 0.1.0
   SwiftyDuration:
-    :commit: 98614b03413218fd10d9225901ca5cbec7e84dde
     :git: https://github.com/markgravity/swifty-duration
+    :tag: v0.1.0
 
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
@@ -171,6 +178,7 @@ SPEC CHECKSUMS:
   Burritos: a91d76e7581376c34026523f43ea83108e102b18
   Gradients: d7e1be639692b86577616ee55ea96f54fb5f1de1
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   L10n-swift: 5895718b0534335a3af0e91e80f0d23dad4d5c30
   LNZCollectionLayouts: 509d8143a70db014f2094ae7052ec879ab988dab
   MockingbirdFramework: 618cd2d6dbd5264b77498ad24e3f4d6cb2da86b9
@@ -195,6 +203,6 @@ SPEC CHECKSUMS:
   UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
   UIWindowTransitions: cb662e2ae9e2d1060fcdbe3eb3de9232bedb7612
 
-PODFILE CHECKSUM: 8822fc72fc2c522120a1dddd91740e44afc00db1
+PODFILE CHECKSUM: f1ec6408dca2a0c907a1ee5a6746f406547286bc
 
 COCOAPODS: 1.9.1

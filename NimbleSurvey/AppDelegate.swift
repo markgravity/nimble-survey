@@ -29,7 +29,8 @@ class AppDelegate: BaseAppDelegate {
             plugins:
                 L10nRegister.self,
                 ApiRegister.self,
-                UIRegister.self
+                UIRegister.self,
+                IQKeyboardManagerRegister.self
         )
         
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
