@@ -63,6 +63,7 @@
 		2D8303DE254FDB73009F4BDB /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8303DD254FDB73009F4BDB /* UIView.swift */; };
 		2D8303E5254FDF7A009F4BDB /* AuthBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8303E3254FDF7A009F4BDB /* AuthBackgroundView.swift */; };
 		2D8303E6254FDF7A009F4BDB /* AuthBackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D8303E4254FDF7A009F4BDB /* AuthBackgroundView.xib */; };
+		2D83043925504028009F4BDB /* IQKeyboardManagerRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D83043825504028009F4BDB /* IQKeyboardManagerRegister.swift */; };
 		2DB97589254E5391001E6B97 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB97588254E5391001E6B97 /* Home.storyboard */; };
 		2DF25ECA254E6228003DEE22 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF25EC9254E6228003DEE22 /* HomeCollectionViewCell.swift */; };
 		2DF25ED4254E62A6003DEE22 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF25ED3254E62A6003DEE22 /* HomeController.swift */; };
@@ -158,6 +159,7 @@
 		2D8303DD254FDB73009F4BDB /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		2D8303E3254FDF7A009F4BDB /* AuthBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthBackgroundView.swift; sourceTree = "<group>"; };
 		2D8303E4254FDF7A009F4BDB /* AuthBackgroundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthBackgroundView.xib; sourceTree = "<group>"; };
+		2D83043825504028009F4BDB /* IQKeyboardManagerRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerRegister.swift; sourceTree = "<group>"; };
 		2DB97588254E5391001E6B97 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2DF25EC9254E6228003DEE22 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		2DF25ED3254E62A6003DEE22 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				2D1F437C254D13D80058AED0 /* ApiRegister.swift */,
 				2D1F437D254D13D80058AED0 /* L10nRegister.swift */,
 				2D1F4590254D915B0058AED0 /* UIRegister.swift */,
+				2D83043825504028009F4BDB /* IQKeyboardManagerRegister.swift */,
 			);
 			path = Registers;
 			sourceTree = "<group>";
@@ -1053,6 +1056,7 @@
 				2D1F44E4254D6ECC0058AED0 /* TextField.swift in Sources */,
 				2D1F432A254D138E0058AED0 /* ViewController.swift in Sources */,
 				2D1F43DD254D16A10058AED0 /* ApiErrorBag.swift in Sources */,
+				2D83043925504028009F4BDB /* IQKeyboardManagerRegister.swift in Sources */,
 				2D1F4326254D138E0058AED0 /* AppDelegate.swift in Sources */,
 				2D1F4390254D13D90058AED0 /* LocatorRegister.swift in Sources */,
 				2D1F4328254D138E0058AED0 /* SceneDelegate.swift in Sources */,

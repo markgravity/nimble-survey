@@ -18,7 +18,7 @@ class HomeController: ViewController {
     @Inject fileprivate var _viewModel: HomeVM
     @Inject fileprivate var _authVM: AuthVM
     
-    fileprivate let _triggerHeight: CGFloat = 200
+    fileprivate let _triggerHeight: CGFloat = 100
     fileprivate var _refreshPopup: RefreshPopup?
     fileprivate let _disposeBag = DisposeBag()
     
@@ -37,6 +37,7 @@ class HomeController: ViewController {
         _setup()
         _binds()
     }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -167,12 +168,16 @@ fileprivate extension HomeController {
             }
             .disposed(by: _disposeBag)
         
-        // First Load
         _showSkeletonLoading()
         _ = _viewModel.refresh(force: false)
             .catchThenAlert()
             .always {
                 self._dismissSkeletonLoading()
+                
+                // Fix: wrong frame when
+                // set numberOfLines in IB
+                self.titleLabel.numberOfLines = 2
+                self.descriptionLabel.numberOfLines = 2
             }
     }
 }
@@ -187,6 +192,7 @@ fileprivate extension HomeController {
     
     func _dismissSkeletonLoading() {
         view.hideSkeleton()
+        view.stopSkeletonAnimation()
     }
 }
 

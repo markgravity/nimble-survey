@@ -55,11 +55,15 @@ fileprivate extension LandingController {
     
     func _binds() {
         _viewModel.fetch()
-            .delay(1)
             .then {
                 self._onFetchCompleted()
             }
-            .catchThenAlert()
+            .catch { _ in
+                
+                // Go to Login when
+                // get error
+                self._performToLoginScreen()
+            }
     }
 }
 
@@ -75,7 +79,16 @@ fileprivate extension LandingController {
             )
         
         case false:
-            performSegue(
+            _performToLoginScreen()
+            
+        }
+    }
+    
+    func _performToLoginScreen() {
+        
+        // Make animation looks smooth
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.performSegue(
                 withNavigationOf: LoginController.self,
                 sender: nil
             )

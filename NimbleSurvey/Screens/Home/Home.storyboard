@@ -119,66 +119,34 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPE-eO-lRE">
-                                <rect key="frame" x="20" y="801" width="298" height="42"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="We would like to know how you feel about our work from home..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ku-Py-vDb">
-                                        <rect key="frame" x="0.0" y="0.0" width="298" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
-                                                <integer key="value" value="12"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="survey_desciption"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="1Ku-Py-vDb" secondAttribute="bottom" id="K3W-8l-enX"/>
-                                    <constraint firstAttribute="height" constant="42" id="Lr7-71-yi9"/>
-                                    <constraint firstItem="1Ku-Py-vDb" firstAttribute="top" secondItem="SPE-eO-lRE" secondAttribute="top" id="Rsl-mO-Rcf"/>
-                                    <constraint firstItem="1Ku-Py-vDb" firstAttribute="leading" secondItem="SPE-eO-lRE" secondAttribute="leading" id="g4k-8H-tvN"/>
-                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1Ku-Py-vDb" secondAttribute="bottom" id="lQG-XL-Qla"/>
-                                    <constraint firstAttribute="trailing" secondItem="1Ku-Py-vDb" secondAttribute="trailing" id="soE-7i-aTo"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Working from home Check-In" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Plk-4E-Vij">
+                                <rect key="frame" x="20" y="711" width="374" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="survey_title"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                                 </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyp-lx-9o4">
-                                <rect key="frame" x="20" y="717" width="374" height="68"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Working from home Check-In" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3T-qS-T1Q">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="33.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
-                                                <integer key="value" value="12"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="survey_title"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="J3T-qS-T1Q" firstAttribute="leading" secondItem="pyp-lx-9o4" secondAttribute="leading" id="DbD-cd-ZH9"/>
-                                    <constraint firstAttribute="trailing" secondItem="J3T-qS-T1Q" secondAttribute="trailing" id="Jr5-6n-jAY"/>
-                                    <constraint firstItem="J3T-qS-T1Q" firstAttribute="top" secondItem="pyp-lx-9o4" secondAttribute="top" id="Ncx-bd-2Mc"/>
-                                    <constraint firstAttribute="height" constant="68" id="SdV-9u-6bU"/>
-                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="J3T-qS-T1Q" secondAttribute="bottom" id="XTU-Jd-wht"/>
-                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="We would like to know how you feel about our work from home..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ku-Py-vDb">
+                                <rect key="frame" x="20" y="760.5" width="298" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="survey_desciption"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
-                            </view>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iio-OW-Fez">
                                 <rect key="frame" x="20" y="663" width="83" height="28"/>
                                 <subviews>
@@ -240,25 +208,26 @@
                         <viewLayoutGuide key="safeArea" id="A4k-hz-nvB"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jdx-ZO-soF" firstAttribute="top" secondItem="pyp-lx-9o4" secondAttribute="bottom" constant="1" id="0vX-jw-62w"/>
                             <constraint firstItem="egG-5N-Fvb" firstAttribute="leading" secondItem="A4k-hz-nvB" secondAttribute="leading" constant="20" id="4lw-dv-YHb"/>
                             <constraint firstItem="i72-49-2oQ" firstAttribute="top" secondItem="A4k-hz-nvB" secondAttribute="top" constant="35" id="7no-hX-x3H"/>
+                            <constraint firstItem="Plk-4E-Vij" firstAttribute="leading" secondItem="A4k-hz-nvB" secondAttribute="leading" constant="20" id="8CO-OR-2QT"/>
                             <constraint firstItem="XzY-2S-aqB" firstAttribute="top" secondItem="A4k-hz-nvB" secondAttribute="top" constant="16" id="8M6-MW-9tn"/>
                             <constraint firstItem="egG-5N-Fvb" firstAttribute="top" secondItem="XzY-2S-aqB" secondAttribute="bottom" constant="4" id="9AE-Qw-75w"/>
+                            <constraint firstItem="A4k-hz-nvB" firstAttribute="bottom" secondItem="Iio-OW-Fez" secondAttribute="bottom" constant="171" id="AAH-TY-o75"/>
                             <constraint firstItem="kBn-tB-9zF" firstAttribute="trailing" secondItem="A4k-hz-nvB" secondAttribute="trailing" id="AZp-6H-iUS"/>
-                            <constraint firstItem="jdx-ZO-soF" firstAttribute="leading" secondItem="SPE-eO-lRE" secondAttribute="trailing" constant="20" id="FKM-Wg-63k"/>
-                            <constraint firstItem="SPE-eO-lRE" firstAttribute="top" secondItem="pyp-lx-9o4" secondAttribute="bottom" constant="16" id="GgB-l2-Ltu"/>
-                            <constraint firstItem="A4k-hz-nvB" firstAttribute="trailing" secondItem="pyp-lx-9o4" secondAttribute="trailing" constant="20" id="Nvi-bN-3LO"/>
+                            <constraint firstItem="A4k-hz-nvB" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1Ku-Py-vDb" secondAttribute="bottom" constant="20" id="CAM-SK-k8S"/>
                             <constraint firstAttribute="bottom" secondItem="kBn-tB-9zF" secondAttribute="bottom" id="OCn-og-0MY"/>
-                            <constraint firstItem="pyp-lx-9o4" firstAttribute="leading" secondItem="A4k-hz-nvB" secondAttribute="leading" constant="20" id="S2m-z7-4Hb"/>
                             <constraint firstItem="XzY-2S-aqB" firstAttribute="leading" secondItem="A4k-hz-nvB" secondAttribute="leading" constant="20" id="TBZ-NH-DfV"/>
-                            <constraint firstItem="SPE-eO-lRE" firstAttribute="leading" secondItem="A4k-hz-nvB" secondAttribute="leading" constant="20" id="TM7-Eh-Ewo"/>
+                            <constraint firstItem="Plk-4E-Vij" firstAttribute="top" secondItem="Iio-OW-Fez" secondAttribute="bottom" constant="20" id="Tgy-Ex-UES"/>
+                            <constraint firstItem="A4k-hz-nvB" firstAttribute="bottom" secondItem="jdx-ZO-soF" secondAttribute="bottom" constant="20" id="VbP-QM-i7m"/>
                             <constraint firstItem="kBn-tB-9zF" firstAttribute="top" secondItem="tl7-XZ-keJ" secondAttribute="top" id="WjR-yK-NXF"/>
                             <constraint firstItem="A4k-hz-nvB" firstAttribute="trailing" secondItem="jdx-ZO-soF" secondAttribute="trailing" constant="20" id="X5d-4f-aNC"/>
                             <constraint firstItem="A4k-hz-nvB" firstAttribute="trailing" secondItem="i72-49-2oQ" secondAttribute="trailing" constant="20" id="fNK-yD-Rbl"/>
                             <constraint firstItem="kBn-tB-9zF" firstAttribute="leading" secondItem="A4k-hz-nvB" secondAttribute="leading" id="h5k-NV-ePQ"/>
-                            <constraint firstItem="pyp-lx-9o4" firstAttribute="top" secondItem="Iio-OW-Fez" secondAttribute="bottom" constant="26" id="kPf-yd-rIE"/>
-                            <constraint firstItem="A4k-hz-nvB" firstAttribute="bottom" secondItem="SPE-eO-lRE" secondAttribute="bottom" constant="19" id="kRQ-Ud-P1I"/>
+                            <constraint firstItem="1Ku-Py-vDb" firstAttribute="top" secondItem="Plk-4E-Vij" secondAttribute="bottom" constant="16" id="oW1-kI-l0v"/>
+                            <constraint firstItem="1Ku-Py-vDb" firstAttribute="leading" secondItem="A4k-hz-nvB" secondAttribute="leading" constant="20" id="ots-6B-FEC"/>
+                            <constraint firstItem="jdx-ZO-soF" firstAttribute="leading" secondItem="1Ku-Py-vDb" secondAttribute="trailing" constant="20" id="oxa-NO-bkB"/>
+                            <constraint firstItem="A4k-hz-nvB" firstAttribute="trailing" secondItem="Plk-4E-Vij" secondAttribute="trailing" constant="20" id="uAs-rN-1oS"/>
                             <constraint firstItem="Iio-OW-Fez" firstAttribute="leading" secondItem="A4k-hz-nvB" secondAttribute="leading" constant="20" id="yKJ-hQ-VxZ"/>
                             <constraint firstItem="egG-5N-Fvb" firstAttribute="top" secondItem="XzY-2S-aqB" secondAttribute="bottom" constant="4" id="ztN-2y-HEi"/>
                         </constraints>
@@ -278,7 +247,7 @@
                         <outlet property="currentDateLabl" destination="XzY-2S-aqB" id="AcP-ho-qv3"/>
                         <outlet property="descriptionLabel" destination="1Ku-Py-vDb" id="DmF-WA-of2"/>
                         <outlet property="pageControl" destination="WBv-Mk-dpK" id="ON9-ZH-FLN"/>
-                        <outlet property="titleLabel" destination="J3T-qS-T1Q" id="93h-HI-e2B"/>
+                        <outlet property="titleLabel" destination="Plk-4E-Vij" id="LHb-3y-Ym9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBa-aq-M52" sceneMemberID="firstResponder"/>
