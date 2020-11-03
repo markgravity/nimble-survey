@@ -27,8 +27,64 @@ fileprivate extension LocatorRegister {
     
     func _registerFactories() {
         
+        // Http
         locator.register(HttpService.self) { _ in
             HttpServiceImpl()
+        }
+        
+        // Api
+        locator.register(ApiService.self) { _ in
+            ApiServiceImpl()
+        }
+        
+        // User
+        locator.register(UserService.self) { _ in
+            UserServiceImpl()
+        }
+        
+        // Auth
+        locator.register(AuthService.self) { _ in
+            AuthServiceImpl()
+        }
+        
+        // SurveyService
+        locator.register(SurveyService.self) { _ in
+            SurveyServiceImpl()
+        }
+        
+        // Timer Service
+        locator.register(TimerService.self) { _ in
+            TimerServiceImpl()
+        }
+        
+        // Timer Service
+        locator.register(DateService.self) { _ in
+            DateServiceImpl()
+        }
+        
+        // UserDefaults
+        locator.register(UserDefaults.self) { _ in
+            UserDefaults.standard
+        }
+        
+        // LandingVM
+        locator.register(LandingVM.self) { _ in
+            LandingVMImpl()
+        }
+        
+        // LoginVM
+        locator.register(LoginVM.self) { _ in
+            LoginVMImpl()
+        }
+        
+        // ForgetPasswordVM
+        locator.register(AuthForgotPasswordVM.self) { _ in
+            AuthForgotPasswordVMImpl()
+        }
+        
+        // HomeVM
+        locator.register(HomeVM.self) { _ in
+            HomeVMImpl()
         }
     }
 }

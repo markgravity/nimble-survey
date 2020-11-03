@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-1035" y="94"/>
         </scene>
-        <!--View Controller-->
+        <!--Landing Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NimbleTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LandingController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LandingController" customModule="NimbleSurvey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,6 +41,9 @@
                                     <constraint firstAttribute="width" constant="201" id="o4k-HT-K2T"/>
                                     <constraint firstAttribute="height" constant="48" id="wQb-d5-0CX"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="app_logo"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -55,10 +58,35 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VWL-Ro-ILt"/>
+                    <connections>
+                        <outlet property="logoImageView" destination="QBX-UI-RnM" id="F1z-0w-bP4"/>
+                        <segue destination="adh-qp-388" kind="show" identifier="LoginNavigationController" customClass="LandingToLoginSegue" customModule="NimbleSurvey" customModuleProvider="target" id="DyB-qh-aT4"/>
+                        <segue destination="O9f-y2-EA7" kind="show" identifier="HomeNavigationController" customClass="SwapRootViewControllerSegue" customModule="SwiftyBase" id="LTH-9N-QYu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="94"/>
+        </scene>
+        <!--LoginNavigationController-->
+        <scene sceneID="E5r-SR-pHV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Auth" referencedIdentifier="LoginNavigationController" id="adh-qp-388" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="n1H-Uh-pT3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dIb-gp-eGo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="891" y="94"/>
+        </scene>
+        <!--HomeNavigationController-->
+        <scene sceneID="EhT-DT-RJS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeNavigationController" id="O9f-y2-EA7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="G6N-Sq-wW4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a7I-g1-vtA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="891" y="132"/>
         </scene>
     </scenes>
     <resources>

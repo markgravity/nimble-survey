@@ -1,13 +1,13 @@
 //
 //  UserInfo.swift
-//  NimbleTest
+//  NimbleSurvey
 //
 //  Created by Mark G on 31/10/2020.
 //
 
 import ObjectMapper
 
-struct UserInfo {
+struct UserInfo: Equatable {
     
     // Properties
     var email: String!

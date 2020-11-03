@@ -1,0 +1,33 @@
+/* 
+  Strings.strings
+  NimbleSurvey
+
+  Created by Mark G on 30/10/2020.
+  Copyright © 2020 Mark G. All rights reserved.
+*/
+
+"auth.invalid_grant_msg" = "The provided authorization grant is invalid, expired, revoked, does not match the redirection URI used in the authorization request, or was issued to another client.";
+
+// Alert
+"alert.title_text" = "Alert";
+"alert.ok_text" = "OK";
+"alert.common_error_msg" = "An error occurred while processing your request";
+
+// Login
+"login.email_placeholder_text" = "Email";
+"login.password_placeholder_text" = "Password";
+"login.forgot_text" = "Forgot?";
+"login.login_text" = "Log in";
+
+// Forgot Password
+"auth.forgot_password.description_text" = "Enter your email to receive instructions for resetting your password.";
+"auth.forgot_password.email_placeholder_text" = "Email";
+"auth.forgot_password.reset_text" = "Reset";
+"auth.forgot_password.resetted_notification_title_text" = "Check your email.";
+"auth.forgot_password.resetted_notification_message_msg" = "We’ve email you instructions to reset  your password.";
+
+// Home
+"home.today_text" = "TODAY";
+
+// Survey
+"survey.start_text" = "Start Survey";

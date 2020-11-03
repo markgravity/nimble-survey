@@ -6,11 +6,18 @@ target 'NimbleSurvey' do
   use_frameworks!
   inhibit_all_warnings!
 
-  # Pods for NimbleTest
-  pod 'SwiftyComponent', :git => 'https://github.com/markgravity/swifty-component.git'
-  pod 'SwiftyBase', :git => 'https://github.com/markgravity/swifty-base.git'
+  # Pods for NimbleSurvey
+  pod 'SwiftyComponent', :git => 'https://github.com/markgravity/swifty-component.git', :tag => '0.1.0'
+  pod 'SwiftyBase', :path => '/Users/markg/Dropbox/Projects/iOS/SwiftyBase', :tag => '0.1.0'
+  pod 'SwiftyPopup', :path => '/Users/markg/Dropbox/Projects/iOS/SwiftyPopup', :tag => '0.1.0'
+  
   pod 'LNZCollectionLayouts', '~> 1.2.2'
   pod 'AlamofireNetworkActivityLogger', '~> 3.0'
+  pod 'Burritos', '~> 0.0.3'
+  pod 'SkeletonView', '~> 1.11.0'
+  pod 'AlamofireImage', '~> 4.0.3'
+  pod 'Hero', '~> 1.5.0'
+  pod 'IQKeyboardManagerSwift', '~> 6.5.6'
   
   post_install do |pi|
      pi.pods_project.targets.each do |t|
@@ -27,6 +34,7 @@ target 'NimbleSurvey' do
     
     pod 'MockingbirdFramework', '~> 0.10.0'
     pod 'Nimble', '~> 8.0.4'
+    pod 'SwiftyDuration', :git => 'https://github.com/markgravity/swifty-duration', :tag => 'v0.1.0'
   end
 
   target 'NimbleSurveyUITests' do

@@ -6,15 +6,34 @@
 //
 
 import UIKit
+import SwiftyBase
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: BaseAppDelegate {
 
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+    override init() {
+        super.init()
+        
+        bootstrap = Bootstrap(
+            LocatorRegister.self
+        )
+    }
+    
+    override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        bootstrap.register(
+            application: application,
+            launchOptions: launchOptions,
+            plugins:
+                L10nRegister.self,
+                ApiRegister.self,
+                UIRegister.self,
+                IQKeyboardManagerRegister.self
+        )
+        
+        return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
     // MARK: UISceneSession Lifecycle
