@@ -7,9 +7,9 @@ target 'NimbleSurvey' do
   inhibit_all_warnings!
 
   # Pods for NimbleSurvey
-  pod 'SwiftyComponent', :git => 'https://github.com/markgravity/swifty-component.git', :tag => '0.1.0'
-  pod 'SwiftyBase', :path => '/Users/markg/Dropbox/Projects/iOS/SwiftyBase', :tag => '0.1.0'
-  pod 'SwiftyPopup', :path => '/Users/markg/Dropbox/Projects/iOS/SwiftyPopup', :tag => '0.1.0'
+  pod 'SwiftyComponent', :git => 'https://github.com/markgravity/swifty-component.git', :tag => 'v0.1.0'
+  pod 'SwiftyBase', :git => 'https://github.com/markgravity/swifty-base.git', :tag => 'v0.1.0'
+  pod 'SwiftyPopup', :git => 'https://github.com/markgravity/swifty-popup.git', :tag => 'v0.1.0'
   
   pod 'LNZCollectionLayouts', '~> 1.2.2'
   pod 'AlamofireNetworkActivityLogger', '~> 3.0'
