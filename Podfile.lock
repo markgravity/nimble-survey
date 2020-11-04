@@ -110,15 +110,15 @@ DEPENDENCIES:
   - AlamofireNetworkActivityLogger (~> 3.0)
   - Burritos (~> 0.0.3)
   - Hero (~> 1.5.0)
-  - IQKeyboardManagerSwift
+  - IQKeyboardManagerSwift (~> 6.5.6)
   - LNZCollectionLayouts (~> 1.2.2)
   - MockingbirdFramework (~> 0.10.0)
   - Nimble (~> 8.0.4)
   - SkeletonView (~> 1.11.0)
-  - SwiftyBase (from `/Users/markg/Dropbox/Projects/iOS/SwiftyBase`)
-  - SwiftyComponent (from `https://github.com/markgravity/swifty-component.git`, tag `0.1.0`)
+  - SwiftyBase (from `https://github.com/markgravity/swifty-base.git`, tag `v0.1.0`)
+  - SwiftyComponent (from `https://github.com/markgravity/swifty-component.git`, tag `v0.1.0`)
   - SwiftyDuration (from `https://github.com/markgravity/swifty-duration`, tag `v0.1.0`)
-  - SwiftyPopup (from `/Users/markg/Dropbox/Projects/iOS/SwiftyPopup`)
+  - SwiftyPopup (from `https://github.com/markgravity/swifty-popup.git`, tag `v0.1.0`)
 
 SPEC REPOS:
   trunk:
@@ -151,24 +151,30 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   SwiftyBase:
-    :path: "/Users/markg/Dropbox/Projects/iOS/SwiftyBase"
-    :tag: 0.1.0
+    :git: https://github.com/markgravity/swifty-base.git
+    :tag: v0.1.0
   SwiftyComponent:
     :git: https://github.com/markgravity/swifty-component.git
-    :tag: 0.1.0
+    :tag: v0.1.0
   SwiftyDuration:
     :git: https://github.com/markgravity/swifty-duration
     :tag: v0.1.0
   SwiftyPopup:
-    :path: "/Users/markg/Dropbox/Projects/iOS/SwiftyPopup"
-    :tag: 0.1.0
+    :git: https://github.com/markgravity/swifty-popup.git
+    :tag: v0.1.0
 
 CHECKOUT OPTIONS:
+  SwiftyBase:
+    :git: https://github.com/markgravity/swifty-base.git
+    :tag: v0.1.0
   SwiftyComponent:
     :git: https://github.com/markgravity/swifty-component.git
-    :tag: 0.1.0
+    :tag: v0.1.0
   SwiftyDuration:
     :git: https://github.com/markgravity/swifty-duration
+    :tag: v0.1.0
+  SwiftyPopup:
+    :git: https://github.com/markgravity/swifty-popup.git
     :tag: v0.1.0
 
 SPEC CHECKSUMS:
@@ -203,6 +209,6 @@ SPEC CHECKSUMS:
   UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
   UIWindowTransitions: cb662e2ae9e2d1060fcdbe3eb3de9232bedb7612
 
-PODFILE CHECKSUM: f1ec6408dca2a0c907a1ee5a6746f406547286bc
+PODFILE CHECKSUM: f94ce1ddcf5c4937fd89c6092d6816c03d751047
 
 COCOAPODS: 1.9.1
