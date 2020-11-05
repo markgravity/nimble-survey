@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-NimbleSurveyTests/Pods-NimbleSurveyTests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework
+${BUILT_PRODUCTS_DIR}/MockingbirdFramework/Mockingbird.framework
+${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework
+${BUILT_PRODUCTS_DIR}/SwiftyDuration/SwiftyDuration.framework

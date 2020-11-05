@@ -1,0 +1,6 @@
+framework module SwiftyComponent {
+  umbrella header "SwiftyComponent-umbrella.h"
+
+  export *
+  module * { export * }
+}

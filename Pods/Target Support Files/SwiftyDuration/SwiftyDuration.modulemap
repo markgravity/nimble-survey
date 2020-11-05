@@ -1,0 +1,6 @@
+framework module SwiftyDuration {
+  umbrella header "SwiftyDuration-umbrella.h"
+
+  export *
+  module * { export * }
+}
