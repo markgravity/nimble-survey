@@ -1,0 +1,214 @@
+PODS:
+  - Alamofire (5.0.5)
+  - AlamofireImage (4.0.3):
+    - Alamofire (< 6.0.0, >= 5.0.2)
+  - AlamofireNetworkActivityLogger (3.0.0):
+    - Alamofire (~> 5.0.0-rc.2)
+  - Burritos (0.0.3):
+    - Burritos/AtomicWrite (= 0.0.3)
+    - Burritos/Clamping (= 0.0.3)
+    - Burritos/Copying (= 0.0.3)
+    - Burritos/DefaultValue (= 0.0.3)
+    - Burritos/DynamicUIColor (= 0.0.3)
+    - Burritos/EnvironmentVariable (= 0.0.3)
+    - Burritos/Expirable (= 0.0.3)
+    - Burritos/LateInit (= 0.0.3)
+    - Burritos/Lazy (= 0.0.3)
+    - Burritos/LazyConstant (= 0.0.3)
+    - Burritos/Trimmed (= 0.0.3)
+    - Burritos/UndoRedo (= 0.0.3)
+    - Burritos/UserDefault (= 0.0.3)
+  - Burritos/AtomicWrite (0.0.3)
+  - Burritos/Clamping (0.0.3)
+  - Burritos/Copying (0.0.3)
+  - Burritos/DefaultValue (0.0.3)
+  - Burritos/DynamicUIColor (0.0.3)
+  - Burritos/EnvironmentVariable (0.0.3)
+  - Burritos/Expirable (0.0.3)
+  - Burritos/LateInit (0.0.3)
+  - Burritos/Lazy (0.0.3)
+  - Burritos/LazyConstant (0.0.3)
+  - Burritos/Trimmed (0.0.3)
+  - Burritos/UndoRedo (0.0.3)
+  - Burritos/UserDefault (0.0.3)
+  - Gradients (0.3.0)
+  - Hero (1.5.0)
+  - IQKeyboardManagerSwift (6.5.6)
+  - L10n-swift (5.7.2):
+    - L10n-swift/Core (= 5.7.2)
+    - L10n-swift/Extension (= 5.7.2)
+    - L10n-swift/IBInspectable (= 5.7.2)
+  - L10n-swift/Core (5.7.2)
+  - L10n-swift/Extension (5.7.2):
+    - L10n-swift/Core
+  - L10n-swift/IBInspectable (5.7.2):
+    - L10n-swift/Core
+  - LNZCollectionLayouts (1.2.2)
+  - MockingbirdFramework (0.10.0)
+  - Nimble (8.0.9)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - ObjectMapper (4.2.0)
+  - PromisesObjC (1.2.11)
+  - PromisesSwift (1.2.11):
+    - PromisesObjC (= 1.2.11)
+  - PureLayout (3.1.6)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
+  - SkeletonView (1.11.0)
+  - SwiftRichString (3.7.2)
+  - SwiftyBase (0.1.0):
+    - Alamofire
+    - Gradients
+    - L10n-swift
+    - NVActivityIndicatorView (~> 4.8.0)
+    - ObjectMapper
+    - PromisesSwift
+    - PureLayout
+    - RxCocoa
+    - RxSwift
+    - RxSwiftExt
+    - SwiftRichString
+    - SwiftyJSON
+    - Swinject
+    - UIColor_Hex_Swift
+    - UIWindowTransitions
+  - SwiftyComponent (0.1.0):
+    - PromisesSwift
+    - PureLayout
+  - SwiftyDuration (0.1.0):
+    - SwiftyDuration/Core (= 0.1.0)
+    - SwiftyDuration/ObjectMapper (= 0.1.0)
+  - SwiftyDuration/Core (0.1.0)
+  - SwiftyDuration/ObjectMapper (0.1.0):
+    - ObjectMapper
+    - SwiftyDuration/Core
+  - SwiftyJSON (5.0.0)
+  - SwiftyPopup (0.1.0):
+    - PromisesSwift
+    - RxCocoa
+    - RxSwift
+  - Swinject (2.7.1)
+  - UIColor_Hex_Swift (5.1.0)
+  - UIWindowTransitions (0.2.0)
+
+DEPENDENCIES:
+  - AlamofireImage (~> 4.0.3)
+  - AlamofireNetworkActivityLogger (~> 3.0)
+  - Burritos (~> 0.0.3)
+  - Hero (~> 1.5.0)
+  - IQKeyboardManagerSwift (~> 6.5.6)
+  - LNZCollectionLayouts (~> 1.2.2)
+  - MockingbirdFramework (~> 0.10.0)
+  - Nimble (~> 8.0.4)
+  - SkeletonView (~> 1.11.0)
+  - SwiftyBase (from `https://github.com/markgravity/swifty-base.git`, tag `v0.1.0`)
+  - SwiftyComponent (from `https://github.com/markgravity/swifty-component.git`, tag `v0.1.0`)
+  - SwiftyDuration (from `https://github.com/markgravity/swifty-duration`, tag `v0.1.0`)
+  - SwiftyPopup (from `https://github.com/markgravity/swifty-popup.git`, tag `v0.1.0`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - AlamofireNetworkActivityLogger
+    - Burritos
+    - Gradients
+    - Hero
+    - IQKeyboardManagerSwift
+    - L10n-swift
+    - LNZCollectionLayouts
+    - MockingbirdFramework
+    - Nimble
+    - NVActivityIndicatorView
+    - ObjectMapper
+    - PromisesObjC
+    - PromisesSwift
+    - PureLayout
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - RxSwiftExt
+    - SkeletonView
+    - SwiftRichString
+    - SwiftyJSON
+    - Swinject
+    - UIColor_Hex_Swift
+    - UIWindowTransitions
+
+EXTERNAL SOURCES:
+  SwiftyBase:
+    :git: https://github.com/markgravity/swifty-base.git
+    :tag: v0.1.0
+  SwiftyComponent:
+    :git: https://github.com/markgravity/swifty-component.git
+    :tag: v0.1.0
+  SwiftyDuration:
+    :git: https://github.com/markgravity/swifty-duration
+    :tag: v0.1.0
+  SwiftyPopup:
+    :git: https://github.com/markgravity/swifty-popup.git
+    :tag: v0.1.0
+
+CHECKOUT OPTIONS:
+  SwiftyBase:
+    :git: https://github.com/markgravity/swifty-base.git
+    :tag: v0.1.0
+  SwiftyComponent:
+    :git: https://github.com/markgravity/swifty-component.git
+    :tag: v0.1.0
+  SwiftyDuration:
+    :git: https://github.com/markgravity/swifty-duration
+    :tag: v0.1.0
+  SwiftyPopup:
+    :git: https://github.com/markgravity/swifty-popup.git
+    :tag: v0.1.0
+
+SPEC CHECKSUMS:
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  AlamofireImage: 3d1a2010519e58675318735580eb856e88840ff7
+  AlamofireNetworkActivityLogger: 94e8a7d454a4a9800cef1d0c1d3699754493684b
+  Burritos: a91d76e7581376c34026523f43ea83108e102b18
+  Gradients: d7e1be639692b86577616ee55ea96f54fb5f1de1
+  Hero: b7385b75e7259da62f4f85462f59a5082d66b058
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  L10n-swift: 5895718b0534335a3af0e91e80f0d23dad4d5c30
+  LNZCollectionLayouts: 509d8143a70db014f2094ae7052ec879ab988dab
+  MockingbirdFramework: 618cd2d6dbd5264b77498ad24e3f4d6cb2da86b9
+  Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
+  PromisesSwift: fed4eb6f7a29846a22624d1b86b77e1dedb88724
+  PureLayout: bd3c4ec3a3819ad387c99ebb72c6b129c3ed4d2d
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
+  SkeletonView: cc84ce90a804dd0dd7198dd802833411c8a64eaf
+  SwiftRichString: d61b807db1f8834c26fee92b6dd3e1be2dc5af03
+  SwiftyBase: 416206906826ece7a87b24f125241c888fe021b7
+  SwiftyComponent: 4a515432491fc516496e12dbba5618c333845e1f
+  SwiftyDuration: 93239cf9c70d39c2cc5d78ee827fa0a92818132d
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  SwiftyPopup: 18cb844896d396262aaef38b86e115cca2396a30
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+  UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
+  UIWindowTransitions: cb662e2ae9e2d1060fcdbe3eb3de9232bedb7612
+
+PODFILE CHECKSUM: f94ce1ddcf5c4937fd89c6092d6816c03d751047
+
+COCOAPODS: 1.9.1

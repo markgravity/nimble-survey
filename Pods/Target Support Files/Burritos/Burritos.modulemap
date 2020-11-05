@@ -1,0 +1,6 @@
+framework module Burritos {
+  umbrella header "Burritos-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module SwiftyPopup {
+  umbrella header "SwiftyPopup-umbrella.h"
+
+  export *
+  module * { export * }
+}

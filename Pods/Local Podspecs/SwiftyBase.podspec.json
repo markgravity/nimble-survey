@@ -1,0 +1,76 @@
+{
+  "name": "SwiftyBase",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftyBase.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/markgravity/SwiftyBase",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "markgravity": "markgravity.in@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/markgravity/SwiftyBase.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0",
+    "osx": "10.15"
+  },
+  "swift_versions": "5.0",
+  "source_files": "SwiftyBase/Classes/**/*",
+  "dependencies": {
+    "PromisesSwift": [
+
+    ],
+    "RxSwift": [
+
+    ],
+    "RxCocoa": [
+
+    ],
+    "Swinject": [
+
+    ],
+    "PureLayout": [
+
+    ],
+    "SwiftRichString": [
+
+    ],
+    "Alamofire": [
+
+    ],
+    "ObjectMapper": [
+
+    ],
+    "SwiftyJSON": [
+
+    ],
+    "L10n-swift": [
+
+    ],
+    "RxSwiftExt": [
+
+    ],
+    "UIColor_Hex_Swift": [
+
+    ]
+  },
+  "ios": {
+    "dependencies": {
+      "NVActivityIndicatorView": [
+        "~> 4.8.0"
+      ],
+      "Gradients": [
+
+      ],
+      "UIWindowTransitions": [
+
+      ]
+    }
+  },
+  "swift_version": "5.0"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "SwiftyPopup",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftyPopup.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/markgravity/SwiftyPopup",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "markgravity": "markgravity.in@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/markgravity/SwiftyPopup.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SwiftyPopup/Classes/**/*",
+  "dependencies": {
+    "PromisesSwift": [
+
+    ],
+    "RxSwift": [
+
+    ],
+    "RxCocoa": [
+
+    ]
+  }
+}
